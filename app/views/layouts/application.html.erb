@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>FreeGoldWatch</title>
+
+    <!-- Materialize CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +14,7 @@
   </head>
 
   <body>
+    <h6>APP LAYOUT</h6>
     <%= yield %>
   </body>
 </html>
