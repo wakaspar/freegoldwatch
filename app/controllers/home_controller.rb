@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 
-  def index
-    @index = Print.all
+  def index    
   end
 
 end

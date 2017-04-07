@@ -43,3 +43,5 @@ admins = [
 
 
 Admin.create(admins)
+
+puts "Seeded the Crew of The Watch!"
