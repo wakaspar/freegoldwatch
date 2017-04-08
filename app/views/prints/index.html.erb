@@ -6,10 +6,11 @@
   <div class="row">
     <div class="col s12">
       <ul class="tabs">
-        <li class="tab col s3 active"><a href="#pending">Pending</a></li>
-        <li class="tab col s3"><a class="active" href="#printing">Printing</a></li>
-        <li class="tab col s3"><a href="#pickup">PickUp</a></li>
-        <li class="tab col s3"><a href="#archive">Archive</a></li>
+        <li class="tab col s2"><a class="active" href="#all">All</a></li>
+        <li class="tab col s2"><a href="#pending">Pending</a></li>
+        <li class="tab col s2"><a href="#printing">Printing</a></li>
+        <li class="tab col s2"><a href="#pickup">PickUp</a></li>
+        <li class="tab col s2"><a href="#archive">Archive</a></li>
       </ul>
     </div>
 
@@ -18,9 +19,44 @@
       <%= link_to 'New Print Order', new_print_path %>
     </div>
 
+    <div id="all" class="col s12">
+      <h1>All Print Orders</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Order state</th>
+            <th>Contact email</th>
+            <th>Contact phone</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @prints.each do |print| %>
+            <% if print.order_state < 3 %>
+              <tr>
+                <td><%= print.name %></td>
+                <td><%= print.quantity %></td>
+                <td><%= print.order_state %></td>
+                <td><%= print.contact_email %></td>
+                <td><%= print.contact_phone %></td>
+                <td><%= link_to 'Show', print %></td>
+                <td><%= link_to 'Edit', edit_print_path(print) %></td>
+                <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+    </div>
+
     <!-- Pending Orders -->
     <div id="pending" class="col s12">
-      <h1>Pending</h1>
+      <h1>Pending Approval</h1>
       <table>
         <thead>
           <tr>
@@ -56,7 +92,7 @@
 
     <!-- Printing Orders -->
     <div id="printing" class="col s12">
-      <h1>Printing</h1>
+      <h1>Currently Printing</h1>
       <table>
         <thead>
           <tr>
@@ -93,7 +129,7 @@
 
     <!-- PickUp Orders -->
     <div id="pickup" class="col s12">
-      <h1>PickUp</h1>
+      <h1>Ready for PickUp</h1>
       <%= link_to 'New Print', new_print_path %>
       <table>
         <thead>
@@ -131,7 +167,7 @@
 
     <!-- Archived Orders -->
     <div id="archive" class="col s12">
-      <h1>Archive</h1>
+      <h1>Order Archive</h1>
       <%= link_to 'New Print', new_print_path %>
       <table>
         <thead>
@@ -147,14 +183,16 @@
 
         <tbody>
           <% @prints.each do |print| %>
-            <tr>
-              <td><%= print.name %></td>
-              <td><%= print.quantity %></td>
-              <td><%= print.order_state %></td>
-              <td><%= print.contact_email %></td>
-              <td><%= print.contact_phone %></td>
-              <td><%= link_to 'Show', print %></td>
-            </tr>
+            <% if print.order_state == 3 %>
+              <tr>
+                <td><%= print.name %></td>
+                <td><%= print.quantity %></td>
+                <td><%= print.order_state %></td>
+                <td><%= print.contact_email %></td>
+                <td><%= print.contact_phone %></td>
+                <td><%= link_to 'Show', print %></td>
+              </tr>
+            <% end %>
           <% end %>
         </tbody>
       </table>

@@ -18,7 +18,19 @@
 
 
     <h6>ADMIN LAYOUT</h6>
-    <%= yield %>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs fixed width">
+        <li class="tab col s3"><a class="active" href="/prints">Prints</a></li>
+        <li class="tab col s3"><a href="/pins">Pins</a></li>
+        <li class="tab col s3"><a href="/parties">Parties</a></li>
+      </ul>
+    </div>
+
+    <!-- Dashboard Viewport -->
+    <div class="col s12"><%= yield %></div>        
+
+  </div>
     <footer class="center">2017</footer>
   </body>
 </html>
