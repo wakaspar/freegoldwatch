@@ -35,6 +35,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 # Fix binding events caused by Turbolinks
 gem 'jquery-turbolinks'
+# Talks to PinballMap.com's API
+gem 'httparty'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
