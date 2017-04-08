@@ -17,6 +17,20 @@ class PrintsController < ApplicationController
     @print = Print.new
   end
 
+  def next_stage
+    @print = Print.find(params[:id])
+    @print.order_state += 1
+    @print.save
+    redirect_to prints_path
+  end
+
+  def last_stage
+    @print = Print.find(params[:id])
+    @print.order_state -= 1
+    @print.save
+    redirect_to prints_path
+  end
+
   # GET /prints/1/edit
   def edit
   end

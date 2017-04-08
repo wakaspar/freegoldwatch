@@ -5,6 +5,7 @@
 
     <!-- Materialize CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
     <%= csrf_meta_tags %>
@@ -13,8 +14,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>    
+  <body>
+
+
     <h6>ADMIN LAYOUT</h6>
     <%= yield %>
+    <footer class="center">2017</footer>
   </body>
 </html>
