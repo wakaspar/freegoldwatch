@@ -17,3 +17,38 @@
 .nav-link {
   display: inline;
 }
+
+.wrapper {
+  background-color: white;
+  position: fixed;
+  max-width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.map-box {
+  margin-top: 400px;
+  overflow: scroll;
+}
+
+.outer {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.item-wrapper {
+  display: table-cell;
+  vertical-align: top;
+  width: 100%;
+}
+
+.item-wrapper img {
+  padding: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.social-box h2 {
+  color:white;
+}
