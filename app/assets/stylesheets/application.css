@@ -33,9 +33,9 @@
 }
 
 .wrapper {
+  width: 100%;
   background-color: white;
   position: fixed;
-  max-width: 100%;
   top: 0px;
   left: 0px;
 }

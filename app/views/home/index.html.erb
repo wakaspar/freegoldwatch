@@ -13,7 +13,7 @@
   <div class="section-wrapper">
     <%= image_tag('pin_title', class: "responsive-img") %>
     <div class="pin-box black section">
-      <h5>Lineup Updated Daily!</h5>
+      <h5>Pinball Lineup Updated Daily!</h5>
       <ul>
         <% @pins.each do |pin| %>
           <li> <%= link_to pin['name'], pin['ipdb_link'] %> </li>
