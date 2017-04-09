@@ -1,15 +1,37 @@
-<div class="map-box section">
-  <div class="flow-text">
-    <h2>Shop Info</h2>
-    <h4>415-876-4444</h4>
-    <h4>1767 Waller St. SF, CA 94117</h4>
-    <h4>email us at : info@freegoldwatch.com</h4>
+  <div class="map-box section">
+    <div class="responsive-img right">
+      <%= image_tag('map', class: 'shop-map') %>
+    </div>
+    <div class="flow-text">
+      <h2>Shop Info</h2>
+      <h4>415-876-4444</h4>
+      <h4>1767 Waller St. SF, CA 94117</h4>
+      <h4>info@freegoldwatch.com</h4>
+    </div>
   </div>
-  <div class="container">
-    <%= image_tag('map', class: "responsive-img right") %>
-  </div>
-</div>
 
-<div class="social-box black section">
-  <h2> HERE THAR BE INSTAGRAM!</h2>
-</div>
+  <div class="section-wrapper">
+    <%= image_tag('pin_title', class: "responsive-img") %>
+    <div class="pin-box black section">
+      <h5>Lineup Updated Daily!</h5>
+      <ul>
+        <% @pins.each do |pin| %>
+          <li> <%= link_to pin['name'], pin['ipdb_link'] %> </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="divider"></div>
+
+  <div class="social-box white section">
+    <h2 class="center"> HERE THAR BE INSTAGRAM!</h2>
+  </div>
+
+  <div class="section-wrapper">
+    <%= image_tag('print_title', class: "responsive-img") %>
+    <div class="print-box black section">
+      <h2 class="center">PRINT ORDERS AHOY!</h2>
+    </div>
+  </div>

@@ -14,8 +14,22 @@
  *= require_self
  */
 
+ ul {
+  -moz-column-count: 4;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 20px;
+  column-count: 4;
+  column-gap: 20px;
+ }
+
 .nav-link {
   display: inline;
+}
+
+.shop-map {
+  display: inline-block;
+  max-width: 78%;
 }
 
 .wrapper {
@@ -27,28 +41,34 @@
 }
 
 .map-box {
-  margin-top: 400px;
+  margin-top: 32%;
   overflow: scroll;
 }
 
 .outer {
+  background-color: white;
+  padding: 10px;
   display: table;
   width: 100%;
-  table-layout: fixed;
+  table-layout: relative;
 }
 
 .item-wrapper {
   display: table-cell;
   vertical-align: top;
-  width: 100%;
 }
 
 .item-wrapper img {
-  padding: 10px;
   max-width: 100%;
   height: auto;
 }
 
-.social-box h2 {
+.print-box h2, .pin-box h5, .pin-box a {
+  text-decoration: none;
   color:white;
+}
+
+.pin-box {
+  padding: 10px;
+
 }
