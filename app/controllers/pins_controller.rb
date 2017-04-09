@@ -5,6 +5,11 @@ class PinsController < ApplicationController
     get_pins
   end
 
+  def search
+    query = params[:q]
+    @pins = Pin.page(params[:page]).search query
+  end
+
   private
 
   def get_pins

@@ -37,7 +37,9 @@ gem 'devise'
 gem 'jquery-turbolinks'
 # Talks to PinballMap.com's API
 gem 'httparty'
-
+# Searches the Pinball Index
+gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
