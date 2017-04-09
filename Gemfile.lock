@@ -8,6 +8,19 @@ GIT
       hashie
     elasticsearch-rails (0.1.9)
 
+GIT
+  remote: git://github.com/elasticsearch/elasticsearch-ruby.git
+  revision: 47455d0e630b1872ee45d057e47d06c220f6bc5b
+  specs:
+    elasticsearch (6.0.0.pre)
+      elasticsearch-api (= 6.0.0.pre)
+      elasticsearch-transport (= 6.0.0.pre)
+    elasticsearch-api (6.0.0.pre)
+      multi_json
+    elasticsearch-transport (6.0.0.pre)
+      faraday
+      multi_json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,14 +80,6 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    elasticsearch (5.0.4)
-      elasticsearch-api (= 5.0.4)
-      elasticsearch-transport (= 5.0.4)
-    elasticsearch-api (5.0.4)
-      multi_json
-    elasticsearch-transport (5.0.4)
-      faraday
-      multi_json
     erubis (2.7.0)
     execjs (2.7.0)
     faraday (0.12.0.1)
@@ -198,6 +203,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  elasticsearch-api!
   elasticsearch-model!
   elasticsearch-rails!
   httparty

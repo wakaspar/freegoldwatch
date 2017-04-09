@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   resources :prints
 
+  # Route for PinIndex, interacts with PinballMap.com's API
   get '/pins', controller: :pins, action: :index
+
+  # Route for Elasticsearch
+  get '/search', to: 'pins#search', as: 'search'
 
   # Routes ONLY used for updating Print Order Status
   put '/prints/:id/bump_up', controller: :prints, action: :next_stage, as: 'bump_up'
