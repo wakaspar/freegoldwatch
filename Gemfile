@@ -30,11 +30,22 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
-# Handle user authentication
-gem 'devise'
+
 # Fix binding events caused by Turbolinks
 gem 'jquery-turbolinks'
+
+gem 'bcrypt', '~> 3.1.7'
+# Handle user authentication
+
+gem 'devise'
+
+# Talks to PinballMap.com's API
+gem 'httparty'
+
+# Searches the Pinball Index
+gem 'elasticsearch-api', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
+gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

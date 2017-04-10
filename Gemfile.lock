@@ -1,3 +1,26 @@
+GIT
+  remote: git://github.com/elasticsearch/elasticsearch-rails.git
+  revision: c8712274e43f8c339e222ebc1711f3bf030538bc
+  specs:
+    elasticsearch-model (0.1.9)
+      activesupport (> 3)
+      elasticsearch (> 1)
+      hashie
+    elasticsearch-rails (0.1.9)
+
+GIT
+  remote: git://github.com/elasticsearch/elasticsearch-ruby.git
+  revision: 47455d0e630b1872ee45d057e47d06c220f6bc5b
+  specs:
+    elasticsearch (6.0.0.pre)
+      elasticsearch-api (= 6.0.0.pre)
+      elasticsearch-transport (= 6.0.0.pre)
+    elasticsearch-api (6.0.0.pre)
+      multi_json
+    elasticsearch-transport (6.0.0.pre)
+      faraday
+      multi_json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,9 +82,14 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.12.0.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    hashie (3.5.5)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     i18n (0.8.1)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
@@ -87,6 +115,8 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
@@ -173,6 +203,10 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  elasticsearch-api!
+  elasticsearch-model!
+  elasticsearch-rails!
+  httparty
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks

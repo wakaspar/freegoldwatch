@@ -1,0 +1,13 @@
+<h1>PINS DASHBOARD (pins/index.html.erb)</h1>
+
+<div class="contianer col s8">
+
+  <% @pins.each do |pin| %>
+    <div class="container">
+      <%= pin['name'] %> |
+      <%= pin['manufacturer'] %> |
+      <%= pin['year'] %> |
+      <%= link_to "remove from floor", pins_path %>
+    </div>
+  <% end %>
+</div>

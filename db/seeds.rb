@@ -8,6 +8,7 @@
 
 Admin.destroy_all
 Print.destroy_all
+Pin.destroy_all
 
 admins = [
   {
@@ -87,3 +88,4 @@ Print.create(prints)
 
 puts "Seeded the Crew of The Watch!"
 puts "Seeded sample print info!"
+puts "Deleted Pins - run $ rake pins"
