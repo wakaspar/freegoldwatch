@@ -1,9 +1,33 @@
-<div class="print-form">
-  <%= form_for @print, :url => 'prints#create' do |f| %>
-    <%= f.label :name %>:
-    <%= f.text_field :name %><br />
-    <%= f.label :quantity %>:
-    <%= f.text_field :quantity %><br />
-    <%= f.submit %>
-  <% end %>
+<%= form_for @print do |f| %>
+<div class="row">
+  <div class="col s4">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="col s2">
+    <%= f.label :quantity %>
+    <%= f.text_field :quantity %>
+  </div>
+  <br/>
 </div>
+
+<div class="row">
+  <div class="col s6">
+    <%= f.label :contact_email %>
+    <%= f.text_field :contact_email %>
+  </div>
+  <br/>
+</div>
+
+<div class="row">
+  <div class="col s6">
+    <%= f.label :contact_phone %>
+    <%= f.text_field :contact_phone %>
+    <%= f.hidden_field :order_state, :value => 0 %>
+  </div>
+  <br>
+</div>
+
+<%= f.submit "Submit Print Order", :controller => 'home', :action => 'index' %>
+
+<% end %>

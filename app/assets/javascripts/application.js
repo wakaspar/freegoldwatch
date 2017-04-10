@@ -14,3 +14,24 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require_tree .
+
+
+// Hides & Shows Print Order Form for Homepage
+$(document).ready(function(){
+  $('.new-print-btn')
+  .on('click', function() {
+    $('.print-info')
+      .addClass('hide');
+    $('.print-form')
+      .removeClass('hide');
+  });
+
+  $('.back-btn')
+  .on('click', function() {
+    $('.print-form')
+      .addClass('hide');
+    $('.print-info')
+      .removeClass('hide');
+  });
+
+});

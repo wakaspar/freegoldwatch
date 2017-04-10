@@ -1,13 +1,27 @@
-<h1>PINS DASHBOARD (pins/index.html.erb)</h1>
+<h1>PinDash</h1>
+<div class="contianer">
+  <div class="col s6">
+    <h4>On The Floor</h4>
+    <% @floor_pins.each do |pin| %>
+      <div class="single-pin">
+        <%= pin['name'] %> |
+        <%= pin['manufacturer'] %> |
+        <%= pin['year'] %> |
+        <%= link_to "remove from floor", pins_path %>
+      </div>
+    <% end %>
+  </div>
 
-<div class="contianer col s8">
-
-  <% @pins.each do |pin| %>
-    <div class="container">
-      <%= pin['name'] %> |
-      <%= pin['manufacturer'] %> |
-      <%= pin['year'] %> |
-      <%= link_to "remove from floor", pins_path %>
-    </div>
-  <% end %>
+  <div class="col s6">
+    <h4>Machine Database</h4>
+    <input type="text" name="search" value="" placeholder="...name a pin">      
+    <% @pin_db.each do |pin| %>
+      <div class="single-pin hide">
+        <%= pin['name'] %> |
+        <%= pin['manufacturer'] %> |
+        <%= pin['year'] %> |
+        <%= link_to "add to floor", pins_path %>
+      </div>
+    <% end %>
+  </div>
 </div>

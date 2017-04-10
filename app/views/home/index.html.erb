@@ -10,26 +10,22 @@
 
   <!-- Address -->
   <div class="shop-info">
-    <div class="">
+    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
       <%= fa_icon "home 5x" %>
-      <%= image_tag('address', class: 'responsive-img') %>
-    </div>
+      <%= image_tag('address', class: 'responsive-img info') %>
+    <% end %>
   </div>
   <br>
   <!-- Phone -->
   <div class="shop-info">
-    <div class="">
-      <%= fa_icon "phone 5x" %>
-      <%= image_tag('phone', class: 'responsive-img') %>
-    </div>
+    <%= fa_icon "phone 5x" %>
+    <%= image_tag('phone', class: 'responsive-img') %>
   </div>
   <br>
   <!-- Email -->
   <div class="shop-info">
-    <div class="">
-      <%= fa_icon "envelope 5x" %>
-      <%= image_tag('email', class: 'responsive-img') %>
-    </div>
+    <%= fa_icon "envelope 5x" %>
+    <%= image_tag('email', class: 'responsive-img') %>
   </div>
 
 </div> <!-- closes Shop Info Box -->
@@ -79,12 +75,29 @@
 <div class="section-wrapper">
   <%= image_tag('print_title', class: "responsive-img") %>
   <div class="print-box section">
-    <ul>
-      <li><h5>Low minimums / fast turnaround!</h5></li>
-      <li><h5>Spot color, 4 color process, waterbase inks!</h5></li>
-      <li><h5><%= link_to "Click here to see our available garmet catalog!", 'https://www.alphabroder.com/' %></h5></li>
-    </ul>
-    <%= render partial: 'home/new_print' %>
+
+    <div class="print-info">
+      <button class="btn btn-large new-print-btn">New Print Order</button>
+      <ul>
+        <div class="">
+          <%= fa_icon "check 5x" %>
+          <h5>Low minimums / fast turnaround!</h5>
+        </div>
+        <div class="">
+          <%= fa_icon "check 5x" %>
+          <h5>Spot color, 4 color process, waterbase inks!</h5>
+        </div>
+        <div class="">
+          <%= fa_icon "tags 5x" %>
+          <h5><%= link_to "Click here to see our available garmet catalog!", 'https://www.alphabroder.com/' %></h5>
+        </div>
+      </ul>
+    </div>
+    <div class="print-form hide">
+      <button class="btn btn-large back-btn">Back</button>
+      <br/>
+      <%= render partial: 'home/new_print' %>
+    </div>
   </div>
 </div>
 <br>
