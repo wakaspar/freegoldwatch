@@ -33,6 +33,11 @@
 <div class="section-wrapper">
   <div class="social-box white section">
     <h2 class="center"> HERE THAR BE INSTAGRAM!</h2>
+    <#% @instagram.each do |instagram| %>
+    <div class="container">
+      <#%= image_tag instagram.images.standard_resolution.url, class: "insta-img" %>
+    </div>
+    <#% end %>
   </div>
 </div>
 
