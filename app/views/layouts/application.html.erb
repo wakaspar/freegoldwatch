@@ -5,6 +5,7 @@
 
     <!-- Materialize CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
     <%= csrf_meta_tags %>
@@ -14,7 +15,22 @@
   </head>
 
   <body>
-    <h6>APP LAYOUT</h6>
-    <%= yield %>
+
+
+    <h6>ADMIN LAYOUT</h6>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs fixed width">
+        <li class="tab col s3"><a class="active" href="/prints">Prints</a></li>
+        <li class="tab col s3"><a href="/pins">Pins</a></li>
+        <li class="tab col s3"><a href="/parties">Parties</a></li>
+      </ul>
+    </div>
+
+    <!-- Dashboard Viewport -->
+    <div class="col s12"><%= yield %></div>        
+
+  </div>
+    <footer class="center">2017</footer>
   </body>
 </html>

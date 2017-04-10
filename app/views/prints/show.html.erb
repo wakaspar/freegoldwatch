@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @print.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @print.quantity %>
+</p>
+
+<p>
+  <strong>Order state:</strong>
+  <%= @print.order_state %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @print.contact_email %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @print.contact_phone %>
+</p>
+
+<%= link_to 'Edit', edit_print_path(@print) %> |
+<%= link_to 'Back', prints_path %>
