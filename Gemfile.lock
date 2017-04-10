@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/Instagram/instagram-ruby-gem.git
+  revision: ff498d8c2fc95b3a8ea8de51d955be976e2a8b66
+  specs:
+    instagram (1.1.6)
+      faraday (>= 0.7, < 0.10)
+      faraday_middleware (>= 0.8, < 0.10)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
+
+GIT
   remote: git://github.com/elasticsearch/elasticsearch-rails.git
   revision: c8712274e43f8c339e222ebc1711f3bf030538bc
   specs:
@@ -82,8 +92,10 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
-    faraday (0.12.0.1)
+    faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.2)
+      faraday (>= 0.7.4, < 0.10)
     ffi (1.9.18)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -182,7 +194,7 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.13)
+    uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -207,6 +219,7 @@ DEPENDENCIES
   elasticsearch-model!
   elasticsearch-rails!
   httparty
+  instagram!
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks

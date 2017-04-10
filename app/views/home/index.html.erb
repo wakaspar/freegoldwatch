@@ -1,33 +1,45 @@
-  <div class="map-box section">
-    <div class="responsive-img right">
+<div class="section-wrapper">
+  <div class="map-box section row">
+    <div class="right responsive-img">
       <%= image_tag('map', class: 'shop-map') %>
     </div>
-    <div class="flow-text">
-      <h2>Shop Info</h2>
-      <h4>415-876-4444</h4>
-      <h4>1767 Waller St. SF, CA 94117</h4>
-      <h4>info@freegoldwatch.com</h4>
+    <div class="col s6 m6">
+      <%= image_tag('phone', class: "responsive-img left") %>
+    </div>
+    <div class="col s6 m6">
+      <%= image_tag('address', class: "responsive-img left") %>
+    </div>
+    <div class="col s6 m6">
+      <%= image_tag('email', class: "responsive-img left") %>
+      <br>
+      <p>TODO: need something to go here!</p>
     </div>
   </div>
+</div>
 
   <div class="section-wrapper">
     <%= image_tag('pin_title', class: "responsive-img") %>
     <div class="pin-box black section">
-      <h5>Lineup Updated Daily!</h5>
+      <h5>Pinball Lineup Updated Daily!</h5>
       <ul>
         <% @pins.each do |pin| %>
           <li> <%= link_to pin['name'], pin['ipdb_link'] %> </li>
         <% end %>
       </ul>
+      <%= link_to "Post High Scores!", "http://freegoldscores.bitballoon.com", class: "fgs-link right" %>
     </div>
   </div>
 
-
-  <div class="divider"></div>
-
+<div class="section-wrapper">
   <div class="social-box white section">
     <h2 class="center"> HERE THAR BE INSTAGRAM!</h2>
+    <#% @instagram.each do |instagram| %>
+    <div class="container">
+      <#%= image_tag instagram.images.standard_resolution.url, class: "insta-img" %>
+    </div>
+    <#% end %>
   </div>
+</div>
 
   <div class="section-wrapper">
     <%= image_tag('print_title', class: "responsive-img") %>
