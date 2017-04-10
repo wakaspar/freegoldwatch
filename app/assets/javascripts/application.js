@@ -14,3 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
