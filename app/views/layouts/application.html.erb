@@ -3,9 +3,10 @@
   <head>
     <title>FreeGoldWatch</title>
 
-    <!-- Materialize CDNs -->
+    <!-- Materialize & Font CDNs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
@@ -19,7 +20,7 @@
   <body>
 
     <%= link_to "logout", destroy_admin_session_path, :method => 'delete', class: 'right' %>
-    <h6>APP/ADMIN LAYOUT</h6>
+    <h1 class="admin_head">FGW</h1>
   <div class="row">
     <div class="col s12">
       <ul class="fixed width">
