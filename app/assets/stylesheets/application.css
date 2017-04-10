@@ -12,68 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
-/* controls pin list wrapping */
- ul {
-  -moz-column-count: 4;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 4;
-  -webkit-column-gap: 20px;
-  column-count: 4;
-  column-gap: 20px;
+ .nav-link {
+   display: inline;
  }
-
-.nav-link {
-  display: inline;
-}
-
-.shop-map {
-  display: inline-block;
-  max-width: 70%;
-}
-
-.wrapper {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-}
-
-.map-box {
-  margin-top: 32%;
-  overflow: scroll;
-}
-
-.outer {
-  background-color: white;
-  padding: 10px;
-  display: table;
-  width: 100%;
-  table-layout: relative;
-}
-
-.item-wrapper {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.item-wrapper img {
-  max-width: 85%;
-  height: auto;
-}
-
-.print-box h2, .pin-box h5, .pin-box a {
-  text-decoration: none;
-  color:white;
-}
-
-.pin-box {
-  padding: 20px;
-
-}
-
-.insta-img {
-  max-width: 100px;
-}

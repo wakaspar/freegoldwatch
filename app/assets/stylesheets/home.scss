@@ -1,3 +1,88 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* controls pin list wrapping */
+ .pin-list {
+  -moz-column-count: 4;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 20px;
+  column-count: 4;
+  column-gap: 20px;
+ }
+
+ .pin-list li {
+   padding: 2px;
+ }
+
+.shop-map {
+  display: inline-block;
+  max-width: 70%;
+}
+
+.info-box {
+  margin-top: 25%;
+  overflow: scroll;
+}
+
+.outer {
+  background-color: white;
+  padding: 10px;
+  display: table;
+  width: 100%;
+  table-layout: relative;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.item-wrapper {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.item-wrapper img {
+  max-width: 85%;
+  height: auto;
+}
+
+.pin-box a {
+  color: white;
+  text-decoration: none;
+}
+
+.pin-box, .print-box {
+  background-color: #161616;
+  color: white;
+  padding: 30px;
+  text-decoration: none;
+}
+
+.insta-img-row {
+  float: right;
+  display: inline-block;
+}
+
+.insta-img-row img {
+  padding: 2px;
+  border-radius: 10px;
+}
+
+// .insta-head {
+//   float: right;
+// }
+
+.sfpd_logo {
+  float: left;
+  width: 200px;
+}
+
+.spacer {
+  height: 50px;
+}

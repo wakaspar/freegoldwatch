@@ -50,6 +50,8 @@ gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-ra
 # Aggregates Social Media from Instagram's API
 gem 'instagram', :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 
+gem 'font-awesome-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
