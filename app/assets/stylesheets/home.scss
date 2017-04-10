@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* controls pin list wrapping */
- ul {
+ .pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
   -webkit-column-count: 4;
@@ -12,24 +12,16 @@
   column-gap: 20px;
  }
 
-.nav-link {
-  display: inline;
-}
+ .pin-list li {
+   padding: 2px;
+ }
 
 .shop-map {
   display: inline-block;
   max-width: 70%;
 }
 
-.wrapper {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-}
-
-.map-box {
+.info-box {
   margin-top: 25%;
   overflow: scroll;
 }
@@ -42,6 +34,14 @@
   table-layout: relative;
 }
 
+.wrapper {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
 .item-wrapper {
   display: table-cell;
   vertical-align: top;
@@ -52,28 +52,37 @@
   height: auto;
 }
 
-.print-box h2, .pin-box h5, .pin-box a {
+.pin-box a {
+  color: white;
   text-decoration: none;
-  color:white;
 }
 
-.pin-box {
+.pin-box, .print-box {
+  background-color: #161616;
+  color: white;
   padding: 30px;
-
+  text-decoration: none;
 }
 
 .insta-img-row {
+  float: right;
   display: inline-block;
 }
 
-.insta-img {
-  max-width: 100px;
+.insta-img-row img {
+  padding: 2px;
+  border-radius: 10px;
 }
 
+// .insta-head {
+//   float: right;
+// }
+
 .sfpd_logo {
+  float: left;
   width: 200px;
 }
 
-.content-break {
+.spacer {
   height: 50px;
 }
