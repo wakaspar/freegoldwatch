@@ -2,6 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.shop-info i {
+  color: #161616;
+  margin-top: 15px;
+  margin-left: 80px;
+}
+
+.shop-info i:hover, .print-box i {
+  color: #545454
+}
+
+.new-print-btn {
+  background-color: #fff;
+  margin-right: 75px;
+  margin-top: 175px;
+  float: right;
+  color: #161616;
+}
+
+.new-print-btn:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
 /* controls pin list wrapping */
  .pin-list {
   -moz-column-count: 4;
@@ -22,7 +46,7 @@
 }
 
 .info-box {
-  margin-top: 25%;
+  margin-top: 24%;
   overflow: scroll;
 }
 
@@ -74,10 +98,6 @@
   border-radius: 10px;
 }
 
-// .insta-head {
-//   float: right;
-// }
-
 .sfpd_logo {
   float: left;
   width: 200px;
@@ -85,4 +105,8 @@
 
 .spacer {
   height: 50px;
+}
+
+footer {
+  height: 200px;
 }
