@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
   def index
     get_pins
-    get_social
+    @instagram = Instagram.user_recent_media("2273097174", {:count => 6})
     render layout: "home"
   end
 
@@ -11,8 +11,6 @@ class HomeController < ApplicationController
   private
 
   def get_social
-    # res = Instagram.user_recent_media("2273097174", {:count => 10})
-    # @instagram = res
   end
 
   def get_pins

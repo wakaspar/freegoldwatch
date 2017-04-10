@@ -1,13 +1,14 @@
+<!-- Shop Info Box -->
 <div class="section-wrapper">
   <div class="map-box section row">
     <div class="right responsive-img">
       <%= image_tag('map', class: 'shop-map') %>
     </div>
     <div class="col s6 m6">
-      <%= image_tag('phone', class: "responsive-img left") %>
+      <%= image_tag('address', class: "responsive-img left") %>
     </div>
     <div class="col s6 m6">
-      <%= image_tag('address', class: "responsive-img left") %>
+      <%= image_tag('phone', class: "responsive-img left") %>
     </div>
     <div class="col s6 m6">
       <%= image_tag('email', class: "responsive-img left") %>
@@ -17,7 +18,9 @@
   </div>
 </div>
 
-  <div class="section-wrapper">
+
+<!-- Pinball Box -->
+<div class="section-wrapper">
     <%= image_tag('pin_title', class: "responsive-img") %>
     <div class="pin-box black section">
       <h5>Pinball Lineup Updated Daily!</h5>
@@ -30,20 +33,27 @@
     </div>
   </div>
 
+
+<!-- Social Media Box -->
 <div class="section-wrapper">
   <div class="social-box white section">
-    <h2 class="center"> HERE THAR BE INSTAGRAM!</h2>
-    <#% @instagram.each do |instagram| %>
-    <div class="container">
-      <#%= image_tag instagram.images.standard_resolution.url, class: "insta-img" %>
+    <%= link_to 'http://sfpins.org' do %>
+      <%= image_tag('sfpd_b&w small', class: "responsive-img sfpd_logo") %>
+    <% end %>
+    <div class="container insta-img-row right">
+       <h5> <%= fa_icon "instagram 3x" %> #freegoldwatch</h5>
+    <% @instagram.each do |instagram| %>
+      <%= image_tag instagram.images.standard_resolution.url, class: "insta-img" %>
+    <% end %>
     </div>
-    <#% end %>
   </div>
 </div>
 
-  <div class="section-wrapper">
-    <%= image_tag('print_title', class: "responsive-img") %>
-    <div class="print-box black section">
-      <h2 class="center">PRINT ORDERS AHOY!</h2>
-    </div>
+
+<!-- Print Order Box -->
+<div class="section-wrapper">
+  <%= image_tag('print_title', class: "responsive-img") %>
+  <div class="print-box black section">
+    <h2 class="center">PRINT ORDERS AHOY!</h2>
   </div>
+</div>
