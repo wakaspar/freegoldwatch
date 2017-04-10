@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 
   def get_pins
     res_one = HTTParty.get('http://pinballmap.com/api/v1/locations/2405/machine_details.json', format: :json)
-    @floor_pins = res_one['machines']
+    @pins = res_one['machines']
   end
 
 end

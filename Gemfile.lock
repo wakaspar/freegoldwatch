@@ -8,29 +8,6 @@ GIT
       hashie (>= 0.4.0)
       multi_json (~> 1.0, >= 1.0.3)
 
-GIT
-  remote: git://github.com/elasticsearch/elasticsearch-rails.git
-  revision: c8712274e43f8c339e222ebc1711f3bf030538bc
-  specs:
-    elasticsearch-model (0.1.9)
-      activesupport (> 3)
-      elasticsearch (> 1)
-      hashie
-    elasticsearch-rails (0.1.9)
-
-GIT
-  remote: git://github.com/elasticsearch/elasticsearch-ruby.git
-  revision: 47455d0e630b1872ee45d057e47d06c220f6bc5b
-  specs:
-    elasticsearch (6.0.0.pre)
-      elasticsearch-api (= 6.0.0.pre)
-      elasticsearch-transport (= 6.0.0.pre)
-    elasticsearch-api (6.0.0.pre)
-      multi_json
-    elasticsearch-transport (6.0.0.pre)
-      faraday
-      multi_json
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -217,9 +194,6 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
-  elasticsearch-api!
-  elasticsearch-model!
-  elasticsearch-rails!
   font-awesome-rails
   httparty
   instagram!

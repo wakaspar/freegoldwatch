@@ -42,11 +42,6 @@ gem 'devise'
 # Talks to PinballMap.com's API
 gem 'httparty'
 
-# Searches the Pinball Index
-gem 'elasticsearch-api', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
-gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
-gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
-
 # Aggregates Social Media from Instagram's API
 gem 'instagram', :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 
