@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 # Fix binding events caused by Turbolinks
 gem 'jquery-turbolinks'
 
+gem 'rails-jquery-autocomplete', '~> 1.0', '>= 1.0.3'
+
 gem 'bcrypt', '~> 3.1.7'
 # Handle user authentication
 

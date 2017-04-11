@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require autocomplete-rails
 //= require_tree .
 
 
@@ -35,3 +36,22 @@ $(document).ready(function(){
   });
 
 });
+
+// 
+// var pinDb = function(){
+//   $.ajax({
+//     method: "GET",
+//     url: "http://pinballmap.com/api/v1/machines.json",
+//     data: $('.pin-search').serialize(),
+//     success: onSuccess,
+//     error: onError
+//   })
+// )};
+//
+// var onSuccess = function(res){
+//   console.log('good job, ajax');
+// }
+//
+// var onError = function(res){
+//   console.log('failjax');
+// }

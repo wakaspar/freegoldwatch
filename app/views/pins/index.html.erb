@@ -14,7 +14,7 @@
 
   <div class="col s6">
     <h4>Machine Database</h4>
-    <input type="text" name="search" value="" placeholder="...name a pin">
+    <input type="text" class="pin-search" value="" placeholder="...name a pin">
     <% @pin_db.each do |pin| %>
       <div class="single-pin">
         <%= pin['name'] %> |

@@ -3,20 +3,9 @@ class PinsController < ApplicationController
 
   def index
     get_pins
-  end
-
-  # def search
-  #   if params[:q].nil?
-  #     @pins = []
-  #   else
-  #     @pins = Pin.search params[:q]
-  #   end
-  # end
-
-  def search
-    query = params[:q]
-    # @pins = Pin.find_by name, params[:q].search query
-    @articles = Pin.search(params[:q]).take
+    # if params[:serach]
+    #   @pin_db = res_two['machines'].name_like("%#{params[:serach]}%")
+    # end
   end
 
   private
@@ -28,4 +17,5 @@ class PinsController < ApplicationController
     res_two = HTTParty.get('http://pinballmap.com/api/v1/machines.json', format: :json)
     @pin_db = res_two['machines']
   end
+
 end
