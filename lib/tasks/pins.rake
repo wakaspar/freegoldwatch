@@ -1,5 +1,3 @@
-desc "Makes a call to PinballMap.com's API, to gather an index of all pinball machines, and store it in the database, making it searchable"
-
 task :pins => :environment do
   res = HTTParty.get('http://pinballmap.com/api/v1/machines.json', format: :json)
   res['machines'].each do |new_pin|
