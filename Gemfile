@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 
-# gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: :production
 
 # Fix binding events caused by Turbolinks
 gem 'jquery-turbolinks'
