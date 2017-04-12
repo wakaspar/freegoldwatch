@@ -49,6 +49,8 @@ $(document).ready(function(){
       .removeClass('hide');
   });
 
+
+  // Handles Machine Database Search of Pin Index
   if ($('.pin-search').val() == '') {
     $('.database-machine').addClass('hide');
   }
@@ -62,25 +64,4 @@ $(document).ready(function(){
       }
     });
   });
-
-
-  // $('.pin-search').autocomplete({
-  //   source: function(request, response) {
-  //             debugger;
-  //             $.ajax({
-  //               url: 'http://pinballmap.com/api/v1/machines.json',
-  //               dataType: 'json',
-  //               data: {term: request.term},
-  //               success: function(data) {
-  //                 console.log('successjax')
-  //                 console.log(data)
-  //                  $('.pin-db').append(data)
-  //                },
-  //                error: function(data){
-  //                  console.log('failjax')
-  //                }
-  //             })  //closes AJAX
-  //   } //closes autocomplete callback
-  // }) //closes autocomplete function
-
 }) //closes document.ready
