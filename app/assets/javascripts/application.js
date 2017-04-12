@@ -22,20 +22,31 @@ $(document).ready(function(){
   // Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')
   .on('click', function() {
+    // Show form
     $('.print-info')
       .addClass('hide');
+    $('.new-print-btn')
+      .addClass('hide');
+    // Hide info & 'new' button
     $('.print-form')
+      .removeClass('hide');
+    $('.back-btn')
       .removeClass('hide');
   });
 
+
   $('.back-btn')
   .on('click', function() {
+    // Hide form
     $('.print-form')
       .addClass('hide');
+    $('.back-btn')
+      .addClass('hide');
+    // Show info & 'new' button
     $('.print-info')
       .removeClass('hide');
-    $('.back-btn')
-      .addclass('hide');
+    $('.new-print-btn')
+      .removeClass('hide');
   });
 
   if ($('.pin-search').val() == '') {

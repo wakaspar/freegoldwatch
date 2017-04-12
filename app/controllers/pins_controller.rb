@@ -4,6 +4,7 @@ class PinsController < ApplicationController
 
   def index
     get_pins
+    render layout: "admin"
   end
 
   def create

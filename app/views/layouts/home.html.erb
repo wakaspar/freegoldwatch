@@ -28,6 +28,39 @@
       </div>
 
     <%= yield %>
-    <footer class="center grey lighten-2">wilbur 2017</footer>
+
+    <footer class="grey lighten-1">
+      <div class="row">
+        <div class="footer-fgw-box col s4">
+          <h5>FreeGoldWatch</h5>
+          <p>Custom Printing / Pinball Arcade</p>
+          <p>1767 Waller St. San Francisco, California 94117</p>
+          <p>415-876-4444</p>
+          <p>info@freegoldwatch.com</p>
+        </div>
+        <div class="footer-icon-box col s4">
+          <div class="center">
+            <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/' do %>
+              <%= fa_icon "facebook-square 5x" %>
+            <% end %>
+            <%= link_to 'https://www.instagram.com/freegoldwatch/' do %>
+            <%= fa_icon "instagram 5x" %>
+            <% end %>
+            <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch' do %>
+              <%= fa_icon "github-square 5x" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="footer-dev-box col s4">
+          <h5>Will Kaspar</h5>
+          <p>Full Stack Developer</p>
+          <p>wakaspar@gmail.com</p>
+          <p>http://www.github.com/wakaspar</p>
+        </div>
+      </div>
+      <div class="footer-skirt grey darken-2">
+        <p>© 2017</p>
+      </div>
+    </footer>
   </body>
 </html>

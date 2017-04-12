@@ -8,7 +8,6 @@
     <%= f.label :quantity %>
     <%= f.text_field :quantity %>
   </div>
-  <br/>
 </div>
 
 <div class="row">
@@ -16,7 +15,6 @@
     <%= f.label :contact_email %>
     <%= f.text_field :contact_email %>
   </div>
-  <br/>
 </div>
 
 <div class="row">
@@ -25,7 +23,6 @@
     <%= f.text_field :contact_phone %>
     <%= f.hidden_field :order_state, :value => 0 %>
   </div>
-  <br>
 </div>
 
 <%= f.submit "Submit Print Order", :controller => 'home', :action => 'index' %>

@@ -7,6 +7,10 @@
 // Home Layout Styling //
 //*********************//
 
+body {
+  margin: 10px;
+}
+
 .fgw-header-box {
   width: 100%;
   background-color: white;
@@ -37,7 +41,7 @@
 // index.html //
 //************//
 
-// Shop Info Box
+// Shop-Info Box
 .shop-info-box {
   margin-top: 22%;
   overflow: scroll;
@@ -53,12 +57,17 @@
   color: #545454
 }
 
-.shop-map {
+.shop-map-up, .shop-map-down {
   display: inline-block;
   max-width: 70%;
 }
 
-// Home Arcade Box
+.shop-map-down {
+  display: inline-block;
+  margin: auto;
+}
+
+// Arcade Box
 .pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
@@ -77,6 +86,7 @@
   text-decoration: none;
 }
 
+
 .pin-box, .print-box {
   background-color: #161616;
   color: white;
@@ -84,32 +94,41 @@
   text-decoration: none;
 }
 
-// Home Social Box
-.insta-img-row {
+// Social Box
+.insta-box {
   float: right;
   display: inline-block;
 }
 
-.insta-img-row img {
+.insta-box img {
   padding: 2px;
   border-radius: 10px;
+  clear: both;
 }
 
 .sfpd_logo {
   float: left;
+  clear: both;
   width: 200px;
 }
 
-// Home Print Box
+// Print Box
 .new-print-btn {
   background-color: #fff;
+  color: #161616;
+  float: right;
   margin-right: 75px;
   margin-top: 175px;
-  float: right;
-  color: #161616;
 }
 
-.new-print-btn:hover {
+.back-btn {
+  background-color: #fff;
+  color: #161616;
+  float: right;
+  margin-top: 175px;
+}
+
+.new-print-btn:hover, .back-btn:hover {
   background-color: #000;
   color: #ffffff;
 }
@@ -117,4 +136,29 @@
 // Footer
 footer {
   height: 200px;
+}
+
+footer p, {
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+footer p, footer h5 {
+  text-align: center ;
+}
+
+.footer-icon-box {
+  margin-top: 50px;
+}
+
+.footer-skirt {
+  height: 30px;
+}
+
+.footer-icon-box i {
+  color: #ffffff;
+}
+
+.footer-icon-box i:hover {
+  color: black;
 }
