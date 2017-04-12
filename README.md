@@ -27,11 +27,11 @@ Open your browser to localhost:3000
 
 #### Sample Admin Login:
 
-username
+email
 ```
 will@fgw.com
 ```
-password
+pw
 ```
 fgwfgw
 ```
