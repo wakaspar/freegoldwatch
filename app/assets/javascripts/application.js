@@ -11,14 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require autocomplete-rails
 //= require_tree .
 
-
-// Hides & Shows Print Order Form for Homepage
 $(document).ready(function(){
+
+  // Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')
   .on('click', function() {
     $('.print-info')
@@ -33,25 +34,42 @@ $(document).ready(function(){
       .addClass('hide');
     $('.print-info')
       .removeClass('hide');
+    $('.back-btn')
+      .addclass('hide');
   });
 
-});
+  if ($('.pin-search').val() == '') {
+    $('.database-machine').addClass('hide');
+  }
+  $('.pin-search').on('input', function() {
+    var txt = $('.pin-search').val();
+    $('.database-machine').each(function(){
+      if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+          $(this).removeClass('hide');
+      } else {
+        $(this).addClass('hide');
+      }
+    });
+  });
 
-// 
-// var pinDb = function(){
-//   $.ajax({
-//     method: "GET",
-//     url: "http://pinballmap.com/api/v1/machines.json",
-//     data: $('.pin-search').serialize(),
-//     success: onSuccess,
-//     error: onError
-//   })
-// )};
-//
-// var onSuccess = function(res){
-//   console.log('good job, ajax');
-// }
-//
-// var onError = function(res){
-//   console.log('failjax');
-// }
+
+  // $('.pin-search').autocomplete({
+  //   source: function(request, response) {
+  //             debugger;
+  //             $.ajax({
+  //               url: 'http://pinballmap.com/api/v1/machines.json',
+  //               dataType: 'json',
+  //               data: {term: request.term},
+  //               success: function(data) {
+  //                 console.log('successjax')
+  //                 console.log(data)
+  //                  $('.pin-db').append(data)
+  //                },
+  //                error: function(data){
+  //                  console.log('failjax')
+  //                }
+  //             })  //closes AJAX
+  //   } //closes autocomplete callback
+  // }) //closes autocomplete function
+
+}) //closes document.ready

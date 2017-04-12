@@ -3,9 +3,26 @@ class PinsController < ApplicationController
 
   def index
     get_pins
-    # if params[:serach]
-    #   @pin_db = res_two['machines'].name_like("%#{params[:serach]}%")
-    # end
+  end
+
+  def create
+    @pin = HTTParty.post('http://pinballmap.com/api/v1/location_machine_xrefs.json',
+      :body => {:location_id => 2405,
+                :machine_id => params[:machine_id] })
+
+  end
+
+  def destroy
+    res = HTTParty.post('http://pinballmap.com/api/v1/location_machine_xrefs.json',
+      :body => {:location_id => 2405,
+                :machine_id => params[:machine_id] })
+    @location_machine_xref_id = res['location_machine']['id']
+
+    @pin = HTTParty.delete("http://pinballmap.com/api/v1/location_machine_xrefs/#{@location_machine_xref_id}.json")
+
+
+
+
   end
 
   private
