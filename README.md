@@ -47,6 +47,8 @@ fgwfgw
 - Devise - auth
 
 
+## Entity Relationship Diagrams
+
 ## Wireframes
 
 ## User Stories
