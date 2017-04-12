@@ -1,5 +1,3 @@
-<snippet>
-  <content><![CDATA[
 # ${1:FREEGOLDWATCH}
 This application functions as a new website for my local print shop / pinball arcade, FreeGoldWatch, located in the Haight-Ashbury neighborhood of San Francisco, California.  The site features a new public-facing homepage with a submittable print form and a series of admininstration dashboards for better managing the day-to-day operations of the shop.  
 
@@ -83,7 +81,3 @@ http://freegoldwatch.herokapp.com
 
 ## License
 It's always MIT, right?  We'll just say it's MIT
-
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
