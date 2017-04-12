@@ -53,6 +53,7 @@ All of the above information can be found in the FGW Planning GoogleDoc, [here](
 
 ## Future TODOs
 
+- Form Validation (PRIORITY!)
 - CarrierWave implementation
 - Show timestamps for different stages of print orders
 - Mailers for print orders
