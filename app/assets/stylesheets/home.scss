@@ -3,6 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+//*********************//
+// Home Layout Styling //
+//*********************//
+
+.fgw-header-box {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.fgw-header {
+  background-color: white;
+  padding: 10px;
+  display: table;
+  width: 100%;
+  table-layout: relative;
+}
+
+.fgw-logo {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.fgw-logo img {
+  max-width: 75%;
+  height: auto;
+}
+
+//************//
+// index.html //
+//************//
+
+// Shop Info Box
+.shop-info-box {
+  margin-top: 22%;
+  overflow: scroll;
+}
+
 .shop-info i {
   color: #161616;
   margin-top: 15px;
@@ -13,67 +53,23 @@
   color: #545454
 }
 
-.new-print-btn {
-  background-color: #fff;
-  margin-right: 75px;
-  margin-top: 175px;
-  float: right;
-  color: #161616;
+.shop-map {
+  display: inline-block;
+  max-width: 70%;
 }
 
-.new-print-btn:hover {
-  background-color: #000;
-  color: #ffffff;
-}
-
-/* controls pin list wrapping */
- .pin-list {
+// Home Arcade Box
+.pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
   -webkit-column-count: 4;
   -webkit-column-gap: 20px;
   column-count: 4;
   column-gap: 20px;
- }
+} // controls pin list wrapping
 
- .pin-list li {
-   padding: 2px;
- }
-
-.shop-map {
-  display: inline-block;
-  max-width: 70%;
-}
-
-.info-box {
-  margin-top: 24%;
-  overflow: scroll;
-}
-
-.outer {
-  background-color: white;
-  padding: 10px;
-  display: table;
-  width: 100%;
-  table-layout: relative;
-}
-
-.wrapper {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-}
-
-.item-wrapper {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.item-wrapper img {
-  max-width: 85%;
-  height: auto;
+.pin-list li {
+  padding: 2px;
 }
 
 .pin-box a {
@@ -88,6 +84,7 @@
   text-decoration: none;
 }
 
+// Home Social Box
 .insta-img-row {
   float: right;
   display: inline-block;
@@ -103,7 +100,21 @@
   width: 200px;
 }
 
+// Home Print Box
+.new-print-btn {
+  background-color: #fff;
+  margin-right: 75px;
+  margin-top: 175px;
+  float: right;
+  color: #161616;
+}
 
+.new-print-btn:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+// Footer
 footer {
   height: 200px;
 }
