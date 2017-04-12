@@ -1,27 +1,47 @@
 <h1>PinDash</h1>
-<div class="contianer">
-  <div class="col s6">
+
+<div class="contianer floor-box right-align">
+  <div class="col s5">
     <h4>On The Floor</h4>
     <% @floor_pins.each do |pin| %>
-      <div class="single-pin">
+      <div class="floor-machine">
         <%= pin['name'] %> |
         <%= pin['manufacturer'] %> |
         <%= pin['year'] %> |
-        <%= link_to "remove from floor", pins_path %>
-      </div>
-    <% end %>
-  </div>
 
-  <div class="col s6">
-    <h4>Machine Database</h4>
-    <input type="text" name="search" value="" placeholder="...name a pin">
-    <% @pin_db.each do |pin| %>
-      <div class="single-pin">
-        <%= pin['name'] %> |
-        <%= pin['manufacturer'] %> |
-        <%= pin['year'] %> |
-        <%= link_to "add to floor", pins_path %>
+        <%= form_tag('/pins', method: :delete) do %>
+          <%= hidden_field_tag "machine_id", pin['id'] %>
+          <div><%= submit_tag "Remove" %></div>
+        <% end %>
+
       </div>
     <% end %>
   </div>
 </div>
+
+<div class="col s1"></div>
+
+<div class="container database-box left-align">
+  <div class="col s5">
+    <h4>Machine Database</h4>
+    <div class="row">
+      <input type="text" class="pin-search col s8" placeholder="...name a pin, ANY pin...ever.">
+    </div>
+    <% @pin_db.each do |pin| %>
+      <div class="database-machine">
+
+        <%= form_tag('/pins', method: :post) do %>
+          <%= hidden_field_tag "machine_id", pin['id'] %>
+          <div><%= submit_tag "Add"  %></div>
+        <% end %>
+
+        <%= pin['name'] %> |
+        <%= pin['manufacturer'] %> |
+        <%= pin['year'] %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<#%= link_to fa_icon("check"), :controller => "pins", :action => "create" %>

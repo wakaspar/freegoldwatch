@@ -92,6 +92,8 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -134,11 +136,16 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+<<<<<<< HEAD
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
+=======
+    rails-jquery-autocomplete (1.0.3)
+      rails (>= 3.2)
+>>>>>>> 61ea3f0b6147dd838550ac5ec847df7e9e8e7f1c
     railties (5.0.2)
       actionpack (= 5.0.2)
       activesupport (= 5.0.2)
@@ -205,12 +212,17 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
+  jquery-ui-rails
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
   rails (~> 5.0.2)
+<<<<<<< HEAD
   rails_12factor
   rake
+=======
+  rails-jquery-autocomplete (~> 1.0, >= 1.0.3)
+>>>>>>> 61ea3f0b6147dd838550ac5ec847df7e9e8e7f1c
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

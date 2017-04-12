@@ -1,13 +1,11 @@
 <!-- Shop Info Box -->
-<div class="info-box section-wrapper section">
-
+<div class="info-box section">
   <!-- Map -->
   <div class="right responsive-img">
     <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
       <%= image_tag('map', class: 'shop-map') %>
     <% end %>
   </div>
-
   <!-- Address -->
   <div class="shop-info">
     <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
@@ -27,57 +25,56 @@
     <%= fa_icon "envelope 5x" %>
     <%= image_tag('email', class: 'responsive-img') %>
   </div>
-
 </div> <!-- closes Shop Info Box -->
 
 <br>
 
 <!-- Pinball Box -->
-<div class="section-wrapper">
-    <%= image_tag('pin_title', class: "responsive-img") %> updated daily
-    <div class="pin-box section">
-      <ul class="pin-list">
-        <% @pins.each do |pin| %>
-          <li> <%= link_to pin['name'], pin['ipdb_link'] %> </li>
-        <% end %>
-      </ul>
-      <%= link_to "post high scores", "http://freegoldscores.bitballoon.com", class: "fgs-link right" %>
-    </div>
+<div>
+  <%= image_tag('pin_title', class: "responsive-img") %> updated daily
+  <div class="pin-box section">
+    <ul class="pin-list">
+    <% @pins.each do |pin| %>
+      <li> <%= link_to pin['name'], pin['ipdb_link'] %> </li>
+    <% end %>
+    </ul>
+    <%= link_to "post high scores", "http://freegoldscores.bitballoon.com", class: "fgs-link right" %>
   </div>
+</div> <!-- closes Pinball Box -->
 
+<br>
 
 <!-- Social Media Box -->
-<div class="section-wrapper">
-  <div class="social-box white section">
-
-    <!-- SFPD Badge -->
-    <%= link_to 'http://sfpins.org' do %>
-      <%= image_tag('sfpd_b&w small', class: "responsive-img sfpd_logo") %>
-    <% end %>
-
-    <!-- Instagram Feed -->
-    <div class="container">
-      <h5 class="insta-head center"> <%= fa_icon "instagram 3x" %> #freegoldwatch</h5>
-      <div class="insta-img-row">
-        <% @instagram.each do |instagram| %>
-          <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-            <%= image_tag instagram.images.thumbnail.url, class: "right" %>
-          <% end %>
+<div class="social-box white section">
+  <!-- SFPD Badge -->
+  <%= link_to 'http://sfpins.org' do %>
+    <%= image_tag('sfpd_b&w small', class: "responsive-img sfpd_logo") %>
+  <% end %>
+  <!-- Instagram Feed -->
+  <div class="container">
+    <h5 class="insta-head center"> <%= fa_icon "instagram 3x" %> #freegoldwatch</h5>
+    <div class="insta-img-row">
+      <% @instagram.each do |instagram| %>
+        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
+          <%= image_tag instagram.images.thumbnail.url, class: "right" %>
         <% end %>
-      </div>
+      <% end %>
     </div>
-
   </div>
-</div>
+</div> <!-- closes Social Media Box -->
 
+<br>
 
 <!-- Print Order Box -->
-<div class="section-wrapper">
+<div>
   <%= image_tag('print_title', class: "responsive-img") %>
   <div class="print-box section">
 
+
+    <button class="btn btn-large new-print-btn">New Print Order</button>
+    <button class="btn btn-large back-btn">Back</button>
+
     <div class="print-info">
-      <button class="btn btn-large new-print-btn">New Print Order</button>
       <ul>
         <div class="">
           <%= fa_icon "check 5x" %>
@@ -94,10 +91,10 @@
       </ul>
     </div>
     <div class="print-form hide">
-      <button class="btn btn-large back-btn">Back</button>
       <br/>
       <%= render partial: 'home/new_print' %>
     </div>
   </div>
 </div>
+
 <br>
