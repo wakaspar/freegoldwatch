@@ -51,9 +51,9 @@ prints = [
     order_state: 0,
     contact_email: "a@r.com",
     contact_phone: "415-555-5555",
-},
-{
-  name: "Gratten Elementary",
+  },
+  {
+    name: "Gratten Elementary",
     quantity: 300,
     order_state: 0,
     contact_email: "g@e.edu",
@@ -80,6 +80,49 @@ prints = [
     contact_email: "dr@ke.com",
     contact_phone: "000 000 0000",
   },
+  {
+    name: "Anamanaguchi",
+    quantity: 3000,
+    order_state: 0,
+    contact_email: "hikaru@miku.com",
+    contact_phone: "222-222-2222",
+  },
+  {
+    name: "Bowl'd Acai",
+    quantity: 25,
+    order_state: 0,
+    contact_email: "b@a.com",
+    contact_phone: "444-4444-4444",
+  },
+  {
+    name: "Bowl'd Acai",
+    quantity: 25,
+    order_state: 0,
+    contact_email: "b@a.com",
+    contact_phone: "888-888-8888",
+  },
+  {
+    name: "Alameda Pinball Museum",
+    quantity: 500,
+    order_state: 0,
+    contact_email: "alameda@pins.com",
+    contact_phone: "777 777 7777",
+  },
+  {
+    name: "Stripe",
+    quantity: 250,
+    order_state: 0,
+    contact_email: "stripe@tech.com",
+    contact_phone: "555-555-5555",
+  },
+  {
+    name: "Jon Slater",
+    quantity: 5,
+    order_state: 0,
+    contact_email: "j@s.com",
+    contact_phone: "999-999-9999",
+  }
+
 ]
 
 
