@@ -21,7 +21,7 @@ $ cd FreeGoldWatch
 $ rails s
 ```
 
-open your browser to localhost:3000
+Open your browser to localhost:3000
 
 ## Usage
 
