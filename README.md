@@ -47,13 +47,9 @@ fgwfgw
 - Devise - auth
 
 
-## Entity Relationship Diagrams
+## User Stories / Wireframes / Entity Relationship Diagrams
 
-## Wireframes
-
-## User Stories
-
-User stories can be found in my planning GoogleDoc, [here](https://docs.google.com/document/d/1lbzvIm8x1vbpjOFJxT-MkkNsgewM2VLCCdJUuPousj0/edit?usp=sharing)
+All of the above information can be found in the FGW Planning GoogleDoc, [here](https://docs.google.com/document/d/1lbzvIm8x1vbpjOFJxT-MkkNsgewM2VLCCdJUuPousj0/edit?usp=sharing)
 
 ## Future TODOs
 
