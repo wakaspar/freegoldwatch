@@ -1,4 +1,5 @@
 class PinsController < ApplicationController
+  before_action :authenticate_user!
   include HTTParty
 
   def index
@@ -10,7 +11,7 @@ class PinsController < ApplicationController
       :body => {:location_id => 2405,
                 :machine_id => params[:machine_id] })
 
-    redirect_to pins_path            
+    redirect_to pins_path
   end
 
   def destroy

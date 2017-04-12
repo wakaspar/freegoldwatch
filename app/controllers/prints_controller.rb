@@ -1,4 +1,5 @@
 class PrintsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_print, only: [:show, :edit, :update, :destroy]
 
   # GET /prints
