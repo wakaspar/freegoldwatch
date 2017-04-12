@@ -10,6 +10,7 @@ class PinsController < ApplicationController
       :body => {:location_id => 2405,
                 :machine_id => params[:machine_id] })
 
+    redirect_to pins_path            
   end
 
   def destroy
@@ -20,9 +21,7 @@ class PinsController < ApplicationController
 
     @pin = HTTParty.delete("http://pinballmap.com/api/v1/location_machine_xrefs/#{@location_machine_xref_id}.json")
 
-
-
-
+    redirect_to pins_path
   end
 
   private
