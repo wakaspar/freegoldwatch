@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # Route for PinIndex, interacts with PinballMap.com's API
   get '/pins', controller: :pins, action: :index
+  post '/pins', controller: :pins, action: :create
+  delete '/pins', controller: :pins, action: :destroy
 
   # Route for Elasticsearch
   get '/search', to: 'pins#search', as: 'search'
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: { sessions: 'admins/sessions' }, path: 'admin',
   path_names: { sign_in: '', sign_out: 'logout'}
 
-  
+
 
   root 'home#index'
 

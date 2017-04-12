@@ -5,18 +5,24 @@ class PinsController < ApplicationController
     get_pins
   end
 
-  # def search
-  #   if params[:q].nil?
-  #     @pins = []
-  #   else
-  #     @pins = Pin.search params[:q]
-  #   end
-  # end
+  def create
+    @pin = HTTParty.post('http://pinballmap.com/api/v1/location_machine_xrefs.json',
+      :body => {:location_id => 2405,
+                :machine_id => params[:machine_id] })
 
-  def search
-    query = params[:q]
-    # @pins = Pin.find_by name, params[:q].search query
-    @articles = Pin.search(params[:q]).take
+  end
+
+  def destroy
+    res = HTTParty.post('http://pinballmap.com/api/v1/location_machine_xrefs.json',
+      :body => {:location_id => 2405,
+                :machine_id => params[:machine_id] })
+    @location_machine_xref_id = res['location_machine']['id']
+
+    @pin = HTTParty.delete("http://pinballmap.com/api/v1/location_machine_xrefs/#{@location_machine_xref_id}.json")
+
+
+
+
   end
 
   private
@@ -28,4 +34,5 @@ class PinsController < ApplicationController
     res_two = HTTParty.get('http://pinballmap.com/api/v1/machines.json', format: :json)
     @pin_db = res_two['machines']
   end
+
 end
