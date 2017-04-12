@@ -52,21 +52,19 @@
 <br>
 
 <!-- Social Media Box -->
-<div class="social-box">
+<div class="social-box container">
   <!-- SFPD Badge -->
   <%= link_to 'http://sfpins.org' do %>
     <%= image_tag('sfpd_b&w small', class: "responsive-img sfpd_logo") %>
   <% end %>
   <!-- Instagram Feed -->
-  <div class="container">
     <h4 class="center"> <%= fa_icon "camera-retro 3x" %> #freegoldwatch</h4>
-    <div class="insta-box row">
-      <% @instagram.each do |instagram| %>
-        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-          <%= image_tag instagram.images.thumbnail.url, class: "hoverable" %>
-        <% end %>
+    <div class="insta-box row container">
+    <% @instagram.each do |instagram| %>
+      <%= link_to "#{instagram.images.standard_resolution.url}" do %>
+        <%= image_tag instagram.images.thumbnail.url, class: "hoverable" %>
       <% end %>
-    </div>
+    <% end %>
   </div>
 </div> <!-- closes Social Box -->
 

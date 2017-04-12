@@ -21,7 +21,7 @@
 
     <!-- All Current Print Orders -->
     <div id="all" class="col s12">
-      <h1>Active Print Orders</h1>
+      <h3>Active Print Orders</h3>
       <table>
         <thead>
           <tr>
@@ -56,7 +56,7 @@
 
     <!-- Pending Orders -->
     <div id="pending" class="col s12">
-      <h1>Pending Approval</h1>
+      <h3>Pending Approval</h3>
       <table>
         <thead>
           <tr>
@@ -92,7 +92,7 @@
 
     <!-- Printing Orders -->
     <div id="printing" class="col s12">
-      <h1>Currently Printing</h1>
+      <h3>Currently Printing</h3>
       <table>
         <thead>
           <tr>
@@ -118,7 +118,7 @@
                 <td><%= link_to 'Edit', edit_print_path(print) %></td>
                 <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
-                <td><%= link_to 'Last Stage', bump_down_path(print), method: :put %></td>
+                <td><%= link_to 'Go Back', bump_down_path(print), method: :put %></td>
               </tr>
             <% end %>
           <% end %>
@@ -129,7 +129,7 @@
 
     <!-- PickUp Orders -->
     <div id="pickup" class="col s12">
-      <h1>Ready for PickUp</h1>
+      <h3>Ready for PickUp</h3>
       <%= link_to 'New Print', new_print_path %>
       <table>
         <thead>
@@ -156,7 +156,7 @@
                 <td><%= link_to 'Edit', edit_print_path(print) %></td>
                 <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
-                <td><%= link_to 'Last Stage', bump_down_path(print), method: :put %></td>
+                <td><%= link_to 'Go Back', bump_down_path(print), method: :put %></td>
               </tr>
             <% end %>
           <% end %>
@@ -167,7 +167,7 @@
 
     <!-- Archived Orders -->
     <div id="archive" class="col s12">
-      <h1>Order Archive</h1>
+      <h3>Order Archive</h3>
       <%= link_to 'New Print', new_print_path %>
       <table>
         <thead>

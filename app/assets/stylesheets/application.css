@@ -20,6 +20,7 @@
 /* Application Layout */
 /**********************/
 
- .nav-link {
-   display: inline;
- }
+.erb-btn {
+  background-color: black;
+  color: white;
+}
