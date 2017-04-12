@@ -18,22 +18,21 @@
   </head>
 
   <body>
-
     <%= link_to "logout", destroy_admin_session_path, :method => 'delete', class: 'right' %>
     <h1 class="admin_head">FGW</h1>
-  <div class="row">
-    <div class="col s12">
-      <ul class="fixed width">
-        <li class="col s4"> <%= link_to "Prints", prints_path %> </li>
-        <li class="col s4"> <%= link_to "Pins", pins_path %> </li>
-        <li class="col s4"> <%= link_to "Front Page", root_path %> </li>
-      </ul>
+    <div class="row">
+      <div class="col s12">
+        <ul class="fixed width">
+          <li class="col s4"> <%= link_to "Prints", prints_path %> </li>
+          <li class="col s4"> <%= link_to "Pins", pins_path %> </li>
+          <li class="col s4"> <%= link_to "Front Page", root_path %> </li>
+        </ul>
+      </div>
+
+      <!-- Dashboard Viewport -->
+      <%= yield %>
+
     </div>
-
-    <!-- Dashboard Viewport -->
-    <%= yield %>
-
-  </div>
     <footer class="center">2017</footer>
   </body>
 </html>
