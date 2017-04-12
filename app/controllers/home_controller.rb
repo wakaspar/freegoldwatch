@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 
 
   def get_social
-    @instagram = Instagram.user_recent_media("2273097174", {:count => 5})
+    @instagram = Instagram.user_recent_media("5254795235", {:count => 6})
   end
 
   def get_pins

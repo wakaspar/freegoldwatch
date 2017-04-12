@@ -3,6 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+//*********************//
+// Home Layout Styling //
+//*********************//
+
+body {
+  margin: 10px;
+}
+
+.fgw-header-box {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.fgw-header {
+  background-color: white;
+  padding: 10px;
+  display: table;
+  width: 100%;
+  table-layout: relative;
+}
+
+.fgw-logo {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.fgw-logo img {
+  max-width: 75%;
+  height: auto;
+}
+
+//************//
+// index.html //
+//************//
+
+// Shop-Info Box
+.shop-info-box {
+  margin-top: 22%;
+  overflow: scroll;
+}
+
 .shop-info i {
   color: #161616;
   margin-top: 15px;
@@ -13,73 +57,35 @@
   color: #545454
 }
 
-.new-print-btn {
-  background-color: #fff;
-  margin-right: 75px;
-  margin-top: 175px;
-  float: right;
-  color: #161616;
+.shop-map-up, .shop-map-down {
+  display: inline-block;
+  max-width: 70%;
 }
 
-.new-print-btn:hover {
-  background-color: #000;
-  color: #ffffff;
+.shop-map-down {
+  display: inline-block;
+  margin: auto;
 }
 
-/* controls pin list wrapping */
- .pin-list {
+// Arcade Box
+.pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
   -webkit-column-count: 4;
   -webkit-column-gap: 20px;
   column-count: 4;
   column-gap: 20px;
- }
+} // controls pin list wrapping
 
- .pin-list li {
-   padding: 2px;
- }
-
-.shop-map {
-  display: inline-block;
-  max-width: 70%;
-}
-
-.info-box {
-  margin-top: 24%;
-  overflow: scroll;
-}
-
-.outer {
-  background-color: white;
-  padding: 10px;
-  display: table;
-  width: 100%;
-  table-layout: relative;
-}
-
-.wrapper {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-}
-
-.item-wrapper {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.item-wrapper img {
-  max-width: 85%;
-  height: auto;
+.pin-list li {
+  padding: 2px;
 }
 
 .pin-box a {
   color: white;
   text-decoration: none;
 }
+
 
 .pin-box, .print-box {
   background-color: #161616;
@@ -88,22 +94,71 @@
   text-decoration: none;
 }
 
-.insta-img-row {
+// Social Box
+.insta-box {
   float: right;
   display: inline-block;
 }
 
-.insta-img-row img {
+.insta-box img {
   padding: 2px;
   border-radius: 10px;
+  clear: both;
 }
 
 .sfpd_logo {
   float: left;
+  clear: both;
   width: 200px;
 }
 
+// Print Box
+.new-print-btn {
+  background-color: #fff;
+  color: #161616;
+  float: right;
+  margin-right: 75px;
+  margin-top: 175px;
+}
 
+.back-btn {
+  background-color: #fff;
+  color: #161616;
+  float: right;
+  margin-top: 175px;
+}
+
+.new-print-btn:hover, .back-btn:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+// Footer
 footer {
   height: 200px;
+}
+
+footer p, {
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+footer p, footer h5 {
+  text-align: center ;
+}
+
+.footer-icon-box {
+  margin-top: 50px;
+}
+
+.footer-skirt {
+  height: 30px;
+}
+
+.footer-icon-box i {
+  color: #ffffff;
+}
+
+.footer-icon-box i:hover {
+  color: black;
 }

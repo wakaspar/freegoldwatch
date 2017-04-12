@@ -46,7 +46,6 @@
                 <td><%= link_to 'Show', print %></td>
                 <td><%= link_to 'Edit', edit_print_path(print) %></td>
                 <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
               </tr>
             <% end %>
           <% end %>

@@ -1,29 +1,38 @@
 <!-- Shop Info Box -->
-<div class="info-box section">
-  <!-- Map -->
+<div class="shop-info-box section">
+  <!-- Map that appears on large -->
   <div class="right responsive-img">
     <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
-      <%= image_tag('map', class: 'shop-map') %>
+      <%= image_tag('map', class: 'shop-map-up hide-on-med-and-down') %>
     <% end %>
   </div>
-  <!-- Address -->
   <div class="shop-info">
+    <!-- Address -->
+    <div class="row">
+      <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
+        <%= fa_icon "home 5x" %>
+        <%= image_tag('address', class: 'responsive-img info') %>
+      <% end %>
+    </div>
+    <br>
+    <!-- Phone -->
+    <div class="row">
+      <%= fa_icon "phone 5x" %>
+      <%= image_tag('phone', class: 'responsive-img') %>
+    </div>
+    <br>
+    <!-- Email -->
+    <div class="row">
+      <%= fa_icon "envelope 5x" %>
+      <%= image_tag('email', class: 'responsive-img') %>
+    </div>
+  </div>
+
+<!--  Map that appears on med & down -->
+  <div class="right responsive-img">
     <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
-      <%= fa_icon "home 5x" %>
-      <%= image_tag('address', class: 'responsive-img info') %>
+      <%= image_tag('map', class: 'shop-map-down hide-on-large-only') %>
     <% end %>
-  </div>
-  <br>
-  <!-- Phone -->
-  <div class="shop-info">
-    <%= fa_icon "phone 5x" %>
-    <%= image_tag('phone', class: 'responsive-img') %>
-  </div>
-  <br>
-  <!-- Email -->
-  <div class="shop-info">
-    <%= fa_icon "envelope 5x" %>
-    <%= image_tag('email', class: 'responsive-img') %>
   </div>
 </div> <!-- closes Shop Info Box -->
 
@@ -45,34 +54,34 @@
 <br>
 
 <!-- Social Media Box -->
-<div class="social-box white section">
+<div class="social-box">
   <!-- SFPD Badge -->
   <%= link_to 'http://sfpins.org' do %>
     <%= image_tag('sfpd_b&w small', class: "responsive-img sfpd_logo") %>
   <% end %>
   <!-- Instagram Feed -->
   <div class="container">
-    <h5 class="insta-head center"> <%= fa_icon "instagram 3x" %> #freegoldwatch</h5>
-    <div class="insta-img-row">
+    <h4 class="center"> <%= fa_icon "camera-retro 3x" %> #freegoldwatch</h4>
+    <div class="insta-box row">
       <% @instagram.each do |instagram| %>
         <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-          <%= image_tag instagram.images.thumbnail.url, class: "right" %>
+          <%= image_tag instagram.images.thumbnail.url, class: "hoverable" %>
         <% end %>
       <% end %>
     </div>
   </div>
-</div> <!-- closes Social Media Box -->
+</div> <!-- closes Social Box -->
 
-<br>
+
 
 <!-- Print Order Box -->
-<div>
+<div class= "section">
   <%= image_tag('print_title', class: "responsive-img") %>
   <div class="print-box section">
 
 
     <button class="btn btn-large new-print-btn">New Print Order</button>
-    <button class="btn btn-large back-btn">Back</button>
+    <button class="btn btn-large back-btn hide">Back</button>
 
     <div class="print-info">
       <ul>

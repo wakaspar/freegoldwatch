@@ -1,20 +1,24 @@
 class PrintsController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_print, only: [:show, :edit, :update, :destroy]
 
   # GET /prints
   # GET /prints.json
   def index
     @prints = Print.all
+    render layout: "admin"
   end
 
   # GET /prints/1
   # GET /prints/1.json
   def show
+    render layout: "admin"
   end
 
   # GET /prints/new
   def new
     @print = Print.new
+    render layout: "admin"
   end
 
   def next_stage
@@ -33,6 +37,7 @@ class PrintsController < ApplicationController
 
   # GET /prints/1/edit
   def edit
+    render layout: "admin"
   end
 
   # POST /prints

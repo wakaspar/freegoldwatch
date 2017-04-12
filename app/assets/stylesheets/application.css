@@ -16,10 +16,9 @@
  *= require font-awesome
  */
 
- .admin-head {
-   font-family: 'Press Start 2P', cursive;
- }
-
+/**********************/
+/* Application Layout */
+/**********************/
 
  .nav-link {
    display: inline;
