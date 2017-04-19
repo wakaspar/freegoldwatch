@@ -43,10 +43,11 @@ body {
 //************//
 
 // Shop-Info Box
-.shop-info-box {
+.shop-info-box-sm, .shop-info-box-lg {
   margin-top: 22%;
   overflow: scroll;
 }
+
 
 .shop-info i {
   color: #161616;
@@ -58,15 +59,11 @@ body {
   color: #545454
 }
 
-.shop-map-up, .shop-map-down {
+.shop-map-up {
   display: inline-block;
   max-width: 70%;
 }
 
-.shop-map-down {
-  display: inline-block;
-  margin: auto;
-}
 
 // Arcade Box
 .pin-list {
