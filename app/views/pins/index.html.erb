@@ -8,8 +8,8 @@
         <%= pin['year'] %> |
 
         <%= form_tag('/pins', method: :delete) do %>
-          <%= hidden_field_tag "machine_id", pin['id'] %>
-          <div><%= submit_tag "Remove" %></div>
+          <%= hidden_field_tag "machine_id", pin['id'] %>          
+          <div><%= submit_tag "Remove", class: "erb-btn" %></div>
         <% end %>
 
       </div>
@@ -30,7 +30,7 @@
 
         <%= form_tag('/pins', method: :post) do %>
           <%= hidden_field_tag "machine_id", pin['id'] %>
-          <div><%= submit_tag "Add"  %></div>
+          <div><%= submit_tag "Add", class: "erb-btn"  %></div>
         <% end %>
 
         <%= pin['name'] %> |
@@ -41,5 +41,3 @@
     </div>
   </div>
 </div>
-
-<#%= link_to fa_icon("check"), :controller => "pins", :action => "create" %>

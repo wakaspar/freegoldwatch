@@ -5,3 +5,30 @@
  .nav-link {
    display: inline;
  }
+
+.admin-style {
+  padding: 10px;
+  background: #161616;
+  color: white;
+}
+
+.tabs, .tab {
+  margin: 25px;
+  background: grey;
+}
+
+.tabs .tab a {
+  color: black;
+}
+
+.tabs .tab a.active {
+  color: white;
+}
+
+.tabs .tab a:hover {
+  color: #545454;
+}
+
+.tabs .indicator {
+  background-color: white;
+}

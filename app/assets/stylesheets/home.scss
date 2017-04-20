@@ -21,7 +21,7 @@ body {
 }
 
 .fgw-header {
-  background-color: white;
+  // background-color: white;
   padding: 10px;
   display: table;
   width: 100%;
@@ -43,24 +43,46 @@ body {
 //************//
 
 // Shop-Info Box
-.shop-info-box-sm, .shop-info-box-lg {
-  margin-top: 22%;
+.shop-info-box {
+  margin-top: 20%;
   overflow: scroll;
 }
 
+.shop-info {
+  margin-top: 2.5%;
+}
+
+.large-info {
+  margin-right: 10%;
+  float: right;
+}
+
+.large-map {
+  margin-left: 10%;
+  float: left;
+}
+
+.small-map {
+  margin: auto;
+  width: 50%;
+}
+
+.small-info {
+  margin: auto;
+  width: 50%;
+}
 
 .shop-info i {
+  display: block;
   color: #161616;
-  margin-top: 15px;
-  margin-left: 80px;
 }
 
 .shop-info i:hover, .print-box i {
+  display: block;
   color: #545454
 }
 
-.shop-map-up {
-  display: inline-block;
+.shop-map {
   max-width: 70%;
 }
 
@@ -106,8 +128,7 @@ body {
 
 .sfpd_logo {
   float: left;
-  clear: both;
-  width: 200px;
+  width: 250px;
 }
 
 // Print Box

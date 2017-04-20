@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: { sessions: 'admins/sessions' }, path: 'admin',
   path_names: { sign_in: '', sign_out: 'logout'}
 
-  resources :prints
+  resources :prints do
+    member do
+      post :user_create
+    end
+  end
 
   # Route for PinIndex, interacts with PinballMap.com's API
   get '/pins', controller: :pins, action: :index

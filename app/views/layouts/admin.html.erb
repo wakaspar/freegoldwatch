@@ -17,15 +17,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="admin-style">
     <%= link_to "logout", destroy_admin_session_path, :method => 'delete', class: 'right' %>
-    <h1 class="admin_head">FGW</h1>
+    <h1>FGW</h1>
     <div class="row">
-      <div class="col s12">
+      <div class="col s12 center">
         <ul class="fixed width">
-          <li class="col s4"> <%= link_to "Prints", prints_path %> </li>
-          <li class="col s4"> <%= link_to "Pins", pins_path %> </li>
-          <li class="col s4"> <%= link_to "Front Page", root_path %> </li>
+          <li class="col s4"> <h5> <%= link_to "Prints", prints_path %> </h5> </li>
+          <li class="col s4">  <h5> <%= link_to "Pins", pins_path %> </h5> </li>
+          <li class="col s4"> <h5> <%= link_to "Front Page", root_path %> </h5> </li>
         </ul>
       </div>
 
@@ -33,6 +33,6 @@
       <%= yield %>
 
     </div>
-    <footer class="center">2017</footer>
+    <footer class="center">© wilbur 2017</footer>
   </body>
 </html>

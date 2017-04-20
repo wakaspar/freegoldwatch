@@ -19,6 +19,8 @@
 
 $(document).ready(function(){
 
+  // screenWidth();
+
   // HOME: Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')
   .on('click', function() {
@@ -49,18 +51,6 @@ $(document).ready(function(){
       .removeClass('hide');
   });
 
-
-  // HOME: Controls responsive views for shop-info box
-
-  var screenWidth = $(window).width();
-  console.log('screen:', screenWidth);
-  if screenWidth < 1200 {
-    $('.shop-info-box-sm').removeClass('hide');
-    $('.shop-info-box-lg').addClass('hide');
-  } else if screenWidth > 1200 {
-    $('.shop-info-box-lg').removeClass('hide');
-    $('.shop-info-box-sm').addClass('hide');
-  }
 
   // ADMIN: Handles Machine Database Search of Pin Index
   if ($('.pin-search').val() == '') {

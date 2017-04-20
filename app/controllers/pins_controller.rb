@@ -4,6 +4,7 @@ class PinsController < ApplicationController
 
   def index
     get_pins
+
     render layout: "admin"
   end
 
@@ -16,9 +17,17 @@ class PinsController < ApplicationController
   end
 
   def destroy
+    user_res = HTTParty.get('http://pinballmap.com/api/v1/users/auth_details.json',
+      :body => {:login => 'wakaspar',
+                :password => 'Yeongtong-403'})
+    token = user_res['user']['authentication_token']
+
     res = HTTParty.post('http://pinballmap.com/api/v1/location_machine_xrefs.json',
-      :body => {:location_id => 2405,
-                :machine_id => params[:machine_id] })
+      :body => {
+                :location_id => 2405,
+                :machine_id => params[:machine_id],
+                :authenticity_token => token
+                 })
     @location_machine_xref_id = res['location_machine']['id']
 
     @pin = HTTParty.delete("http://pinballmap.com/api/v1/location_machine_xrefs/#{@location_machine_xref_id}.json")

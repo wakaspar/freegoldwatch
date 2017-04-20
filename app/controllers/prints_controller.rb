@@ -1,5 +1,5 @@
 class PrintsController < ApplicationController
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, except: :create
   before_action :set_print, only: [:show, :edit, :update, :destroy]
 
   # GET /prints
@@ -43,18 +43,17 @@ class PrintsController < ApplicationController
   # POST /prints
   # POST /prints.json
   def create
+
     @print = Print.new(print_params)
 
-    respond_to do |format|
-      if @print.save
-        format.html { redirect_to @print, notice: 'Print was successfully created.' }
-        format.json { render :show, status: :created, location: @print }
-      else
-        format.html { render :new }
-        format.json { render json: @print.errors, status: :unprocessable_entity }
-      end
+    @print.save
+    if current_admin
+      redirect_to @print
+    else
+      redirect_to root_path
     end
   end
+
 
   # PATCH/PUT /prints/1
   # PATCH/PUT /prints/1.json

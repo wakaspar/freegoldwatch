@@ -5,14 +5,3 @@
 .floor-machine, .database-machine {
   padding: 3px;
 }
-
-.floor-machine i {
-  color: red;
-}
-.database-machine i {
-  color: green;
-}
-
-.floor-machine i:hover, .database-machine i:hover {
-  color: black;
-}

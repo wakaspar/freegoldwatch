@@ -1,60 +1,34 @@
 <!-- Shop Info Box - Large -->
-<div class="hide shop-info-box-lg section">
-  <!-- Map that appears on large -->
-  <div class="right responsive-img">
-    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
-      <%= image_tag('map', class: 'shop-map-up') %>
-    <% end %>
-  </div>
-  <div class="shop-info">
-    <!-- Address -->
-    <div>
-      <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
-        <%= fa_icon "home 5x" %>
-        <%= image_tag('address', class: 'responsive-img info') %>
-      <% end %>
-    </div>
-    <!-- Phone -->
-    <div>
-      <%= fa_icon "phone 5x" %>
-      <%= image_tag('phone', class: 'responsive-img') %>
-    </div>
-    <!-- Email -->
-    <div>
-      <%= fa_icon "envelope 5x" %>
-      <%= image_tag('email', class: 'responsive-img') %>
-    </div>
-  </div>
-</div> <!-- closes Shop Info Box - Large -->
+<div class="shop-info-box section">
 
-<!-- Shop Info Box - Small -->
-<div class="shop-info-box-sm section">
-<!--  Map that appears on med & down -->
-  <div>
-    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
-      <%= image_tag('map', class: 'shop-map-down responsive-img') %>
-    <% end %>
-  </div>
-  <div class="shop-info">
+  <div class="shop-info large-info">
     <!-- Address -->
     <div>
       <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
-        <%= fa_icon "home 3x" %>
+
+        <%= fa_icon "home 4x" %>
         <%= image_tag('address', class: 'responsive-img') %>
       <% end %>
     </div>
     <!-- Phone -->
     <div>
-      <%= fa_icon "phone 3x" %>
+      <%= fa_icon "phone 4x" %>
       <%= image_tag('phone', class: 'responsive-img') %>
     </div>
     <!-- Email -->
     <div>
-      <%= fa_icon "envelope 3x" %>
+      <%= fa_icon "envelope 4x" %>
       <%= image_tag('email', class: 'responsive-img') %>
     </div>
   </div>
-</div> <!-- closes Shop Info Box - Small -->
+
+  <!-- Map that appears on large -->
+  <div class="shop-map large-map">
+    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
+    <%= image_tag('map') %>
+    <% end %>
+  </div>
+</div> <!-- closes Shop Info Box - Large -->
 
 <br>
 
@@ -98,21 +72,21 @@
   <div class="print-box section">
 
 
-    <button class="hide btn btn-large new-print-btn">New Print Order</button>
+    <button class="btn btn-large new-print-btn">New Print Order</button>
     <button class="btn btn-large back-btn hide">Back</button>
 
     <div class="print-info">
       <ul>
         <div class="">
-          <%= fa_icon "check 5x" %>
+          <%= fa_icon "check 4x" %>
           <h5>Low minimums / fast turnaround!</h5>
         </div>
         <div class="">
-          <%= fa_icon "check 5x" %>
+          <%= fa_icon "check 4x" %>
           <h5>Spot color, 4 color process, waterbase inks!</h5>
         </div>
         <div class="">
-          <%= fa_icon "tags 5x" %>
+          <%= fa_icon "tags 4x" %>
           <h5><%= link_to "Click here to see our available garmet catalog!", 'https://www.alphabroder.com/' %></h5>
         </div>
       </ul>
