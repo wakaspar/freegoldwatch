@@ -4,7 +4,7 @@
   <div class="shop-info large-info">
     <!-- Address -->
     <div>
-      <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
+      <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
 
         <%= fa_icon "home 4x" %>
         <%= image_tag('address', class: 'responsive-img') %>
@@ -24,7 +24,7 @@
 
   <!-- Map that appears on large -->
   <div class="shop-map large-map">
-    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724' do %>
+    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
     <%= image_tag('map') %>
     <% end %>
   </div>
@@ -38,10 +38,10 @@
   <div class="pin-box section">
     <ul class="pin-list">
     <% @pins.each do |pin| %>
-      <li> <%= link_to pin['name'], pin['ipdb_link'] %> </li>
+      <li> <%= link_to pin['name'], pin['ipdb_link'], target: '_blank' %> </li>
     <% end %>
     </ul>
-    <%= link_to "post high scores", "http://freegoldscores.bitballoon.com", class: "fgs-link right" %>
+    <%= link_to "post high scores", "http://freegoldscores.bitballoon.com", class: "fgs-link right", target: '_blank' %>
   </div>
 </div> <!-- closes Pinball Box -->
 
@@ -50,7 +50,7 @@
 <!-- Social Media Box -->
 <div class="social-box container">
   <!-- SFPD Badge -->
-  <%= link_to 'http://sfpins.org' do %>
+  <%= link_to 'http://sfpins.org', target: '_blank' do %>
     <%= image_tag('sfpd_b&w small', class: "responsive-img sfpd_logo") %>
   <% end %>
   <!-- Instagram Feed -->
@@ -73,26 +73,24 @@
 
 
     <button class="btn btn-large new-print-btn">New Print Order</button>
-    <button class="btn btn-large back-btn hide">Back</button>
 
     <div class="print-info">
       <ul>
-        <div class="">
+        <div>
           <%= fa_icon "check 4x" %>
           <h5>Low minimums / fast turnaround!</h5>
         </div>
-        <div class="">
+        <div>
           <%= fa_icon "check 4x" %>
           <h5>Spot color, 4 color process, waterbase inks!</h5>
         </div>
-        <div class="">
+        <div>
           <%= fa_icon "tags 4x" %>
-          <h5><%= link_to "Click here to see our available garmet catalog!", 'https://www.alphabroder.com/' %></h5>
+          <h5><%= link_to "Click here to see our available garmet catalog!", 'https://www.alphabroder.com/', target: '_blank' %></h5>
         </div>
       </ul>
     </div>
     <div class="print-form hide">
-      <br/>
       <%= render partial: 'home/new_print' %>
     </div>
   </div>

@@ -31,9 +31,7 @@ $(document).ready(function(){
       .addClass('hide');
     // Hide info & 'new' button
     $('.print-form')
-      .removeClass('hide');
-    $('.back-btn')
-      .removeClass('hide');
+      .removeClass('hide');    
   });
 
 
@@ -41,8 +39,6 @@ $(document).ready(function(){
   .on('click', function() {
     // Hide form
     $('.print-form')
-      .addClass('hide');
-    $('.back-btn')
       .addClass('hide');
     // Show info & 'new' button
     $('.print-info')
