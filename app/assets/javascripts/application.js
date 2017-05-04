@@ -17,9 +17,7 @@
 //= require autocomplete-rails
 //= require_tree .
 
-$(document).ready(function(){
-
-  // screenWidth();
+$(document).ready(function(){  
 
   // HOME: Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')
@@ -31,9 +29,8 @@ $(document).ready(function(){
       .addClass('hide');
     // Hide info & 'new' button
     $('.print-form')
-      .removeClass('hide');    
+      .removeClass('hide');
   });
-
 
   $('.back-btn')
   .on('click', function() {

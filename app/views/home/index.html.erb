@@ -1,7 +1,14 @@
-<!-- Shop Info Box - Large -->
+<!-- Shop Info Box -->
 <div class="shop-info-box section">
 
-  <div class="shop-info large-info">
+  <!-- Shop Map -->
+  <div class="shop-map large-map">
+    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
+    <%= image_tag('map') %>
+    <% end %>
+  </div>
+
+  <div class="shop-info">
     <!-- Address -->
     <div>
       <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
@@ -22,13 +29,7 @@
     </div>
   </div>
 
-  <!-- Map that appears on large -->
-  <div class="shop-map large-map">
-    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
-    <%= image_tag('map') %>
-    <% end %>
-  </div>
-</div> <!-- closes Shop Info Box - Large -->
+</div> <!-- closes Shop Info Box -->
 
 <br>
 

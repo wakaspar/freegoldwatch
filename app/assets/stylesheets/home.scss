@@ -21,7 +21,6 @@ body {
 }
 
 .fgw-header {
-  // background-color: white;
   padding: 10px;
   display: table;
   width: 100%;
@@ -34,7 +33,7 @@ body {
 }
 
 .fgw-logo img {
-  max-width: 75%;
+  max-width: 65%;
   height: auto;
 }
 
@@ -44,23 +43,18 @@ body {
 
 // Shop-Info Box
 .shop-info-box {
-  margin-top: 20%;
+  column-count: 2;
+  column-gap: 10px;
+  margin-top: 18%;
   overflow: scroll;
 }
 
 .shop-info {
   margin-top: 2.5%;
-}
-
-.large-info {
   margin-right: 10%;
   float: right;
 }
 
-.large-map {
-  margin-left: 10%;
-  float: left;
-}
 
 .small-map {
   margin: auto;
@@ -78,12 +72,13 @@ body {
 }
 
 .shop-info i:hover, .print-box i {
-  display: block;
   color: #545454
 }
 
 .shop-map {
-  max-width: 70%;
+  float: left;
+  margin-left: 10%;
+  width: 70%;
 }
 
 
