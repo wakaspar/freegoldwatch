@@ -29,10 +29,17 @@
 
     <%= yield %>
 
-    <footer class="grey lighten-1">
+    <footer class="home-footer">
       <div class="row">
         <div class="footer-fgw-box col s4">
-          <h5>FreeGoldWatch</h5>
+          <p> <%= fa_icon "exclamation-triangle 2x" %> Click
+            <%= link_to new_admin_session_path do %>
+            <span class="admin-link">
+                here
+              <% end %>
+            </span> to access the admin pages.</p>
+            <br>
+          <p>FreeGoldWatch</p>
           <p>Custom Printing / Pinball Arcade</p>
           <p>1767 Waller St. San Francisco, California 94117</p>
           <p>415-876-4444</p>
@@ -44,7 +51,7 @@
               <%= fa_icon "facebook-square 4x" %>
             <% end %>
             <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
-            <%= fa_icon "instagram 4x" %>
+              <%= fa_icon "instagram 4x" %>
             <% end %>
             <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
               <%= fa_icon "github-square 4x" %>
@@ -52,16 +59,15 @@
           </div>
         </div>
         <div class="footer-dev-box col s4">
-          <h5>Will Kaspar</h5>
-          <p>Full Stack Developer</p>
+          <p style="font-weight:bold">THIS WEBSITE IS A PROTOTYPE <%= fa_icon "asterisk 2x" %> </p>
+          <br>
+          <p>Will Kaspar</p>
           <p>wakaspar@gmail.com</p>
-          <p>http://www.github.com/wakaspar</p>
-          <p>* * THIS IS A PROTOTYPE * * </p>
+          <p>github.com/wakaspar</p>
+          <br>
         </div>
       </div>
-      <div class="footer-skirt grey darken-2">
-        <p>© 2017</p>
-      </div>
+      <p class="year">© 2017</p>
     </footer>
   </body>
 </html>

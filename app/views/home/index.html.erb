@@ -19,13 +19,17 @@
     </div>
     <!-- Phone -->
     <div>
-      <%= fa_icon "phone 4x" %>
-      <%= image_tag('phone', class: 'responsive-img') %>
+      <%= link_to 'tel:1-415-876-4444' do %>
+        <%= fa_icon "phone 4x" %>
+        <%= image_tag('phone', class: 'responsive-img') %>
+      <% end %>
     </div>
     <!-- Email -->
     <div>
-      <%= fa_icon "envelope 4x" %>
-      <%= image_tag('email', class: 'responsive-img') %>
+      <%= link_to 'mailto:info@freegoldwatch.com' do %>
+        <%= fa_icon "envelope 4x" %>
+        <%= image_tag('email', class: 'responsive-img') %>
+      <% end %>
     </div>
   </div>
 

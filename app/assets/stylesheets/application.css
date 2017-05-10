@@ -21,6 +21,10 @@
 /**********************/
 
 .erb-btn {
-  background-color: black;
-  color: grey;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.erb-btn:hover {
+  color: #777777;
 }

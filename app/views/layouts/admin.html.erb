@@ -19,7 +19,9 @@
 
   <body class="admin-style">
     <%= link_to "logout", destroy_admin_session_path, :method => 'delete', class: 'right' %>
-    <h1>FGW</h1>
+    <%= link_to root_path do %>
+      <h1 style="text-decoration:none; color:#ffffff;">FGW</h1>
+    <% end %>
     <div class="row">
       <div class="col s12 center">
         <ul class="fixed width">

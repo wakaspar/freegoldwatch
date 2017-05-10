@@ -50,15 +50,13 @@ body {
 }
 
 .shop-info {
-  margin-top: 2.5%;
-  margin-right: 10%;
+  margin: 10%;
   float: right;
 }
 
-
 .small-map {
   margin: auto;
-  width: 50%;
+  width: 45%;
 }
 
 .small-info {
@@ -122,6 +120,7 @@ body {
 }
 
 .sfpd_logo {
+  margin-left: -10%;
   float: left;
   width: 250px;
 }
@@ -135,27 +134,48 @@ body {
   margin-top: 175px;
 }
 
-.new-print-btn:hover, .back-btn:hover {
+.new-print-btn:hover {
   background-color: #000;
   color: #ffffff;
 }
 
+.back-btn:hover {
+  color: #545454;
+}
+
 // Footer
-footer {
+.home-footer {
+  background-color: #777777;
   height: 200px;
+  line-height: 0.2;
 }
 
-footer p, {
-  font-size: 13px;
-  font-weight: bolder;
+.year {
+  text-align: center;
+  font-weight: bold;
 }
 
-footer p, footer h5 {
-  text-align: center ;
+.admin-link {
+  color: #ffffff;
+  font-weight: 300;
 }
+
+.admin-link:hover {
+  color: #000000;
+  font-weight: 300;
+}
+
 
 .footer-icon-box {
   margin-top: 50px;
+}
+
+.footer-dev-box {
+    text-align: right;
+}
+
+.footer-fgw-box {
+    text-align: left;
 }
 
 .footer-skirt {
@@ -167,5 +187,5 @@ footer p, footer h5 {
 }
 
 .footer-icon-box i:hover {
-  color: black;
+  color: #000000;
 }
