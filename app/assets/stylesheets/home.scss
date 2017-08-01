@@ -117,13 +117,6 @@ $font-family: 'helsinkiregular';
 // Footer
 .home-footer {
   background-color: #777777;
-  height: 200px;
-  line-height: 0.2;
-}
-
-.year {
-  text-align: center;
-  font-weight: bold;
 }
 
 .admin-link {
@@ -136,24 +129,16 @@ $font-family: 'helsinkiregular';
   font-weight: 300;
 }
 
-
-.footer-icon-box {
-  margin-top: 50px;
-}
-
-.footer-dev-box {
-    text-align: right;
-}
-
-.footer-fgw-box {
-    text-align: left;
-}
-
 .footer-skirt {
-  height: 30px;
+  background: #161616;
+  height: 5vh;
 }
 
 .footer-icon-box i {
+  color: #ffffff;
+}
+
+.year {
   color: #ffffff;
 }
 

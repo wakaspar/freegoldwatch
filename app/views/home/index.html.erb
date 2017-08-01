@@ -120,42 +120,27 @@
 </div>
 
 <footer class="home-footer">
-  <div class="row">
-    <div class="footer-fgw-box col s4">
-      <p> <%= fa_icon "exclamation-triangle 2x" %> Click
-        <%= link_to new_admin_session_path do %>
-        <span class="admin-link">
-            here
-          <% end %>
-        </span> to access the admin pages.</p>
-        <br>
-      <p>FreeGoldWatch</p>
-      <p>Custom Printing / Pinball Arcade</p>
-      <p>1767 Waller St. San Francisco, California 94117</p>
-      <p>415-876-4444</p>
-      <p>info@freegoldwatch.com</p>
-    </div>
-    <div class="footer-icon-box col s4">
-      <div class="center">
-        <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
-          <%= fa_icon "facebook-square 4x" %>
-        <% end %>
-        <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
-          <%= fa_icon "instagram 4x" %>
-        <% end %>
-        <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
-          <%= fa_icon "github-square 4x" %>
-        <% end %>
-      </div>
-    </div>
-    <div class="footer-dev-box col s4">
-      <p style="font-weight:bold">THIS WEBSITE IS A PROTOTYPE <%= fa_icon "asterisk 2x" %> </p>
-      <br>
-      <p>Will Kaspar</p>
-      <p>wakaspar@gmail.com</p>
-      <p>github.com/wakaspar</p>
-      <br>
-    </div>
+  <div class="ui container">
+    <p>FreeGoldWatch | Custom Printing / Pinball Arcade</p>
+    <p>1767 Waller St. San Francisco, California 94117</p>
+    <p>415-876-4444 | info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
+    <p class=""><%= link_to new_admin_session_path do %>
+      <%= fa_icon "exclamation-triangle 2x" %>
+    <% end %></p>
+
+    <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
+      <%= fa_icon "facebook-square 2x" %>
+    <% end %>
+    <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
+      <%= fa_icon "instagram 2x" %>
+    <% end %>
+    <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
+      <%= fa_icon "github-square 2x" %>
+    <% end %>
   </div>
-  <p class="year">© 2017</p>
+
+  <div class="footer-skirt">
+    <p class="year"><span style="font-family:'serif'; color: #ffffff;">©</span>2017</p>
+  </div>
+
 </footer>
