@@ -2,39 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$font-family: 'helsinkiregular';
+@import 'semantic-ui';
+
 
 //*********************//
 // Home Layout Styling //
 //*********************//
-
-body {
-  background-color: #ffffff;
-  margin: 10px;
+.hi {
+  font-family: 'helsinkiregular';
 }
 
-.fgw-header-box {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0px;
-  left: 0px;
+.logo {
+  color: white;
+  font-size: 5em;
+  text-shadow: -2px 0 #161616, 0 3px #161616, 5px 0 #161616, 0 -2px #161616;
 }
 
-.fgw-header {
-  padding: 10px;
-  display: table;
-  width: 100%;
-  table-layout: relative;
-}
-
-.fgw-logo {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.fgw-logo img {
-  max-width: 65%;
-  height: auto;
+.section-header {
+  color: #161616;
+  font-size: 15em;
 }
 
 //************//
@@ -42,43 +29,26 @@ body {
 //************//
 
 // Shop-Info Box
-.shop-info-box {
-  column-count: 2;
-  column-gap: 10px;
-  margin-top: 18%;
-  overflow: scroll;
+.info-box {
+  margin-top: 10%;
 }
 
 .shop-info {
-  margin: 10%;
-  float: right;
+  color: #161616;
+  font-size: 1.25em;
 }
 
-.small-map {
-  margin: auto;
-  width: 45%;
-}
-
-.small-info {
-  margin: auto;
-  width: 50%;
+.info {
+  margin: 3.5% 0%;
 }
 
 .shop-info i {
-  display: block;
   color: #161616;
 }
 
-.shop-info i:hover, .print-box i {
-  color: #545454
+.info a:hover, .pin-list a:hover, .print-box i {
+  color: #777777
 }
-
-.shop-map {
-  float: left;
-  margin-left: 10%;
-  width: 70%;
-}
-
 
 // Arcade Box
 .pin-list {
@@ -91,7 +61,9 @@ body {
 } // controls pin list wrapping
 
 .pin-list li {
-  padding: 2px;
+  font-size: .8em;
+  line-height: 15px;
+  padding: 3px;
 }
 
 .pin-box a {
@@ -99,33 +71,32 @@ body {
   text-decoration: none;
 }
 
-
 .pin-box, .print-box {
   background-color: #161616;
-  color: white;
   padding: 30px;
   text-decoration: none;
 }
 
-// Social Box
-.insta-box {
-  float: right;
-  display: inline-block;
-}
 
-.insta-box img {
-  padding: 2px;
-  border-radius: 10px;
-  clear: both;
+.games-updated-daily {
+  float:right;
+  text-align: right;
 }
 
 .sfpd_logo {
-  margin-left: -10%;
   float: left;
-  width: 250px;
+  width: 155px;
 }
 
 // Print Box
+.print-info {
+  color: #ffffff;
+}
+
+.print-form {
+  display: none;
+}
+
 .new-print-btn {
   background-color: #fff;
   color: #161616;

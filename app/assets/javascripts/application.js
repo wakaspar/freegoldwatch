@@ -17,31 +17,32 @@
 //= require autocomplete-rails
 //= require_tree .
 
-$(document).ready(function(){  
+$(document).ready(function(){
+
 
   // HOME: Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')
   .on('click', function() {
     // Show form
-    $('.print-info')
-      .addClass('hide');
-    $('.new-print-btn')
-      .addClass('hide');
-    // Hide info & 'new' button
     $('.print-form')
-      .removeClass('hide');
+      .css('display', 'block');
+      // Hide info & 'new' button
+    $('.new-print-btn')
+      .css('display', 'none');
+    $('.print-info')
+      .css('display', 'none');
   });
 
   $('.back-btn')
   .on('click', function() {
     // Hide form
     $('.print-form')
-      .addClass('hide');
-    // Show info & 'new' button
+      .css('display', 'none');
+  //   // Show info & 'new' button
     $('.print-info')
-      .removeClass('hide');
+      .css('display', 'block');
     $('.new-print-btn')
-      .removeClass('hide');
+      .css('display', 'block');
   });
 
 

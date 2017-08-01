@@ -26,6 +26,8 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'jquery-ui-rails'
 
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+
 gem 'rails-jquery-autocomplete', '~> 1.0', '>= 1.0.3'
 
 gem 'turbolinks', '~> 5'
