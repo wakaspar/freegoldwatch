@@ -1,114 +1,90 @@
-<p>home to the most pinball machines in sf!</p>
-<div class="container">
-  <div class="logo-drop-shadow">
-    <h1 class="logo">freegoldwatch</h1>
-    <p>print. shop. arcade.</p>
-  </div>
-</div>
-
-
-<!-- Shop Info Box -->
-<div class="ui stackable grid section ui container">
-
-  <!-- Shop Map -->
-  <div class="six wide column">
-    <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
-      <%= image_tag('new_map', class: 'shop-map ui image') %>
-    <% end %>
-  </div>
-
-    <div class="info-box ten wide column">
-    <!-- Address -->
-    <div class="info">
-      <h2 class="ui header"><div class="content"><a class="shop-info" href="https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724" target="blank">1767 waller st. sf, ca 94117</a></div></h2>
+<!-- Page Header -->
+<header>
+  <div class="ui section">
+    <div class="top-cap ui centered grid">
+      <div class="row home-of" style="color: #ffffff;">
+        <ul>
+          <li>home</li>
+          <li>of</li>
+          <li>the</li>
+          <li>most</li>
+          <li>pinball</li>
+          <li>machines</li>
+          <li>in</li>
+          <li>san</li>
+          <li>francisco</li>
+        </ul>
+        <!-- TODO: ghost code -->
+        <!-- <p style="color:#ffffff;">home of the most pinball machines in san francisco</p> -->
+      </div>
     </div>
-    <!-- Phone -->
-    <div class="info">
-      <h2 class="ui header"><i class="phone icon"></i><div class="content"><a class="shop-info" href="tel:1-415-876-4444" target="blank">415-876-4444</a></div></h2>
-    </div>
-    <!-- Email -->
-    <div class="info">
-      <h2 class="ui header"><i class="envelope icon"></i><div class="content"><a class="shop-info" href="mailto:info@freegoldwatch.com" target="blank">info<span style="font-family:'serif';">@</span>freegoldwatch.com</a></div></h2>
+    <div class="ui stackable two column grid">
+      <div class="column ten wide">
+        <div class="logo-box">
+          <h2>print. shop. arcade.</h2>
+          <h1 class="logo">freegoldwatch.</h1>
+        </div>
+      </div>
+      <div class="column six wide centered">
+        <div class="row my-nav">
+          <a href="#pins">pins.</a>
+          <a href="#prints">prints.</a>
+          <a href="#parties">parties.</a>
+          <a href="#social">social.</a>
+        </div>
+      </div>
     </div>
   </div>
+</header>
 
-</div> <!-- closes Shop Info Box -->
-
-<br>
+<!-- BG Holder One -->
+<div id="bg-one" class="bg-holder"></div>
 
 <!-- Pinball Box -->
-<div class="ui section">
-  <div class="section-header ui">
-    <h1>pinball and video arcade</h1>
+<div id="pins" class="ui section content-box">
+  <div class="section-header">
+    <h1>pinball and video arcade.</h1>
+    <br>
   </div>
-
   <div class="pin-box">
     <ul class="pin-list">
     <% @pins.each do |pin| %>
       <li> <%= link_to pin['name'], pin['ipdb_link'], target: '_blank' %> </li>
     <% end %>
     </ul>
+    <p class="box-bottom-text"><%= fa_icon "asterisk" %>all ages welcome.  games updated daily!</p>
   </div>
-    <p class="games-updated-daily">all ages welcome.  games updated daily!</p>
-  </div>
-
 </div> <!-- closes Pinball Box -->
 
-<br>
-
-<!-- Social Media Box -->
-<div class="ui stackable grid container">
-  <!-- Instagram Feed -->
-  <div class="ten wide column">
-    <div class="section-header">
-      <h1> <i class="instagram icon"></i> <span style="font-family:'serif';">@</span>freegoldwatch </h1>
-    </div>
-    <div class="ui tiny images">
-      <% @instagram.each do |instagram| %>
-      <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-      <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
-      <% end %>
-      <% end %>
-    </div>
-  </div>
-  <!-- SFPD Badge -->
-  <div class="four wide column">
-    <%= link_to 'http://sfpins.org', target: '_blank' do %>
-    <%= image_tag('sfpd_b&w small', class: "sfpd_logo") %>
-    <% end %>
-  </div>
-  <br>
-</div> <!-- closes Social Box -->
-
-<br>
+<!-- BG Holder Two -->
+<div id="bg-two" class="bg-holder"></div>
 
 <!-- Print Order Box -->
-<div class= "ui section">
+<div id="prints" class= "ui section content-box">
   <div class="section-header">
     <h1>custom screen printing</h1>
+    <br>
   </div>
   <div class="print-box">
-
-    <button class="ui button new-print-btn">New Print Order</button>
-
+    <button class="ui massive secondary button new-print-btn">New Print Order</button>
     <div class="print-info">
       <ul>
         <div class="ui header">
-          <%= fa_icon "check 2x" %>
+          <%= fa_icon "check 3x" %>
           <div class="content">
-            <h5>Low minimums / fast turnaround!</h5>
+            <p>Low minimums / fast turnaround.</p>
           </div>
         </div>
         <div class="ui header">
-          <%= fa_icon "check 2x" %>
+          <%= fa_icon "check 3x" %>
           <div class="content">
-            <h5>Spot color, 4 color process, waterbase inks!</h5>
+            <p>Spot color, 4 color process, waterbase inks.</p>
           </div>
         </div>
         <div class="ui header">
-          <%= fa_icon "tags 2x" %>
+          <%= fa_icon "tags 3x" %>
           <div class="content">
-            <h5><a href="https://www.alphabroder.com/" target="_blank">available garmet catalog</a></h5>
+            <a href="https://www.alphabroder.com/" target="_blank">visit our available garmet catalog.</a>
           </div>
         </div>
       </ul>
@@ -116,31 +92,168 @@
     <div class="print-form">
       <%= render partial: 'home/new_print' %>
     </div>
+    <p class="box-bottom-text"><%= fa_icon "asterisk" %>we speicalize in small batch garmets of up to four colors.</p>
   </div>
 </div>
 
-<footer class="home-footer">
-  <div class="ui container">
-    <p>FreeGoldWatch | Custom Printing / Pinball Arcade</p>
-    <p>1767 Waller St. San Francisco, California 94117</p>
-    <p>415-876-4444 | info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
-    <p class=""><%= link_to new_admin_session_path do %>
-      <%= fa_icon "exclamation-triangle 2x" %>
-    <% end %></p>
+<!-- BG Holder Three -->
+<div id="bg-three" class="bg-holder"></div>
 
-    <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
-      <%= fa_icon "facebook-square 2x" %>
-    <% end %>
-    <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
-      <%= fa_icon "instagram 2x" %>
-    <% end %>
-    <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
-      <%= fa_icon "github-square 2x" %>
-    <% end %>
+<!-- Parties Box -->
+<div id="parties" class= "ui section content-box">
+  <div class="section-header">
+    <h1>party & event hosting.</h1>
+    <br>
+  </div>
+  <div class="party-box">
+    <div class="party-info">
+      <ul>
+        <div class="ui header">
+          <%= fa_icon "birthday-cake 3x" %>
+          <div class="content">
+            <p>child & adult birthdays.</p>
+          </div>
+        </div>
+        <div class="ui header">
+          <%= fa_icon "certificate 3x" %>
+          <div class="content">
+            <p>corporate & office parties.</p>
+          </div>
+        </div>
+        <div class="ui header">
+          <%= fa_icon "certificate 3x" %>
+          <div class="content">
+            <p>screen printing workshops.</p>
+          </div>
+        </div>
+      </ul>
+    </div>
+    <div class="print-form">
+      <%= render partial: 'home/new_print' %>
+    </div>
+    <p class="box-bottom-text"><a href="tel: 415-876-4444"><%= fa_icon "phone" %> call</a> / <a href="mailto: info@freegoldwath.com"><%= fa_icon "envelope" %> email </a> for info & availability.</p>
+  </div>
+</div>
+
+
+<!-- BG Holder Four -->
+<div id="bg-four" class="bg-holder"></div>
+
+<!-- Social Media Box -->
+<div id="social" class="ui section content-box" style="background-color: #ffffff;">
+  <div class="section-header">
+    <h1>social media</h1>
+    <br>
+  </div>
+  <!-- Social Media Content - Instagram & Facebook Feeds -->
+  <div class="ui three column grid container">
+
+    <div class="column six wide">
+      <!-- Instagram Feed -->
+      <p><%= fa_icon "instagram 4x", class: 'ui image' %><span style="font-family:'serif';">@</span>freegoldwatch</p>
+      <div class="ui row tiny images">
+        <% @instagram.each do |instagram| %>
+        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
+        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
+        <% end %>
+        <% end %>
+      </div>
+      <p><%= fa_icon "twitter 4x", class: 'ui image' %><span style="font-family:'serif';">#</span>freegoldwatchUS</p>
+      <div class="ui row tiny images">
+        <% @instagram.each do |instagram| %>
+        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
+        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="column six wide">
+      <!-- Facebook Feed -->
+      <!-- TODO: figure out why this row isn't directly below the insta feed -->
+      <p><%= fa_icon "facebook 4x", class: 'ui image' %> /freegoldwatchshop</p>
+      <div class="ui row tiny images">
+        <% @instagram.each do |instagram| %>
+        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
+        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- SFPD Badge -->
+    <div class="column four wide">
+      <%= link_to 'http://sfpins.org', target: '_blank' do %>
+      <%= image_tag('sfpd_b&w small', class: "sfpd_logo ui image") %>
+      <% end %>
+      <p><%= fa_icon "chevron-up" %> check out league.</p>
+    </div>
   </div>
 
-  <div class="footer-skirt">
-    <p class="year"><span style="font-family:'serif'; color: #ffffff;">©</span>2017</p>
+</div> <!-- closes Social Box -->
+
+<!-- BG Holder Four -->
+<div id="bg-five" class="bg-holder"></div>
+
+<!-- Page Footer -->
+<footer class="home-footer">
+  <div class="footer-cap"></div>
+
+  <div class="ui container">
+
+      <div class="ui three column grid">
+
+        <div class="left aligned column">
+          <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
+            <%= image_tag('new_map', class: 'map ui image') %>
+          <% end %>
+          <div class="row">
+            <p>FreeGoldWatch</p>
+          </div>
+          <div class="row">
+            <p>Custom Print Shop & Pinball Arcade</p>
+          </div>
+        </div>
+
+        <div class="center aligned column">
+          <div class="footer-info">
+
+            <div class="row">
+              <p>1767 Waller St. San Francisco, California, 94117</p>
+            </div>
+            <div class="row footer-icons">
+              <%= link_to new_admin_session_path do %>
+              <%= fa_icon "exclamation-triangle 2x" %>
+              <% end %>
+              <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
+              <%= fa_icon "facebook-square 2x" %>
+              <% end %>
+              <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
+              <%= fa_icon "instagram 2x" %>
+              <% end %>
+              <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
+              <%= fa_icon "github-square 2x" %>
+              <% end %>
+              <p>copyright<span style="font-family:'serif';"> © </span>2017 | friendly ghost ind.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="right aligned column footer-info">
+          <%= image_tag('hours', class: 'ui image hours') %>
+          <div class="row">
+            <p>415 876-4444</p>
+          </div>
+          <div class="row">
+            <p>info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
 </footer>

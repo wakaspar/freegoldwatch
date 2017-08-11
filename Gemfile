@@ -52,6 +52,8 @@ gem 'instagram', :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 
 gem 'font-awesome-rails'
 
+gem 'parallax-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
