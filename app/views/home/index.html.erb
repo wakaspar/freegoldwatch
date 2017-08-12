@@ -199,61 +199,56 @@
 <footer class="home-footer">
   <div class="footer-cap"></div>
 
-  <div class="ui container">
+  <div class="ui three column grid container">
 
-      <div class="ui three column grid">
+    <div class="left aligned column">
+        <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
+        <%= image_tag('new_map', class: 'map ui image') %>
+        <% end %>
+        <div class="row">
+          <p>FreeGoldWatch.</p>
+        </div>
+        <div class="row">
+          <p>Custom Print Shop & Pinball Arcade</p>
+        </div>
+    </div>
 
-        <div class="left aligned column">
-          <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
-            <%= image_tag('new_map', class: 'map ui image') %>
+
+
+    <div class="center aligned column">
+      <div class="footer-content">
+        <div class="row">
+          <p>1767 Waller St. San Francisco, California, 94117</p>
+        </div>
+        <div class="row">
+          <%= link_to new_admin_session_path do %>
+          <%= fa_icon "exclamation-triangle 2x" %>
           <% end %>
-          <div class="row">
-            <p>FreeGoldWatch</p>
-          </div>
-          <div class="row">
-            <p>Custom Print Shop & Pinball Arcade</p>
-          </div>
+          <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
+          <%= fa_icon "facebook-square 2x" %>
+          <% end %>
+          <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
+          <%= fa_icon "instagram 2x" %>
+          <% end %>
+          <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
+          <%= fa_icon "github-square 2x" %>
+          <% end %>
         </div>
-
-        <div class="center aligned column">
-          <div class="footer-info">
-
-            <div class="row">
-              <p>1767 Waller St. San Francisco, California, 94117</p>
-            </div>
-            <div class="row footer-icons">
-              <%= link_to new_admin_session_path do %>
-              <%= fa_icon "exclamation-triangle 2x" %>
-              <% end %>
-              <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
-              <%= fa_icon "facebook-square 2x" %>
-              <% end %>
-              <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
-              <%= fa_icon "instagram 2x" %>
-              <% end %>
-              <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
-              <%= fa_icon "github-square 2x" %>
-              <% end %>
-              <p>copyright<span style="font-family:'serif';"> © </span>2017 | friendly ghost ind.</p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="right aligned column footer-info">
-          <%= image_tag('hours', class: 'ui image hours') %>
-          <div class="row">
-            <p>415 876-4444</p>
-          </div>
-          <div class="row">
-            <p>info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
-          </div>
-        </div>
-
+        <p>copyright<span style="font-family:'serif';"> © </span>2017 | friendly ghost ind.</p>
       </div>
+    </div>
 
+
+
+    <div class="right aligned column">
+      <%= image_tag('hours', class: 'ui image hours') %>
+      <div class="row">
+        <p>415 876-4444</p>
+      </div>
+      <div class="row">
+        <p>info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
+      </div>
     </div>
 
   </div>
-
 </footer>

@@ -48,8 +48,6 @@ p, a, span {
 }
 
 .content-box {
-  // z-index: 2;
-  // position: relative;
   padding: 2%;
   text-decoration: none;
 }
@@ -62,6 +60,8 @@ p, a, span {
 
 .top-cap, .footer-cap {
   background: #161616;
+  height: 35px;
+
 }
 
 // Page Header //
@@ -153,29 +153,19 @@ header {
   color: #545454;
 }
 
-// Parties Box //
-
-
-// Social Box //
-
-
 // Footer //
 footer {
   background-color: #777777;
 
-  .footer-cap {
-    height: 35px;
-  }
-
   i:hover {
     color: #545454;
   }
-
-  .footer-info {
-  }
-
-  .hours, .map {
+  .map {
     padding-top: 1%;
+    max-height: 500px;
+  }
+  .hours {
+    padding-top: 2%;
     max-height: 500px;
   }
 }
