@@ -12,7 +12,6 @@ require "action_cable/engine"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 require "httparty"
-require "semantic-ui-sass"
 
 
 # config.assets.initialize_on_precompile = false

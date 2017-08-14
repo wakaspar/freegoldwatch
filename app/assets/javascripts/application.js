@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery.turbolinks
-
+//= require semantic-ui
 
 
 //= require jquery_ujs
