@@ -3,7 +3,7 @@
   <div class="ui section">
     <div class="top-cap ui centered grid">
       <div class="row home-of" style="color: #ffffff;">
-        <ul>
+        <!-- <ul>
           <li>home</li>
           <li>of</li>
           <li>the</li>
@@ -13,7 +13,11 @@
           <li>in</li>
           <li>san</li>
           <li>francisco</li>
-        </ul>
+        </ul> -->
+
+        <div class="tagline">home of the most pinball machines in san francisco</div>
+
+
         <!-- TODO: ghost code -->
         <!-- <p style="color:#ffffff;">home of the most pinball machines in san francisco</p> -->
       </div>
@@ -84,7 +88,7 @@
         <div class="ui header">
           <%= fa_icon "tags 3x" %>
           <div class="content">
-            <a href="https://www.alphabroder.com/" target="_blank">visit our available garmet catalog.</a>
+            <a href="https://www.alphabroder.com/" target="_blank">Visit our available garmet catalog.</a>
           </div>
         </div>
       </ul>
@@ -105,34 +109,34 @@
     <h1>party & event hosting.</h1>
     <br>
   </div>
-  <div class="party-box">
-    <div class="party-info">
-      <ul>
-        <div class="ui header">
-          <%= fa_icon "birthday-cake 3x" %>
-          <div class="content">
-            <p>child & adult birthdays.</p>
-          </div>
-        </div>
-        <div class="ui header">
-          <%= fa_icon "certificate 3x" %>
-          <div class="content">
-            <p>corporate & office parties.</p>
-          </div>
-        </div>
-        <div class="ui header">
-          <%= fa_icon "certificate 3x" %>
-          <div class="content">
-            <p>screen printing workshops.</p>
-          </div>
-        </div>
-      </ul>
+
+  <div class="ui three column grid">
+    <div class="column">
+      <h2 class="ui icon header">
+        <%= fa_icon "birthday-cake 4x" %>
+        <div class="content">birthday parties</div>
+        <div class="sub header">for children & adults</div>
+      </h2>
     </div>
-    <div class="print-form">
-      <%= render partial: 'home/new_print' %>
+
+    <div class="column">
+      <h2 class="ui icon header">
+        <%= fa_icon "building 4x" %>
+        <div class="content">corporate & office parties</div>
+        <div class="sub header">professionals playing pins</div>
+      </h2>
     </div>
-    <p class="box-bottom-text"><a href="tel: 415-876-4444"><%= fa_icon "phone" %> call</a> / <a href="mailto: info@freegoldwath.com"><%= fa_icon "envelope" %> email </a> for info & availability.</p>
+
+    <div class="column">
+      <h2 class="ui icon header">
+        <%= fa_icon "tint 4x" %>
+        <div class="content">screen printing workshops</div>
+        <div class="sub header">learn to make some swag</div>
+      </h2>
+    </div>
   </div>
+
+  <p class="box-bottom-text"><a href="tel: 415-876-4444"><%= fa_icon "phone" %> call</a> / <a href="mailto: info@freegoldwath.com"><%= fa_icon "envelope" %> email </a> for info & availability.</p>
 </div>
 
 

@@ -2,16 +2,33 @@
 // home/index.html.erb //
 //*********************//
 
-$font-family: 'helsinkiregular';
+@font-face {
+    font-family: 'helsinkiregular';
+    src: font-url(asset-path('fonts/helsinki-webfont.eot'));
+    src: font-url(asset-path('fonts/helsinki-webfont.eot?#iefix')) format('embedded-opentype'),
+         font-url(asset-path('fonts/helsinki-webfont.woff')) format('woff'),
+         font-url(asset-path('fonts/helsinki-webfont.ttf')) format('truetype'),
+         font-url(asset-path('fonts/helsinki-webfont.svg#helsinkiregular')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+};
+
 @import 'semantic-ui';
 
 // TODO: Always Be Refactoring //
 
 // Page Layout CSS //
-h1, h2, h3, h4, h5, p, a, i, span, .logo-box h2, .section-header h1, .top-cap ul li {
+
+.logo, .my-nav a, #parties .content, .section-header h1,
+.top-cap .tagline, .box-bottom-text, footer {
   font-family: 'helsinkiregular';
   -webkit-font-smoothing: antialiased;
   color: #161616;
+}
+
+a:hover, a i:hover {
+  text-decoration: none;
+  color: #777777;
 }
 
 p, a, span {
@@ -41,11 +58,19 @@ p, a, span {
 }
 
 .home-of {
-  ul {
-    width: 100%;
-  }
+  width: 100%;
+  text-align: center;
+
+  // ul {
+
+  // }
   ul li {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // padding: 0% 2%;
+    font-size: 2em;
+    color: #ffffff;
   }
 }
 
@@ -61,10 +86,8 @@ p, a, span {
 }
 
 .top-cap, .footer-cap {
-  color: #ffffff;
   background: #161616;
   min-height: 35px;
-
 }
 
 // Page Header //
@@ -78,7 +101,6 @@ header {
 
   .my-nav a {
     color: #161616;
-    margin-top: 50px;
     padding: 1%;
   }
 }
@@ -111,10 +133,8 @@ header {
   background-image: url('full_screen_5.jpg');
 }
 
-////////////////
-// Arcade Box //
-////////////////
 
+// Arcade Box //
 .pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
@@ -125,6 +145,7 @@ header {
 } // controls pin list wrapping
 
 .pin-list li {
+  font-family: sans-serif;
   font-size: .8em;
   line-height: 15px;
   padding: 3px;
@@ -156,10 +177,21 @@ header {
   color: #545454;
 }
 
+// Party Box //
+.party-info {
+  width: 100%;
+  margin: auto;
+  ul li {
+    display: inline-block;
+  }
+}
+
 // Footer //
 footer {
   background-color: #777777;
-
+  i {
+    color: #161616;
+  }
   i:hover {
     color: #545454;
   }

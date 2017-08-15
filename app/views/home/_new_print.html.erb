@@ -1,33 +1,39 @@
 <%= form_for @print do |f| %>
-<div class="ui form">
 
-</div>
-<div class="field">
-  <div class="">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="">
-    <%= f.label :quantity %>
-    <%= f.text_field :quantity %>
-  </div>
-</div>
+<div class="form-wrapper">
 
-<div class="field">
-  <div class="">
-    <%= f.label :contact_email %>
-    <%= f.text_field :contact_email %>
-  </div>
-</div>
+  <div class="ui equal width large form">
+    <div class="fields">
+      <div class="field">
+        <%= f.label :name, 'Client Name' %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field three wide">
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity %>
+      </div>
+    </div>
 
-<div class="field">
-  <div class="">
-    <%= f.label :contact_phone %>
-    <%= f.text_field :contact_phone %>
-    <%= f.hidden_field :order_state, :value => 0 %>
-  </div>
-</div>
+    <div class="fields">
+      <div class="field">
+        <%= f.label :contact_email %>
+        <%= f.text_field :contact_email %>
+      </div>
+      <div class="field">
+        <%= f.label :contact_phone %>
+        <%= f.text_field :contact_phone %>
+        <%= f.hidden_field :order_state, :value => 0 %>
+      </div>
+    </div>
 
-<%= f.submit "Submit Print Order", class: "erb-btn", :controller => 'prints', :action => 'user_create' %>
-<input type="button" value="Go Back" class="back-btn erb-btn">
-<% end %>
+    <div class="field">
+      <%= f.label :upload_art, 'Upload your art' %>
+      <%= f.file_field :upload_art %>
+    </div>
+
+    <%= f.submit "Submit Print Order", class: "erb-btn ui secondary big button", :controller => 'prints', :action => 'user_create' %>
+    <input type="button" value="Go Back" class="back-btn erb-btn ui secondary big button">
+    <% end %>
+  </div>
+
+  </div>
