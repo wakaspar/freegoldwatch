@@ -1,6 +1,7 @@
 //*********************//
 // home/index.html.erb //
 //*********************//
+// INFO: Freegoldwatch. uses Helsinki regular for EVERYTHING, including this website.
 @font-face {
     font-family: 'helsinkiregular';
     src: font-url(asset-path('fonts/helsinki-webfont.eot'));
@@ -11,6 +12,7 @@
     font-weight: normal;
     font-style: normal;
 };
+
 @import 'semantic-ui';
 
 /////////////////////
@@ -32,37 +34,9 @@ a, p, span {
   font-size: 1.25em;
 }
 
-
-.logo {
-  font-family: 'helsinkiregular';
-  color: #ffffff;
-  font-size: 5em;
-  line-height: 0.2;
-  padding: 0% 0% 2% 2%;
-  text-shadow: -2px 0 #161616, 0 3px #161616, 5px 0 #161616, 0 -2px #161616;
-}
-
-.logo-box {
-  padding-left: 2%;
-}
-
 .section-header {
   padding-left: 2%;
   font-size: 2.5em;
-}
-
-.home-of {
-  width: 100%;
-  text-align: center;
-}
-
-.tagline {
-  color: #ffffff;
-  font-size: 2em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 1%;
 }
 
 .content-box {
@@ -81,7 +55,9 @@ a, p, span {
   min-height: 25px;
 }
 
-// Page Header //
+////////////////////////
+// Page Header & Logo //
+////////////////////////
 header {
   top: 0px;
   z-index: 3;
@@ -89,27 +65,40 @@ header {
   display: block;
   position: fixed;
   background-color: #fff;
-
   .my-nav a {
     color: #161616;
     padding: 1%;
   }
+  .home-of {
+    width: 100%;
+    text-align: center;
+  }
+  .tagline {
+    color: #ffffff;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1%;
+  }
+  .logo {
+    font-family: 'helsinkiregular';
+    color: #ffffff;
+    font-size: 5em;
+    line-height: 0.2;
+    padding: 0% 0% 2% 2%;
+    text-shadow: -2px 0 #161616, 0 3px #161616, 5px 0 #161616, 0 -2px #161616;
+  }
+  .logo-box {
+    padding-left: 2%;
+  }
 }
+
 //////////////////////////
 // Parallax Backgrounds //
 //////////////////////////
-.bg-holder {
-  z-index: -1;
-  position: static;
-  top: 0;
-  left: 0;
-  height: 70vh;
-  width: 100%;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
 
+// Background Sources //
 #bg-one {
   background-image: url('full_screen_1.jpg');
 }
@@ -126,24 +115,41 @@ header {
   background-image: url('full_screen_5.jpg');
 }
 
-// Mobile Settings //
+.bg-holder {
+  z-index: -1;
+  position: static;
+  top: 0;
+  left: 0;
+  height: 65vh;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+// INFO: Sets first background size @ 100vh on displays > 720px.
 @media (min-width: 720px) {
    #bg-one {
      height: 100vh;
   }
 }
 
+// Mobile Settings //
+// INFO: Resets background props & sizes for mobile displays.
 @media (max-width: 720px) {
   .bg-holder {
     height: 50vh;
   }
   #bg-one {
-    height: 75vh;
+    height: 70vh;
   }
 }
 
-
+////////////////
 // Arcade Box //
+////////////////
+
+// INFO: controls pin list wrapping
 .pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
@@ -151,7 +157,7 @@ header {
   -webkit-column-gap: 20px;
   column-count: 4;
   column-gap: 20px;
-} // controls pin list wrapping
+}
 
 .pin-list li {
   font-family: sans-serif;
@@ -163,9 +169,14 @@ header {
 .pin-box a {
   color: #161616;
   text-decoration: none;
+  :hover {
+    color: coral;
+  }
 }
 
+///////////////
 // Print Box //
+///////////////
 .print-form {
   display: none;
 }
@@ -178,13 +189,17 @@ header {
   margin-top: 17.5%;
 }
 
+///////////////
 // Party Box //
+///////////////
 #parties i:hover {
   color: #777777;
   text-shadow: 2px 2px #161616;
 }
 
+////////////
 // Footer //
+////////////
 footer {
   background-color: #777777;
 
