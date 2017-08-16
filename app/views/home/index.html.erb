@@ -46,10 +46,8 @@
 
 <!-- Pinball Box -->
 <div id="pins" class="ui section content-box">
-  <div class="section-header">
-    <h1>pinball and video arcade.</h1>
-    <br>
-  </div>
+  <h1 class="section-header">pinball and video arcade.</h1>
+  <br>
   <div class="pin-box">
     <ul class="pin-list">
     <% @pins.each do |pin| %>
@@ -65,10 +63,9 @@
 
 <!-- Print Order Box -->
 <div id="prints" class= "ui section content-box">
-  <div class="section-header">
-    <h1>custom screen printing</h1>
-    <br>
-  </div>
+  <h1 class="section-header">custom screen printing</h1>
+  <br>
+
   <div class="print-box">
     <button class="ui massive secondary button new-print-btn">New Print Order</button>
     <div class="print-info">
@@ -96,7 +93,7 @@
     <div class="print-form">
       <%= render partial: 'home/new_print' %>
     </div>
-    <p class="box-bottom-text"><%= fa_icon "asterisk" %>we speicalize in small batch garmets of up to four colors.</p>
+    <p class="box-bottom-text"><%= fa_icon "asterisk" %>we specialize in small batch garmets of up to four colors.</p>
   </div>
 </div>
 
@@ -105,10 +102,10 @@
 
 <!-- Parties Box -->
 <div id="parties" class= "ui section content-box">
-  <div class="section-header">
-    <h1>party & event hosting.</h1>
-    <br>
-  </div>
+
+  <h1 class="section-header">party and event hosting.</h1>
+  <p style="padding-left:4%;">We happily host public or private functions, including:</p>
+  <br>
 
   <div class="ui three column grid">
     <div class="column">
@@ -131,7 +128,7 @@
       <h2 class="ui icon header">
         <%= fa_icon "tint 4x" %>
         <div class="content">screen printing workshops</div>
-        <div class="sub header">learn to make some swag</div>
+        <div class="sub header">make some swag</div>
       </h2>
     </div>
   </div>
@@ -145,10 +142,8 @@
 
 <!-- Social Media Box -->
 <div id="social" class="ui section content-box" style="background-color: #ffffff;">
-  <div class="section-header">
-    <h1>social media</h1>
-    <br>
-  </div>
+  <h1 class="section-header">social media</h1>
+  <br>
   <!-- Social Media Content - Instagram & Facebook Feeds -->
   <div class="ui three column grid container">
 
@@ -206,28 +201,15 @@
   <div class="ui three column grid container">
 
     <div class="left aligned column">
-        <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
-        <%= image_tag('new_map', class: 'map ui image') %>
-        <% end %>
-        <div class="row">
-          <p>FreeGoldWatch.</p>
-        </div>
-        <div class="row">
-          <p>Custom Print Shop & Pinball Arcade</p>
-        </div>
+      <%= link_to 'https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724', target: '_blank' do %>
+      <%= image_tag('new_map', class: 'ui image map') %>
+      <% end %>
+      <p>1767 Waller St. SF, Ca. 94117</p>
     </div>
 
-
-
     <div class="center aligned column">
-      <div class="footer-content">
+      <div class="copy-col">
         <div class="row">
-          <p>1767 Waller St. San Francisco, California, 94117</p>
-        </div>
-        <div class="row">
-          <%= link_to new_admin_session_path do %>
-          <%= fa_icon "exclamation-triangle 2x" %>
-          <% end %>
           <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
           <%= fa_icon "facebook-square 2x" %>
           <% end %>
@@ -238,19 +220,17 @@
           <%= fa_icon "github-square 2x" %>
           <% end %>
         </div>
-        <p>copyright<span style="font-family:'serif';"> © </span>2017 | friendly ghost ind.</p>
+        <p>copyright<span style="font-family:'serif';"> © </span>2017 | freegoldwatch.</p>
       </div>
     </div>
 
-
-
     <div class="right aligned column">
-      <%= image_tag('hours', class: 'ui image hours') %>
-      <div class="row">
-        <p>415 876-4444</p>
-      </div>
-      <div class="row">
-        <p>info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
+      <div class="hours-col">
+        <%= image_tag('hours', class: 'ui image hours') %>
+        <div class="f-cont">
+          <p>415 876-4444</p>
+          <p>info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
+        </div>
       </div>
     </div>
 
