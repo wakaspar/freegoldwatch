@@ -13,7 +13,9 @@
 };
 @import 'semantic-ui';
 
+/////////////////////
 // Page Layout CSS //
+/////////////////////
 .my-nav a, #parties .content, .section-header,
 .top-cap, .box-bottom-text, footer {
   font-family: 'helsinkiregular';
@@ -93,30 +95,23 @@ header {
     padding: 1%;
   }
 }
-
+//////////////////////////
 // Parallax Backgrounds //
+//////////////////////////
 .bg-holder {
-  // width: 100%;
-  // height: 70vh;
-  // z-index: 1;
-  // position: static;
-  // background-position: top center;
-  // background-attachment: fixed;
-  // background-size: contain;
-
   z-index: -1;
   position: static;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 70vh;
   width: 100%;
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 #bg-one {
   background-image: url('full_screen_1.jpg');
-  height: 100vh;
 }
 #bg-two {
   background-image: url('full_screen_4.jpg');
@@ -130,6 +125,23 @@ header {
 #bg-five {
   background-image: url('full_screen_5.jpg');
 }
+
+// Mobile Settings //
+@media (min-width: 720px) {
+   #bg-one {
+     height: 100vh;
+  }
+}
+
+@media (max-width: 720px) {
+  .bg-holder {
+    height: 50vh;
+  }
+  #bg-one {
+    height: 75vh;
+  }
+}
+
 
 // Arcade Box //
 .pin-list {
@@ -167,12 +179,9 @@ header {
 }
 
 // Party Box //
-.party-info {
-  width: 100%;
-  margin: auto;
-  ul li {
-    display: inline-block;
-  }
+#parties i:hover {
+  color: #777777;
+  text-shadow: 2px 2px #161616;
 }
 
 // Footer //
@@ -185,15 +194,9 @@ footer {
       line-height: 0;
     }
   }
-
-  i {
-    color: #161616;
-  }
-
   i:hover {
     color: #545454;
   }
-
   .copy-col {
     padding-bottom: 5%;
     position: absolute;
