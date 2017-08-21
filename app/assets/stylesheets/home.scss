@@ -19,14 +19,14 @@
 // Page Layout CSS //
 /////////////////////
 .my-nav a, #parties .content, .section-header,
-.top-cap, .box-bottom-text, footer {
+.tagline, .box-bottom-text, footer {
   font-family: 'helsinkiregular';
   -webkit-font-smoothing: antialiased;
   color: #161616;
   text-decoration: none;
 }
 
-a, i {
+body a, i {
   color: #161616;
 }
 
@@ -50,7 +50,7 @@ a, p, span {
   text-align: right;
 }
 
-.top-cap, .footer-cap {
+.tag-bg, .foot-cap {
   background: #161616;
   min-height: 25px;
 }
@@ -69,17 +69,14 @@ header {
     color: #161616;
     padding: 1%;
   }
-  .home-of {
-    width: 100%;
-    text-align: center;
-  }
   .tagline {
+    text-align: center;
     color: #ffffff;
     font-size: 2em;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 1%;
+    padding: 1% 0%;
   }
   .logo {
     font-family: 'helsinkiregular';
@@ -202,30 +199,25 @@ header {
 ////////////
 footer {
   background-color: #777777;
-
-  .f-cont {
-    padding-top: 2%;
-    p {
-      line-height: 0;
-    }
-  }
   i:hover {
     color: #545454;
   }
-  .copy-col {
-    padding-bottom: 5%;
-    position: absolute;
-    bottom: 0;
+  .pc-foot, .mobile-foot {
+    padding: 2%;
   }
+  .hours-extra-text {
+    margin-top: 2%;
+  }
+}
 
-  .map-col {
-    position: absolute;
-    bottom: 0;
-  }
 
-  .hours-col {
-    padding-bottom: 6%;
-    position: absolute;
-    bottom: 0;
+.pc-foot {
+  // display: none;
+  .hours {
+    float: right;
   }
+}
+
+.mobile-foot {
+  display: none;
 }
