@@ -22,7 +22,10 @@
 
 $(document).ready(function(){
 
-
+  // HOME: Initializes dropdown menu for mobile.
+  $('.ui.dropdown')
+  .dropdown()
+  ;
   // HOME: Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')
   .on('click', function() {

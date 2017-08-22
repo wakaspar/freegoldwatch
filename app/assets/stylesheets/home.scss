@@ -34,6 +34,14 @@ a, p, span {
   font-size: 1.25em;
 }
 
+.mobile-head {
+  padding: 0% 3%;
+  .dropdown {
+    margin-top: 1%;
+  }
+}
+
+
 .section-header {
   padding-left: 2%;
   font-size: 2.5em;
@@ -65,19 +73,21 @@ header {
   display: block;
   position: fixed;
   background-color: #fff;
+
   .my-nav a {
     color: #161616;
     padding: 1%;
   }
-  .tagline {
+
+  .tagline p {
     text-align: center;
     color: #ffffff;
     font-size: 2em;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 1% 0%;
   }
+
   .logo {
     font-family: 'helsinkiregular';
     color: #ffffff;
@@ -86,6 +96,7 @@ header {
     padding: 0% 0% 2% 2%;
     text-shadow: -2px 0 #161616, 0 3px #161616, 5px 0 #161616, 0 -2px #161616;
   }
+
   .logo-box {
     padding-left: 2%;
   }
@@ -94,8 +105,7 @@ header {
 //////////////////////////
 // Parallax Backgrounds //
 //////////////////////////
-
-// Background Sources //
+// Sources //
 #bg-one {
   background-image: url('full_screen_1.jpg');
 }
@@ -124,16 +134,22 @@ header {
   background-repeat: no-repeat;
 }
 
-// INFO: Sets first background size @ 100vh on displays > 720px.
+// INFO: Sets size of the first background @ 100vh on displays > 720px.
 @media (min-width: 720px) {
    #bg-one {
      height: 100vh;
+  }
+  .mobile-head {
+    display: none;
   }
 }
 
 // Mobile Settings //
 // INFO: Resets background props & sizes for mobile displays.
 @media (max-width: 720px) {
+  .pc-head {
+    display: none;
+  }
   .bg-holder {
     height: 50vh;
   }
@@ -145,8 +161,6 @@ header {
 ////////////////
 // Arcade Box //
 ////////////////
-
-// INFO: controls pin list wrapping
 .pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
@@ -199,25 +213,13 @@ header {
 ////////////
 footer {
   background-color: #777777;
+  .foot-box {
+    padding: 2%;
+  }
   i:hover {
     color: #545454;
-  }
-  .pc-foot, .mobile-foot {
-    padding: 2%;
   }
   .hours-extra-text {
     margin-top: 2%;
   }
-}
-
-
-.pc-foot {
-  // display: none;
-  .hours {
-    float: right;
-  }
-}
-
-.mobile-foot {
-  display: none;
 }

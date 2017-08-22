@@ -3,25 +3,70 @@
   <div class="ui section">
     <div class="tag-bg ui centered grid">
       <div class="row home-of" style="color: #ffffff;">
-        <div class="tagline">home of the most pinball machines in san francisco</div>
+        <div class="tagline">
+          <p>home of the most pinball machines in san francisco</p>
+          </div>
       </div>
     </div>
-    <div class="ui stackable two column grid">
-      <div class="column ten wide">
-        <div class="logo-box">
-          <h2>print. shop. arcade.</h2>
-          <h1 class="logo">freegoldwatch.</h1>
+
+    <div class="pc-head">
+      <div class="ui stackable two column grid">
+        <div class="column ten wide">
+          <div class="logo-box">
+            <h2>print. shop. arcade.</h2>
+            <h1 class="logo">freegoldwatch.</h1>
+          </div>
         </div>
-      </div>
-      <div class="column six wide centered">
-        <div class="row my-nav">
-          <a href="#pins">pins.</a>
-          <a href="#prints">prints.</a>
-          <a href="#parties">parties.</a>
-          <a href="#social">social.</a>
+        <div class="column six wide centered">
+          <div class="row my-nav">
+            <a href="#pins">pins.</a>
+            <a href="#prints">prints.</a>
+            <a href="#parties">parties.</a>
+            <a href="#social">social.</a>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="mobile-head">
+      <div class="ui text menu">
+        <div class="header item">
+          <h1 class="logo">fgw.</h1>
+        </div>
+        <p>print.shop.arcade.</p>
+        <div class="right menu">
+          <div class="ui dropdown basic button item">
+            <%= fa_icon "bars 2x" %>
+            <div class="menu">
+              <div class="item">
+                <a href="#pins">pins.</a>
+              </div>
+              <div class="item">
+                <a href="#prints">prints.</a>
+              </div>
+              <div class="item">
+                <a href="#parties">parties.</a>
+              </div>
+              <div class="item">
+                <a href="#social">social.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="column six wide centered">
+          <div class="row my-nav">
+            <a href="#pins">pins.</a>
+            <a href="#prints">prints.</a>
+            <a href="#parties">parties.</a>
+            <a href="#social">social.</a>
+          </div> -->
+        </div>
+      </div> <!-- closes mobile-head -->
+
+    </div>
+
+
   </div>
 </header>
 
@@ -179,52 +224,21 @@
 <!-- Page Footer -->
 <footer>
   <div class="foot-cap"></div>
-
-  <div class="mobile-foot">
-    <div class="ui two column stackable grid">
-      <div class="eight wide column">
-        <a href="https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724" target="_blank">
-          <%= image_tag('new_map', class: 'ui image map') %>
-        </a>
-        <div class="row">
-          <p>1767 Waller St. SF, Ca. 94117</p>
-        </div>
-      </div>
-      <div class="eight wide column">
-        <%= image_tag('hours', class: 'ui image') %>
-        <p>415 876-4444 | info<span style="font-family:'serif';">@</span>freegoldwatch.com</p>
-      </div>
-    </div>
-    <div class="ui centered grid">
-      <div class="row">
-        <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
-        <%= fa_icon "facebook-square 2x" %>
-        <% end %>
-        <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
-        <%= fa_icon "instagram 2x" %>
-        <% end %>
-        <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
-        <%= fa_icon "github-square 2x" %>
-        <% end %>
-      </div>
-      <div class="row">
-        <p>copyright<span style="font-family:'serif';"> © </span>2017 | freegoldwatch.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="pc-foot">
+  <div class="foot-box">
     <div class="ui center aligned stackable grid">
       <div class="row">
-        <div class="left aligned five wide computer column">
+
+        <div class="five wide computer seven wide tablet column">
           <a href="https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724" target="_blank">
             <%= image_tag('new_map', class: 'ui image') %>
           </a>
           <p>1767 Waller St. SF, Ca. 94117</p>
         </div>
-        <div class="six wide column"></div>
-        <div class="right aligned five wide column">
-          <%= image_tag('hours', class: 'ui image') %>
+
+        <div class="six wide computer one wide tablet column"></div>
+
+        <div class="five wide computer seven wide tablet column">
+          <%= image_tag('hours', class: 'ui centered image') %>
           <div class="hours-extra-text">
             <div><%= link_to 'mailto:info@freegoldwatch.com', target: '_blank' do %> info<span style="font-family:sans-serif;">@</span>freegoldwatch.com
             <% end %></div>
@@ -232,6 +246,7 @@
             <% end %></div>
           </div>
         </div>
+
       </div>
 
       <div class="row">
