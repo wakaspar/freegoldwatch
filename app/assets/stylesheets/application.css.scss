@@ -13,10 +13,11 @@
  *= require_tree .
  *= require_self
  *= require jquery-ui
+*= require semantic-ui
  *= require font-awesome
  */
 
-@import 'semantic-ui';
+// @import 'semantic-ui';
 
 /**********************/
 /* Application Layout */

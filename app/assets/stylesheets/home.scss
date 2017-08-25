@@ -1,6 +1,7 @@
 //*********************//
 // home/index.html.erb //
 //*********************//
+
 // INFO: Freegoldwatch. uses Helsinki regular for EVERYTHING, including this website.
 @font-face {
     font-family: 'helsinkiregular';
@@ -15,19 +16,26 @@
 
 @import 'semantic-ui';
 
+
 /////////////////////
 // Page Layout CSS //
 /////////////////////
-.my-nav a, #parties .content, .section-header,
+.item a, #parties .content, .section-header,
 .tagline, .box-bottom-text, footer {
   font-family: 'helsinkiregular';
   -webkit-font-smoothing: antialiased;
   color: #161616;
-  text-decoration: none;
 }
 
-body a, i {
-  color: #161616;
+body {
+  margin: 0em;
+  a, i {
+    color: #161616;
+    text-decoration: none;
+    :hover {
+      color: coral;
+    }
+  }
 }
 
 a, p, span {
@@ -36,11 +44,7 @@ a, p, span {
 
 .mobile-head {
   padding: 0% 3%;
-  .dropdown {
-    margin-top: 1%;
-  }
 }
-
 
 .section-header {
   padding-left: 2%;
@@ -49,7 +53,10 @@ a, p, span {
 
 .content-box {
   padding: 2%;
-  text-decoration: none;
+}
+
+.logo-box {
+  padding: 0% 1%;
 }
 
 .box-bottom-text {
@@ -58,14 +65,15 @@ a, p, span {
   text-align: right;
 }
 
-.tag-bg, .foot-cap {
+.tagline, .foot-cap {
   background: #161616;
-  min-height: 25px;
+  min-height: 35px;
 }
 
-////////////////////////
-// Page Header & Logo //
-////////////////////////
+
+/////////////////////////////////////
+// Page Header, Logo, & Navigation //
+/////////////////////////////////////
 header {
   top: 0px;
   z-index: 3;
@@ -74,33 +82,25 @@ header {
   position: fixed;
   background-color: #fff;
 
-  .my-nav a {
-    color: #161616;
-    padding: 1%;
-  }
-
   .tagline p {
     text-align: center;
     color: #ffffff;
     font-size: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 0% 2.75%;
+  }
+  // Removes some default Semantic UI styling
+  .ui.text.menu, .full-name, .initials {
+    margin: 0em;
   }
 
   .logo {
     font-family: 'helsinkiregular';
     color: #ffffff;
     font-size: 5em;
-    line-height: 0.2;
-    padding: 0% 0% 2% 2%;
     text-shadow: -2px 0 #161616, 0 3px #161616, 5px 0 #161616, 0 -2px #161616;
   }
-
-  .logo-box {
-    padding-left: 2%;
-  }
 }
+
 
 //////////////////////////
 // Parallax Backgrounds //
@@ -134,33 +134,42 @@ header {
   background-repeat: no-repeat;
 }
 
+
+/////////////////////////////////////
+// Media Queries & Mobile Settings //
+/////////////////////////////////////
+@media (min-width: 1060px) {
+
+}
 // INFO: Sets size of the first background @ 100vh on displays > 720px.
-@media (min-width: 720px) {
-   #bg-one {
-     height: 100vh;
+@media (min-width: 769px) {
+  #bg-one {
+    height: 100vh;
   }
-  .mobile-head {
+  .initials {
     display: none;
   }
 }
-
-// Mobile Settings //
-// INFO: Resets background props & sizes for mobile displays.
-@media (max-width: 720px) {
-  .pc-head {
-    display: none;
+// INFO: Resets background props & sizes, as well as
+// other CSS, for mobile displays.
+@media (max-width: 768px) {
+  #bg-one {
+    height: 70vh;
   }
   .bg-holder {
     height: 50vh;
   }
-  #bg-one {
-    height: 70vh;
+  .full-name {
+    display: none;
   }
 }
 
-////////////////
+
+///////////////////
+// Content Boxes //
+///////////////////
+
 // Arcade Box //
-////////////////
 .pin-list {
   -moz-column-count: 4;
   -moz-column-gap: 20px;
@@ -185,37 +194,33 @@ header {
   }
 }
 
-///////////////
 // Print Box //
-///////////////
-.print-form {
+.print-order-form {
   display: none;
 }
 
 .new-print-btn {
   background-color: #161616;
   color: #ffffff;
-  float: right;
-  margin-right: 7.5%;
-  margin-top: 17.5%;
 }
 
-///////////////
-// Party Box //
-///////////////
+// Parties Box //
 #parties i:hover {
   color: #777777;
   text-shadow: 2px 2px #161616;
 }
+
+// Social Box //
+.sfpd_logo:hover {
+  background-color: black;
+}
+
 
 ////////////
 // Footer //
 ////////////
 footer {
   background-color: #777777;
-  .foot-box {
-    padding: 2%;
-  }
   i:hover {
     color: #545454;
   }

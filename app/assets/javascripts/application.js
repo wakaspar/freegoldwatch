@@ -30,22 +30,22 @@ $(document).ready(function(){
   $('.new-print-btn')
   .on('click', function() {
     // Show form
-    $('.print-form')
+    $('.print-order-form')
       .css('display', 'block');
       // Hide info & 'new' button
     $('.new-print-btn')
       .css('display', 'none');
-    $('.print-info')
+    $('.print-order-info')
       .css('display', 'none');
   });
 
   $('.back-btn')
   .on('click', function() {
     // Hide form
-    $('.print-form')
+    $('.print-order-form')
       .css('display', 'none');
   //   // Show info & 'new' button
-    $('.print-info')
+    $('.print-order-info')
       .css('display', 'block');
     $('.new-print-btn')
       .css('display', 'block');
