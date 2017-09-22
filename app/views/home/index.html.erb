@@ -3,7 +3,6 @@
   <div class="ui centered row tagline">
     <p>home of the most pinball machines in san francisco</p>
   </div>
-
   <div class="logo-box">
     <div class="ui text menu">
       <!-- Logos -->
@@ -13,49 +12,31 @@
       </div>
       <!-- Navigation -->
       <div class="right menu">
-
-
-          <p class="item">print. shop. arcade.</p>
-          <div class="ui dropdown basic button item">
-            <%= fa_icon "bars 3x" %>
-            <div class="ui burger menu">
-              <div class="item">
-                <a href="#pins">pins.</a>
-              </div>
-              <div class="ui divider"></div>
-              <div class="item">
-                <a href="#prints">prints.</a>
-              </div>
-              <div class="ui divider"></div>
-              <div class="item">
-                <a href="#parties">parties.</a>
-              </div>
-              <div class="ui divider"></div>
-              <div class="item">
-                <a href="#social">social.</a>
-              </div>
-            </div>
+        <!-- Smells Fishy -->
+        <p class="item psa" style="color:#161616;">print. shop. arcade.</p>
+        <div class="ui dropdown basic button item">
+          <%= fa_icon "bars 3x" %>
+          <div class="ui burger menu">
+            <a href="#pins">
+              <div class="item">pins.</div>
+            </a>
+            <div class="ui divider"></div>
+            <a href="#prints">
+              <div class="item">prints.</div>
+            </a>
+            <div class="ui divider"></div>
+            <a href="#parties">
+              <div class="item">parties.</div>
+            </a>
+            <div class="ui divider"></div>
+            <a href="#social">
+              <div class="item">social.</div>
+            </a>
           </div>
-
-        
-
-      </div>
-    </div>
-  </div>
-
-
-      <!-- TODO: FIGURE OUT WHAT TO DO WITH Horizonav - For Desktop Displays -->
-      <!-- <div class="horizonav">
-        <div class="">
-          <a href="#pins">pins.</a>
-          <a href="#prints">prints.</a>
-          <a href="#parties">parties.</a>
-          <a href="#social">social.</a>
         </div>
-      </div> -->
-    </div>
-
-  </div>
+      </div> <!-- closes Nav -->
+    </div>  <!-- closes 'ui text menu' -->
+  </div>  <!-- closes logo-box -->
 </header>
 
 <!-- BG Holder One -->
@@ -63,7 +44,7 @@
 
 <!-- // Pinball Box // -->
 <div id="pins" class="ui section content-box">
-  <h1 class="section-header">pinball and video arcade.</h1>
+  <h1 class="section-header">pinball & video arcade.</h1>
   <br>
   <div class="pin-box">
     <ul class="pin-list">
@@ -71,8 +52,12 @@
       <li> <%= link_to pin['name'], pin['ipdb_link'], target: '_blank' %> </li>
     <% end %>
     </ul>
-    <p class="box-bottom-text"><%= fa_icon "asterisk" %>all ages welcome.  games updated daily!</p>
   </div>
+  <br>
+  <div class="ui right aligned grid">
+    <p class="column box-bottom-text"><%= fa_icon "asterisk" %>all ages welcome.  games updated daily!</p>
+  </div>
+
 </div> <!-- closes Pinball Box -->
 
 <!-- BG Holder Two -->
@@ -80,41 +65,48 @@
 
 <!-- // Print Order Box // -->
 <div id="prints" class= "ui section content-box">
-  <h1 class="section-header">custom screen printing</h1>
+  <h1 class="section-header">custom screen printing.</h1>
   <br>
+
   <div class="print-order-info">
-    <div class="ui center aligned two column stackable grid">
-      <div class="left aligned eleven wide column">
-        <ul>
-          <div class="ui header">
-            <%= fa_icon "check 3x" %>
-            <div class="content">
-              <p>Low minimums / fast turnaround.</p>
-            </div>
-          </div>
-          <div class="ui header">
-            <%= fa_icon "check 3x" %>
-            <div class="content">
-              <p>Spot color, 4 color process, waterbase inks.</p>
-            </div>
-          </div>
-          <div class="ui header">
-            <%= fa_icon "tags 3x" %>
-            <div class="content">
-              <a href="https://www.alphabroder.com/" target="_blank">Visit our available garmet catalog.</a>
-            </div>
-          </div>
-        </ul>
+    <div class="ui center aligned three column stackable grid">
+
+      <div class="column">
+        <h2 class="ui icon header">
+          <i class="ui circular inverted exchange icon"></i>
+          <div class="content">Low minimums / fast turnaround</div>
+        </h2>
       </div>
-      <div class="five wide column">
+
+      <div class="column">
+        <h2 class="ui icon header">
+          <i class="ui circular inverted tint icon"></i>
+          <div class="content">Spot color, 4 color process, waterbase inks</div>
+        </h2>
+      </div>
+
+      <div class="column">
+        <h2 class="ui icon header">
+          <i class="ui circular inverted tags icon"></i>
+          <div class="content"><a href="https://www.alphabroder.com/" target="_blank">Visit our available garmet catalog</a></div>
+        </h2>
+      </div>
+
+      <div class="row">
         <button class="ui massive secondary button new-print-btn">New Print Order</button>
       </div>
     </div>
-  </div>
+  </div> <!-- closes print-order-info -->
+
   <div class="print-order-form">
     <%= render partial: 'home/new_print' %>
   </div>
-  <p class="box-bottom-text"><%= fa_icon "asterisk" %>we specialize in small batch garmets of up to four colors.</p>
+
+  <br>
+  <div class="ui right aligned grid">
+    <p class="column box-bottom-text"><%= fa_icon "asterisk" %>we specialize in small batches of up to four colors.</p>
+  </div>
+
 </div>
 
 <!-- BG Holder Three -->
@@ -123,7 +115,8 @@
 <!-- // Parties Box // -->
 <div id="parties" class= "ui section content-box">
 
-  <h1 class="section-header">party and event hosting.</h1>
+  <h1 class="section-header">party & event hosting.</h1>
+  <!-- TODO: SMELLY! -->
   <p style="padding-left:4%;">We happily host public or private functions, including:</p>
   <br>
 
@@ -140,7 +133,6 @@
       <h2 class="ui icon header">
         <i class="ui circular inverted building icon"></i>
         <div class="content">corporate & office parties</div>
-        <div class="sub header">professionals playing pins</div>
       </h2>
     </div>
 
@@ -148,12 +140,13 @@
       <h2 class="ui icon header">
         <i class="ui circular inverted tint icon"></i>
         <div class="content">screen printing workshops</div>
-        <div class="sub header">make some swag</div>
       </h2>
     </div>
   </div>
 
-  <p class="box-bottom-text"><a href="tel: 415-876-4444"><%= fa_icon "phone" %> call</a> / <a href="mailto: info@freegoldwath.com"><%= fa_icon "envelope" %> email </a> for info & availability.</p>
+  <div class="ui right aligned grid">
+    <p class="column box-bottom-text"><a href="tel: 415-876-4444"><%= fa_icon "phone" %> call</a> / <a href="mailto: info@freegoldwath.com"><%= fa_icon "envelope" %> email </a> for info & availability.</p>
+  </div>
 </div>
 
 <!-- BG Holder Four -->
@@ -161,13 +154,14 @@
 
 <!-- // Social Media Box // -->
 <div id="social" class="ui section content-box">
-  <h1 class="section-header">social media</h1>
+  <h1 class="section-header">social media.</h1>
   <br>
   <!-- Social Media Content - Instagram & Facebook Feeds -->
   <div class="ui center aligned three column stackable grid container">
+
     <div class="column six wide">
-      <!-- Instagram Feed -->
-      <p><%= fa_icon "instagram 4x", class: 'ui image' %><span style="font-family:'serif';">@</span>freegoldwatch</p>
+      <!-- Instagram Feed  - SFPins Account -->
+      <p><%= fa_icon "instagram 4x", class: 'ui image' %><span style="font-family:'serif';"> @</span>sfpins</p>
       <div class="ui row tiny images">
         <% @instagram.each do |instagram| %>
         <%= link_to "#{instagram.images.standard_resolution.url}" do %>
@@ -175,6 +169,20 @@
         <% end %>
         <% end %>
       </div>
+
+      <!-- Instagram Feed  - FGW Account -->
+      <p><%= fa_icon "instagram 4x", class: 'ui image' %><span style="font-family:'serif';"> @</span>freegoldwatch</p>
+      <div class="ui row tiny images">
+        <% @instagram.each do |instagram| %>
+        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
+        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
+        <% end %>
+        <% end %>
+      </div>
+
+    </div>
+
+    <div class="column six wide">
       <!-- Twitter Feed -->
       <p><%= fa_icon "twitter 4x", class: 'ui image' %><span style="font-family:'serif';">#</span>freegoldwatchUS</p>
       <div class="ui row tiny images">
@@ -184,9 +192,7 @@
         <% end %>
         <% end %>
       </div>
-    </div>
 
-    <div class="column six wide">
       <!-- Facebook Feed -->
       <p><%= fa_icon "facebook 4x", class: 'ui image' %> /freegoldwatchshop</p>
       <div class="ui row tiny images">
@@ -197,12 +203,13 @@
         <% end %>
       </div>
     </div>
+
     <!-- SFPD Badge -->
     <div class="four wide column">
       <%= link_to 'http://sfpins.org', target: '_blank' do %>
-      <%= image_tag('sfpd_b&w small', class: "sfpd_logo ui centered image") %>
+        <%= image_tag('sfpd_b&w small', class: "sfpd_logo ui centered image") %>
+        <p class="box-bottom-text"><%= fa_icon "chain" %> league.</p>
       <% end %>
-      <p><%= fa_icon "chevron-up" %> check out league.</p>
     </div>
   </div>
 
@@ -221,8 +228,8 @@
         <div class="five wide computer seven wide tablet column">
           <a href="https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724" target="_blank">
             <%= image_tag('new_map', class: 'ui image') %>
+            <p>1767 Waller St. SF, Ca. 94117</p>
           </a>
-          <p>1767 Waller St. SF, Ca. 94117</p>
         </div>
         <div class="six wide computer one wide tablet column"></div>
         <div class="five wide computer seven wide tablet column">
@@ -245,8 +252,8 @@
           <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
           <%= fa_icon "instagram 3x" %>
           <% end %>
-          <%= link_to 'https://www.github.com/wakaspar/FreeGoldWatch', target: '_blank' do %>
-          <%= fa_icon "github-square 3x" %>
+          <%= link_to 'https://twitter.com/freegoldwatchus', target: '_blank' do %>
+          <%= fa_icon "twitter-square 3x" %>
           <% end %>
           <p>copyright<span style="font-family:'serif';"> © </span>2017 | freegoldwatch.</p>
         </div>

@@ -20,54 +20,54 @@
 /////////////////////
 // Page Layout CSS //
 /////////////////////
-.item a, #parties .content, .section-header,
+.psa, .item a, .content, .section-header,
 .tagline, .box-bottom-text, footer {
   font-family: 'helsinkiregular';
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
   color: #161616;
 }
 
+// NOTE: I was having trouble getting responsive font
+// sizes to work with things scoped into the body tag (duh).
 body {
-  margin: 0em;
   a, i {
     color: #161616;
-    text-decoration: none;
-    :hover {
-      color: coral;
-    }
+  }
+  .content-box {
+    padding: 2%;
+  }
+  .tagline, .foot-cap {
+    background: #161616;
   }
 }
 
-a, p, span {
-  font-size: 1.25em;
-}
-
-.mobile-head {
-  padding: 0% 3%;
+///////////////////////////
+// Responsive Font Sizes //
+///////////////////////////
+.tagline p {
+  font-size: 3.5vw;
 }
 
 .section-header {
   padding-left: 2%;
-  font-size: 2.5em;
-}
-
-.content-box {
-  padding: 2%;
-}
-
-.logo-box {
-  padding: 0% 1%;
+  font-size: 7.25vw;
 }
 
 .box-bottom-text {
-  margin-top: 2.5%;
-  float: right;
-  text-align: right;
+  font-size: 4vw;
 }
 
-.tagline, .foot-cap {
-  background: #161616;
-  min-height: 35px;
+.psa {
+  font-size: 4.5vw;
+}
+
+.initials {
+  font-size: 10vw;
+}
+
+.full-name {
+  font-size: 5vw;
 }
 
 
@@ -85,27 +85,21 @@ header {
   .tagline p {
     text-align: center;
     color: #ffffff;
-    font-size: 2em;
-    margin: 0% 2.75%;
+  }
+  .burger.menu {
+    width: 40vw;
+  }
+  .logo-box {
+    padding: 0% 1%;
+  }
+  .logo {
+    font-family: 'helsinkiregular';
+    color: #ffffff;
+    text-shadow: -2px 0 #161616, 0 3px #161616, 5px 0 #161616, 0 -2px #161616;
   }
   // Removes some default Semantic UI styling
   .ui.text.menu, .full-name, .initials {
     margin: 0em;
-  }
-
-  .burger.menu .item {
-    width: 100%;
-      a {
-      text-align: right;
-    }
-  }
-
-
-  .logo {
-    font-family: 'helsinkiregular';
-    color: #ffffff;
-    font-size: 5em;
-    text-shadow: -2px 0 #161616, 0 3px #161616, 5px 0 #161616, 0 -2px #161616;
   }
 }
 
@@ -113,9 +107,9 @@ header {
 //////////////////////////
 // Parallax Backgrounds //
 //////////////////////////
-// Sources //
 #bg-one {
   background-image: url('full_screen_1.jpg');
+  height: 60vh;
 }
 #bg-two {
   background-image: url('full_screen_4.jpg');
@@ -129,49 +123,64 @@ header {
 #bg-five {
   background-image: url('full_screen_5.jpg');
 }
-
 .bg-holder {
-  z-index: -1;
   position: static;
   top: 0;
   left: 0;
-  height: 65vh;
-  width: 100%;
+  height: 45vh;
+  width: 100vw;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-color: dodgerblue;
 }
 
 
 /////////////////////////////////////
 // Media Queries & Mobile Settings //
 /////////////////////////////////////
-@media (min-width: 1060px) {
 
+// Caps .box-bottom-text font size @ 30px on screens > 600px wide.
+@media (min-width: 600px) {
+  .box-bottom-text {
+    font-size: 22px;
+  }
+  .section-header {
+    font-size: 30px;
+  }
 }
+
+// Caps .tagline p font size @ 30px on screens > 860px wide.
+@media (min-width: 860px) {
+  .tagline p {
+    font-size: 30px;
+  }
+}
+
+
 // INFO: Sets size of the first background @ 100vh on displays > 720px.
-@media (min-width: 769px) {
+@media (min-width: 900px) {
   #bg-one {
     height: 100vh;
+  }
+  .psa {
+    font-size: 34px;
   }
   .initials {
     display: none;
   }
-}
-// INFO: Resets background props & sizes, as well as
-// other CSS, for mobile displays.
-@media (max-width: 768px) {
-  #bg-one {
-    height: 70vh;
-  }
   .bg-holder {
-    height: 50vh;
+    height: 45vh;
   }
+}
+
+// INFO: Displays full name of shop on larger screen sizes.
+@media (max-width: 899px) {
   .full-name {
     display: none;
   }
 }
-
 
 ///////////////////
 // Content Boxes //
@@ -189,7 +198,7 @@ header {
 
 .pin-list li {
   font-family: sans-serif;
-  font-size: .8em;
+  font-size: .9em;
   line-height: 15px;
   padding: 3px;
 }
@@ -228,6 +237,9 @@ header {
 // Footer //
 ////////////
 footer {
+  .foot-cap {
+    min-height: 25px;
+  }
   background-color: #777777;
   i:hover {
     color: #545454;
