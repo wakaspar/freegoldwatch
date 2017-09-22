@@ -129,7 +129,7 @@ header {
   left: 0;
   height: 45vh;
   width: 100vw;
-  background-size: cover;
+  background-size: 100vw;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -172,6 +172,7 @@ header {
   }
   .bg-holder {
     height: 45vh;
+    background-size: cover;
   }
 }
 
