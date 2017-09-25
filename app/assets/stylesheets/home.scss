@@ -107,7 +107,7 @@ header {
 //////////////////////////
 // Parallax Backgrounds //
 //////////////////////////
-#bg-one {
+#home {
   background-image: url('full_screen_1.jpg');
   height: 60vh;
 }
@@ -124,12 +124,12 @@ header {
   background-image: url('full_screen_5.jpg');
 }
 .bg-holder {
-  position: static;
+  // position: static;
   top: 0;
   left: 0;
   height: 45vh;
   width: 100vw;
-  background-size: 100vw;
+  background-size: auto;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -159,9 +159,9 @@ header {
 }
 
 
-// INFO: Sets size of the first background @ 100vh on displays > 720px.
+// INFO: Sets size of the first background @ 100vh on displays > 900px.
 @media (min-width: 900px) {
-  #bg-one {
+  #home {
     height: 100vh;
   }
   .psa {
@@ -171,7 +171,6 @@ header {
     display: none;
   }
   .bg-holder {
-    height: 45vh;
     background-size: cover;
   }
 }
