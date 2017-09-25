@@ -108,8 +108,9 @@ header {
 // Parallax Backgrounds //
 //////////////////////////
 #home {
-  background-image: url('full_screen_1.jpg');
+  top: 100;
   height: 60vh;
+  background-image: url('full_screen_1.jpg');
 }
 #bg-two {
   background-image: url('full_screen_4.jpg');
@@ -124,13 +125,12 @@ header {
   background-image: url('full_screen_5.jpg');
 }
 .bg-holder {
-  // position: static;
+  position: static;
   top: 0;
   left: 0;
   height: 45vh;
   width: 100vw;
-  background-size: auto;
-  background-attachment: fixed;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: dodgerblue;
@@ -171,7 +171,7 @@ header {
     display: none;
   }
   .bg-holder {
-    background-size: cover;
+    background-attachment: fixed;
   }
 }
 
