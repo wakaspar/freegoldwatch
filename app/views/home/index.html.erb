@@ -19,19 +19,19 @@
         <div class="ui dropdown basic button item">
           <%= fa_icon "bars 3x" %>
           <div class="ui burger menu">
-            <a href="#pins">
+            <a id="pins-link">
               <div class="item">pins.</div>
             </a>
             <div class="ui divider"></div>
-            <a href="#prints">
+            <a id="prints-link">
               <div class="item">prints.</div>
             </a>
             <div class="ui divider"></div>
-            <a href="#parties">
+            <a id="parties-link">
               <div class="item">parties.</div>
             </a>
             <div class="ui divider"></div>
-            <a href="#social">
+            <a id="social-link">
               <div class="item">social.</div>
             </a>
           </div>
@@ -59,7 +59,6 @@
   <div class="ui right aligned grid">
     <p class="column box-bottom-text"><%= fa_icon "asterisk" %>all ages welcome.  games updated daily!</p>
   </div>
-
 </div> <!-- closes Pinball Box -->
 
 <!-- BG Holder Two -->
@@ -69,46 +68,38 @@
 <div id="prints" class= "ui section content-box">
   <h1 class="section-header">custom screen printing.</h1>
   <br>
-
   <div class="print-order-info">
     <div class="ui center aligned three column stackable grid">
-
       <div class="column">
         <h2 class="ui icon header">
           <i class="ui circular inverted exchange icon"></i>
           <div class="content">Low minimums / fast turnaround</div>
         </h2>
       </div>
-
       <div class="column">
         <h2 class="ui icon header">
           <i class="ui circular inverted tint icon"></i>
           <div class="content">Spot color, 4 color process, waterbase inks</div>
         </h2>
       </div>
-
       <div class="column">
         <h2 class="ui icon header">
           <i class="ui circular inverted tags icon"></i>
           <div class="content"><a href="https://www.alphabroder.com/" target="_blank">Visit our available garmet catalog</a></div>
         </h2>
       </div>
-
       <div class="row">
         <button class="ui massive secondary button new-print-btn">New Print Order</button>
       </div>
     </div>
   </div> <!-- closes print-order-info -->
-
   <div class="print-order-form">
     <%= render partial: 'home/new_print' %>
   </div>
-
   <br>
   <div class="ui right aligned grid">
     <p class="column box-bottom-text"><%= fa_icon "asterisk" %>we specialize in small batches of up to four colors.</p>
   </div>
-
 </div>
 
 <!-- BG Holder Three -->

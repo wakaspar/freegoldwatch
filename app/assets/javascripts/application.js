@@ -24,8 +24,27 @@ $(document).ready(function(){
 
   // HOME: Initializes dropdown menu for mobile.
   $('.ui.dropdown')
-  .dropdown()
-  ;
+  .dropdown();
+
+  // HOME: Enables smooth scrolling
+  var headerHeight = $("header").height();
+   $("#pins-link").click(function(){
+      $path=$("#pins").offset().top - headerHeight;
+      $('body').animate({scrollTop:$path},1000);
+   });
+   $("#prints-link").click(function(){
+      $path=$("#prints").offset().top - headerHeight;
+      $('body').animate({scrollTop:$path},1000);
+   });
+   $("#parties-link").click(function(){
+      $path=$("#parties").offset().top - headerHeight + 1;
+      $('body').animate({scrollTop:$path},1000);
+   });
+   $("#social-link").click(function(){
+    $path=$("#social").offset().top - headerHeight + 1;
+    $('body').animate({scrollTop:$path},1000);
+   });
+
   // HOME: Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')
   .on('click', function() {
