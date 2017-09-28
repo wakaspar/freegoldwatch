@@ -50,6 +50,7 @@ gem 'httparty'
 # Aggregates Social Media from Instagram's API
 gem 'instagram', :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 gem 'twitter'
+gem 'koala'
 
 gem 'font-awesome-rails'
 

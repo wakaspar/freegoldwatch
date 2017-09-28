@@ -15,6 +15,11 @@ class HomeController < ApplicationController
     @instagram = Instagram.user_recent_media("5254795235", {:count => 3})
   end
 
+  def get_facebook
+    @feed = @graph.get_object(access_token)
+    puts feed
+  end
+
   def get_pins
     res_one = HTTParty.get('http://pinballmap.com/api/v1/locations/2405/machine_details.json', format: :json)
     @pins = res_one['machines']
