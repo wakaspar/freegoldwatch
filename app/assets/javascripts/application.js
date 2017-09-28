@@ -29,20 +29,20 @@ $(document).ready(function(){
   // HOME: Enables smooth scrolling
   var headerHeight = $("header").height();
    $("#pins-link").click(function(){
-      $path=$("#pins").offset().top - headerHeight;
-      $('body').animate({scrollTop:$path},1000);
+      $path=$("#pins").offset().top - headerHeight + 1;
+      $('body').animate({scrollTop:$path},1200);
    });
    $("#prints-link").click(function(){
-      $path=$("#prints").offset().top - headerHeight;
-      $('body').animate({scrollTop:$path},1000);
+      $path=$("#prints").offset().top - headerHeight + 1;
+      $('body').animate({scrollTop:$path},1200);
    });
    $("#parties-link").click(function(){
       $path=$("#parties").offset().top - headerHeight + 1;
-      $('body').animate({scrollTop:$path},1000);
+      $('body').animate({scrollTop:$path},1200);
    });
    $("#social-link").click(function(){
     $path=$("#social").offset().top - headerHeight + 1;
-    $('body').animate({scrollTop:$path},1000);
+    $('body').animate({scrollTop:$path},1200);
    });
 
   // HOME: Hides & Shows Print Order Form for Homepage
@@ -69,6 +69,10 @@ $(document).ready(function(){
     $('.new-print-btn')
       .css('display', 'block');
   });
+
+// , function() {
+//   $( this ).find( "i:last" ).remove();
+// }
 
 
   // ADMIN: Handles Machine Database Search of Pin Index
