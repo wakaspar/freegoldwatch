@@ -30,19 +30,19 @@ $(document).ready(function(){
   var headerHeight = $("header").height();
    $("#pins-link").click(function(){
       $path=$("#pins").offset().top - headerHeight + 1;
-      $('body').animate({scrollTop:$path},1200);
+      $('body').animate({scrollTop:$path},"slow");
    });
    $("#prints-link").click(function(){
       $path=$("#prints").offset().top - headerHeight + 1;
-      $('body').animate({scrollTop:$path},1200);
+      $('body').animate({scrollTop:$path},"slow");
    });
    $("#parties-link").click(function(){
       $path=$("#parties").offset().top - headerHeight + 1;
-      $('body').animate({scrollTop:$path},1200);
+      $('body').animate({scrollTop:$path},"slow");
    });
    $("#social-link").click(function(){
     $path=$("#social").offset().top - headerHeight + 1;
-    $('body').animate({scrollTop:$path},1200);
+    $('body').animate({scrollTop:$path},"slow");
    });
 
   // HOME: Hides & Shows Print Order Form for Homepage
