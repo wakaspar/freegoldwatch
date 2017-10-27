@@ -2,39 +2,43 @@
 <html>
   <head>
     <title>FreeGoldWatch</title>
-
-    <!-- Materialize & Font CDNs -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body class="admin-style">
-    <%= link_to "logout", destroy_admin_session_path, :method => 'delete', class: 'right' %>
-    <%= link_to root_path do %>
-      <h1 style="text-decoration:none; color:#ffffff;">FGW</h1>
-    <% end %>
-    <div class="row">
-      <div class="col s12 center">
-        <ul class="fixed width">
-          <li class="col s4"> <h5> <%= link_to "Prints", prints_path %> </h5> </li>
-          <li class="col s4">  <h5> <%= link_to "Pins", pins_path %> </h5> </li>
-          <li class="col s4"> <h5> <%= link_to "Front Page", root_path %> </h5> </li>
-        </ul>
+
+    <div class="ui text menu">
+      <div class="header item">
+        <%= link_to root_path do %>
+        <h1 class="admin-head">FGW.</h1>
+        <% end %>
       </div>
-
-      <!-- Dashboard Viewport -->
-      <%= yield %>
-
+      <div class="right menu">
+        <%= link_to "logout", destroy_admin_session_path, :method => 'delete', class: 'logout-link' %>
+      </div>
     </div>
-    <footer class="center">© wilbur 2017</footer>
+
+    <p id="notice"><%= notice %></p>
+
+    <div class="ui three item inverted menu">
+      <%= link_to prints_path, class: 'item admin-nav-links' do %>
+        Prints
+      <% end %>
+      <%= link_to pins_path, class: 'item admin-nav-links' do %>
+        Pins
+      <% end %>
+      <%= link_to root_path, class: 'item admin-nav-links' do %>
+        Front Page
+      <% end %>
+    </div>
+
+    <!-- Dashboard Viewport -->
+    <div class="ui centered stackable grid">
+      <%= yield %>
+    </div>
+
   </body>
 </html>

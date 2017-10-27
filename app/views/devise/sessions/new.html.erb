@@ -1,29 +1,35 @@
-<div class="container">
-  <h2>Log in</h2>
+<div class="ui centered stackable grid">
+  <div class="column six wide computer black-box">
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, value: 'will@fgw.com', autofocus: true %>
-    </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, value: 'fgwfgw', autocomplete: "off" %>
-    </div>
+    <h2>Login</h2>
 
-    <% if devise_mapping.rememberable? -%>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="ui inverted form">
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, value: 'will@fgw.com', autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, value: 'fgwfgw', autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "erb-btn" %>
+        </div>
       </div>
-    <% end -%>
+    <% end %>
 
-    <div class="actions">
-      <%= f.submit "Log in", class: "erb-btn" %>
-    </div>
-  <% end %>
-
+  </div>
 </div>
 
 <!-- Removed from default Devise sign in view -->

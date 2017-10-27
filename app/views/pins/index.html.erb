@@ -1,6 +1,6 @@
-<div class="contianer floor-box right-align">
+<div class="">
   <div class="col s5">
-    <h4>FGW Floor</h4>
+    <h4>On the Floor</h4>
     <% @floor_pins.each do |pin| %>
       <div class="floor-machine">
         <%= pin['name'] %> |
@@ -8,7 +8,7 @@
         <%= pin['year'] %> |
 
         <%= form_tag('/pins', method: :delete) do %>
-          <%= hidden_field_tag "machine_id", pin['id'] %>          
+          <%= hidden_field_tag "machine_id", pin['id'] %>
           <div><%= submit_tag "Remove", class: "erb-btn" %></div>
         <% end %>
 
@@ -21,7 +21,7 @@
 
 <div class="container database-box left-align">
   <div class="col s5">
-    <h4>Machine DB</h4>
+    <h4>PinballMap's Machine Database</h4>
     <div class="row">
       <input type="text" class="pin-search col s8" placeholder="...name a pin, ANY pin...ever.">
     </div>

@@ -138,7 +138,7 @@
   </div>
 
   <div class="ui right aligned grid">
-    <p class="column box-bottom-text"><span><a class="party-link" href="tel: 415-876-4444"> <i class="phone icon"></i>call</a></span> / <a class="party-link" href="mailto: info@freegoldwath.com"><i class="envelope icon"></i>email</a> for info & availability.</p>
+    <p class="column box-bottom-text"><span><a class="party-link" href="tel: 415-876-4444"> <i class="phone icon"></i>call</a></span> / <a class="party-link" href="mailto: info@freegoldwatch.com"><i class="envelope icon"></i>email</a> for info & availability.</p>
   </div>
 </div>
 
@@ -181,8 +181,8 @@
       <div class="ui row tiny images">
         <% @instagram.each do |instagram| %>
         <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
-        <% end %>
+          <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
+          <% end %>
         <% end %>
       </div>
 
@@ -191,8 +191,8 @@
       <div class="ui row tiny images">
         <% @instagram.each do |instagram| %>
         <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
-        <% end %>
+          <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
+          <% end %>
         <% end %>
       </div>
     </div>
@@ -240,13 +240,13 @@
         <div class="three wide column"></div>
         <div class="ten wide column">
           <%= link_to 'https://www.facebook.com/FreeGoldWatchShop/', target: '_blank' do %>
-          <%= fa_icon "facebook-square 3x" %>
+            <%= fa_icon "facebook-square 3x" %>
           <% end %>
           <%= link_to 'https://www.instagram.com/freegoldwatch/', target: '_blank' do %>
-          <%= fa_icon "instagram 3x" %>
+            <%= fa_icon "instagram 3x" %>
           <% end %>
           <%= link_to 'https://twitter.com/freegoldwatchus', target: '_blank' do %>
-          <%= fa_icon "twitter-square 3x" %>
+            <%= fa_icon "twitter-square 3x" %>
           <% end %>
           <p>copyright<span style="font-family:'serif';"> © </span>2017 | freegoldwatch.</p>
         </div>

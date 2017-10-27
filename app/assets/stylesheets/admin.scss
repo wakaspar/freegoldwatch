@@ -1,30 +1,20 @@
- .nav-link {
-   display: inline;
- }
+@import 'semantic-ui';
 
 .admin-style {
-  padding: 10px;
-  background: #161616;
-  color: white;
+  margin: 2%;
+  background: #545454;
+  color: #161616;
 }
 
-.tabs, .tab {
-  margin: 25px;
-  background: grey;
+.admin-nav-links, .logout-link {
+  font-size: 2vw;
 }
 
-.tabs .tab a {
-  color: black;
+.admin-nav-links {
+  color: #ffffff;
 }
 
-.tabs .tab a.active {
-  color: white;
-}
-
-.tabs .tab a:hover {
-  color: #545454;
-}
-
-.tabs .indicator {
-  background-color: white;
+.logout-link {
+  font-family: 'helsinkiregular';
+  color: #161616;
 }

@@ -1,201 +1,213 @@
+
+<!-- NOTE: I should extract all these tables into partials and only render what I need at any given time.
+It would be smart to only have to load a single table at a time.  Different tables can be color-coded for
+different states in the state machine.
+-->
 <p id="notice"><%= notice %></p>
 
 <!-- Dashboard -->
-<div class="container admin-style center">
-  <div class="row">
-    <div class="col s12 tab-row">
-      <ul class="tabs">
-        <li class="col s1"></li>
-        <li class="tab col s2"><a href="#all">All</a></li>
-        <li class="tab col s2"><a href="#pending">Pending</a></li>
-        <li class="tab col s2"><a href="#printing">Printing</a></li>
-        <li class="tab col s2"><a href="#pickup">PickUp</a></li>
-        <li class="tab col s2"><a href="#archive">Archive</a></li>
-        <li class="col s1"></li>
-      </ul>
-    </div>
-    <!-- New Print Link -->
-    <div class="row">
-      <%= link_to 'New Print', new_print_path %>
-    </div>
+<div class="ui horizontal divider"></div>
 
-    <!-- All Current Print Orders -->
-    <div id="all" class="col s12">
-      <h3>Active Print Orders</h3>
-      <table>
-        <thead>
+<div class="ui labeled icon inverted six item menu">
+  <%= link_to new_print_path, class: 'item' do %>
+    <i class="add circle icon"></i>New Print Job
+  <% end %>
+  <a href="#all" class="item">
+    <i class="tasks icon"></i>All Orders
+  </a>
+  <a href="#pending" class="item">
+    <i class="check circle icon"></i>Pending Approval
+  </a>
+  <a href="#printing" class="item">
+    <i class="paint brush icon"></i>Currently Printing
+  </a>
+  <a href="#printing" class="item">
+    <i class="shipping icon"></i>Ready For Pickup
+  </a>
+  <a href="#archive" class="item">
+    <i class="book icon"></i>Order Archive
+  </a>
+</div>
+
+<div class="ui horizontal divider"></div>
+
+<!-- All Current Print Orders -->
+<div id="all" class="">
+  <h3 class="print-table-headings">All Active Print Orders</h3>
+  <table class="ui inverted black table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Contact Phone</th>
+        <th>Order State</th>
+        <th>Actions</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state < 3 %>
           <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Order state</th>
-            <th>Contact email</th>
-            <th>Contact phone</th>
-            <th colspan="3"></th>
+            <td><%= print.name %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_phone %></td>
+            <td><%= print.order_state %></td>
+            <td><%= link_to print do%><i class="info circle icon"></i>Details<% end %></td>
+            <td>
+              <%= link_to edit_print_path(print) do %>
+                <i class="ui write icon"></i>Edit
+              <% end %>
+            </td>
+            <td>
+              <%= link_to print, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="trash icon"></i>Delete
+              <% end %>
+            </td>
           </tr>
-        </thead>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>
 
-        <tbody>
-          <% @prints.each do |print| %>
-            <% if print.order_state < 3 %>
-              <tr>
-                <td><%= print.name %></td>
-                <td><%= print.quantity %></td>
-                <td><%= print.order_state %></td>
-                <td><%= print.contact_email %></td>
-                <td><%= print.contact_phone %></td>
-                <td><%= link_to 'Show', print %></td>
-                <td><%= link_to 'Edit', edit_print_path(print) %></td>
-                <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-          <% end %>
-        </tbody>
-      </table>
-      <br>
-    </div>
+<!-- Pending Orders -->
+<div id="pending" class="">
+  <h3>Orders Pending Approval</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Contact email</th>
+        <th>Contact phone</th>
+        <th>Actions</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-    <!-- Pending Orders -->
-    <div id="pending" class="col s12">
-      <h3>Pending Approval</h3>
-      <table>
-        <thead>
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state == 0 %>
           <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Order state</th>
-            <th>Contact email</th>
-            <th>Contact phone</th>
-            <th colspan="3"></th>
+            <td><%= print.name %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_email %></td>
+            <td><%= print.contact_phone %></td>
+            <td><%= link_to 'Show', print %></td>
+            <td><%= link_to 'Edit', edit_print_path(print) %></td>
+            <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
           </tr>
-        </thead>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>
 
-        <tbody>
-          <% @prints.each do |print| %>
-            <% if print.order_state == 0 %>
-              <tr>
-                <td><%= print.name %></td>
-                <td><%= print.quantity %></td>
-                <td><%= print.order_state %></td>
-                <td><%= print.contact_email %></td>
-                <td><%= print.contact_phone %></td>
-                <td><%= link_to 'Show', print %></td>
-                <td><%= link_to 'Edit', edit_print_path(print) %></td>
-                <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
-              </tr>
-            <% end %>
-          <% end %>
-        </tbody>
-      </table>
-      <br>
-    </div>
+<!-- Printing Orders -->
+<div id="printing" class="">
+  <h3>Jobs Currently Printing</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Contact email</th>
+        <th>Contact phone</th>
+        <th>Actions</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-    <!-- Printing Orders -->
-    <div id="printing" class="col s12">
-      <h3>Currently Printing</h3>
-      <table>
-        <thead>
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state == 1 %>
           <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Order state</th>
-            <th>Contact email</th>
-            <th>Contact phone</th>
-            <th colspan="3"></th>
+            <td><%= print.name %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_email %></td>
+            <td><%= print.contact_phone %></td>
+            <td><%= link_to 'Show', print %></td>
+            <td><%= link_to 'Edit', edit_print_path(print) %></td>
+            <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
+            <td><%= link_to 'Go Back', bump_down_path(print), method: :put %></td>
           </tr>
-        </thead>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>
 
-        <tbody>
-          <% @prints.each do |print| %>
-            <% if print.order_state == 1 %>
-              <tr>
-                <td><%= print.name %></td>
-                <td><%= print.quantity %></td>
-                <td><%= print.order_state %></td>
-                <td><%= print.contact_email %></td>
-                <td><%= print.contact_phone %></td>
-                <td><%= link_to 'Show', print %></td>
-                <td><%= link_to 'Edit', edit_print_path(print) %></td>
-                <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
-                <td><%= link_to 'Go Back', bump_down_path(print), method: :put %></td>
-              </tr>
-            <% end %>
-          <% end %>
-        </tbody>
-      </table>
-      <br>
-    </div>
+<!-- PickUp Orders -->
+<div id="pickup" class="">
+  <h3>Ready for PickUp</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Contact email</th>
+        <th>Contact phone</th>
+        <th>Actions</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-    <!-- PickUp Orders -->
-    <div id="pickup" class="col s12">
-      <h3>Ready for PickUp</h3>    
-      <table>
-        <thead>
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state == 2 %>
           <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Order state</th>
-            <th>Contact email</th>
-            <th>Contact phone</th>
-            <th colspan="3"></th>
+            <td><%= print.name %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_email %></td>
+            <td><%= print.contact_phone %></td>
+            <td><%= link_to 'Show', print %></td>
+            <td><%= link_to 'Edit', edit_print_path(print) %></td>
+            <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
+            <td><%= link_to 'Go Back', bump_down_path(print), method: :put %></td>
           </tr>
-        </thead>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>
 
-        <tbody>
-          <% @prints.each do |print| %>
-            <% if print.order_state == 2 %>
-              <tr>
-                <td><%= print.name %></td>
-                <td><%= print.quantity %></td>
-                <td><%= print.order_state %></td>
-                <td><%= print.contact_email %></td>
-                <td><%= print.contact_phone %></td>
-                <td><%= link_to 'Show', print %></td>
-                <td><%= link_to 'Edit', edit_print_path(print) %></td>
-                <td><%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                <td><%= link_to 'Next Stage', bump_up_path(print), method: :put %></td>
-                <td><%= link_to 'Go Back', bump_down_path(print), method: :put %></td>
-              </tr>
-            <% end %>
-          <% end %>
-        </tbody>
-      </table>
-      <br>
-    </div>
+<!-- Archived Orders -->
+<div id="archive" class="">
+  <h3>Order Archive</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Contact email</th>
+        <th>Contact phone</th>
+        <th>Actions</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-    <!-- Archived Orders -->
-    <div id="archive" class="col s12">
-      <h3>Order Archive</h3>
-      <table>
-        <thead>
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state == 3 %>
           <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Order state</th>
-            <th>Contact email</th>
-            <th>Contact phone</th>
-            <th colspan="3"></th>
+            <td><%= print.name %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_email %></td>
+            <td><%= print.contact_phone %></td>
+            <td><%= link_to 'Show', print %></td>
           </tr>
-        </thead>
-
-        <tbody>
-          <% @prints.each do |print| %>
-            <% if print.order_state == 3 %>
-              <tr>
-                <td><%= print.name %></td>
-                <td><%= print.quantity %></td>
-                <td><%= print.order_state %></td>
-                <td><%= print.contact_email %></td>
-                <td><%= print.contact_phone %></td>
-                <td><%= link_to 'Show', print %></td>
-              </tr>
-            <% end %>
-          <% end %>
-        </tbody>
-      </table>
-      <br>
-    </div>
-
-  </div>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
 </div>
