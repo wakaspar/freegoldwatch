@@ -1,5 +1,11 @@
 @import 'semantic-ui';
 
+@media (min-width: 900px) {
+  #admin-menu {
+    width: 50%;
+  }
+}
+
 .admin-style {
   margin: 2%;
   background: #545454;
@@ -7,7 +13,7 @@
 }
 
 .admin-nav-links, .logout-link {
-  font-size: 2vw;
+  font-size: 5vw;
 }
 
 .admin-nav-links {

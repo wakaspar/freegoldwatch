@@ -13,7 +13,7 @@
     <div class="ui text menu">
       <div class="header item">
         <%= link_to root_path do %>
-        <h1 class="admin-head">FGW.</h1>
+        <h1 class="admin-header">FGW.</h1>
         <% end %>
       </div>
       <div class="right menu">
@@ -23,15 +23,12 @@
 
     <p id="notice"><%= notice %></p>
 
-    <div class="ui three item inverted menu">
+    <div id="admin-menu" class="ui two item centered inverted menu">
       <%= link_to prints_path, class: 'item admin-nav-links' do %>
         Prints
       <% end %>
       <%= link_to pins_path, class: 'item admin-nav-links' do %>
         Pins
-      <% end %>
-      <%= link_to root_path, class: 'item admin-nav-links' do %>
-        Front Page
       <% end %>
     </div>
 

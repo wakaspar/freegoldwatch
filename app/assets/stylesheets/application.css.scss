@@ -53,13 +53,20 @@
 }
 
 .form-wrapper {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
-.admin-head {
+.admin-header {
   color: #161616;
   text-decoration: none;
   font-family: 'helsinkiregular';
   font-size: 9vw;
+}
+
+// Caps size of FGW. admin header
+@media (min-width: 600px) {
+  .admin-header {
+    font-size: 5em;
+  }
 }
