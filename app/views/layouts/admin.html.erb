@@ -8,7 +8,7 @@
   </head>
 
 
-  <body class="admin-style">
+  <body class="ui container admin-style">
 
     <div class="ui text menu">
       <div class="header item">
@@ -16,24 +16,28 @@
         <h1 class="admin-header">FGW.</h1>
         <% end %>
       </div>
+
+      <div class="item inverted">
+          <%= link_to prints_path, class: 'item admin-nav-links' do %>
+            Prints.
+          <% end %>
+      </div>
+      <div class="item inverted">
+          <%= link_to pins_path, class: 'item admin-nav-links' do %>
+            Pins.
+          <% end %>
+      </div>
+
       <div class="right menu">
         <%= link_to "logout", destroy_admin_session_path, :method => 'delete', class: 'logout-link' %>
       </div>
     </div>
 
     <p id="notice"><%= notice %></p>
-
-    <div id="admin-menu" class="ui two item centered inverted menu">
-      <%= link_to prints_path, class: 'item admin-nav-links' do %>
-        Prints
-      <% end %>
-      <%= link_to pins_path, class: 'item admin-nav-links' do %>
-        Pins
-      <% end %>
-    </div>
+    <br>
 
     <!-- Dashboard Viewport -->
-    <div class="ui centered stackable grid">
+    <div class="">
       <%= yield %>
     </div>
 

@@ -1,0 +1,27 @@
+<div class="ui compact labeled icon inverted menu">
+
+  <%= link_to new_print_path, class: 'green item' do %>
+    <i class="add circle icon"></i>New Print Job
+  <% end %>
+
+  <a id="all" class="active red item">
+    <i style="color:#ffffff;" class="tasks icon"></i>All Orders
+  </a>
+
+  <a id="pending" class="yellow item">
+    <i style="color:#ffffff;" class="check circle icon"></i>Pending Approval
+  </a>
+
+  <a id="current" class="blue item">
+    <i style="color:#ffffff;" class="paint brush icon"></i>Currently Printing
+  </a>
+
+  <a id="pickup" class="orange item">
+    <i style="color:#ffffff;" class="shipping icon"></i>Ready For Pickup
+  </a>
+
+  <a id="archive" class="purple item">
+    <i style="color:#ffffff;" class="book icon"></i>Order Archive
+  </a>
+
+</div>

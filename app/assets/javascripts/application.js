@@ -14,14 +14,12 @@
 //= require jquery-ui
 //= require jquery.turbolinks
 //= require semantic-ui
-
-
 //= require jquery_ujs
 //= require autocomplete-rails
 //= require_tree .
 
 $(document).ready(function(){
-
+  console.log('howdy');
   // HOME: Initializes dropdown menu for mobile.
   $('.ui.dropdown')
   .dropdown();
@@ -29,20 +27,20 @@ $(document).ready(function(){
   // HOME: Enables smooth scrolling
   var headerHeight = $("header").height();
    $("#pins-link").click(function(){
-      $path=$("#pins").offset().top - headerHeight + 1;
-      $('body').animate({scrollTop:$path},"slow");
+      $path = $("#pins").offset().top - headerHeight + 1;
+      $('html,body').animate({scrollTop:$path},"slow");
    });
    $("#prints-link").click(function(){
       $path=$("#prints").offset().top - headerHeight + 1;
-      $('body').animate({scrollTop:$path},"slow");
+      $('html,body').animate({scrollTop:$path},"slow");
    });
    $("#parties-link").click(function(){
       $path=$("#parties").offset().top - headerHeight + 1;
-      $('body').animate({scrollTop:$path},"slow");
+      $('html,body').animate({scrollTop:$path},"slow");
    });
    $("#social-link").click(function(){
     $path=$("#social").offset().top - headerHeight + 1;
-    $('body').animate({scrollTop:$path},"slow");
+    $('html,body').animate({scrollTop:$path},"slow");
    });
 
   // HOME: Hides & Shows Print Order Form for Homepage
@@ -69,11 +67,6 @@ $(document).ready(function(){
     $('.new-print-btn')
       .css('display', 'block');
   });
-
-// , function() {
-//   $( this ).find( "i:last" ).remove();
-// }
-
 
   // ADMIN: Handles Machine Database Search of Pin Index
   if ($('.pin-search').val() == '') {

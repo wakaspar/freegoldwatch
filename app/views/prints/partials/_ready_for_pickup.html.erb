@@ -1,0 +1,53 @@
+<!-- PickUp Orders -->
+<div id="pickup" class="ui centered stackable grid">
+
+
+  <!-- Print Order Menu -->
+  <h3 class="print-table-headings">Ready for PickUp</h3>
+  <%= render partial: 'prints/partials/print_menu' %>
+
+  <table class="ui black inverted table">
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Quantity</th>
+        <th>Contact email</th>
+        <th>Contact phone</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Back to Printing</th>
+        <th>Move to Archive</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state == 2 %>
+          <tr>
+            <td><%= link_to print do%></i><%= print.name %><% end %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_email %></td>
+            <td><%= print.contact_phone %></td>
+            <td><%= link_to 'Edit', edit_print_path(print) %></td>
+            <td>
+              <%= link_to print, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ui center aligned' do %>
+                <i class="trash icon"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to bump_down_path(print), method: :put do %>
+                <i class="arrow left icon"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to bump_up_path(print), method: :put do %>
+                <i class="arrow right icon"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>

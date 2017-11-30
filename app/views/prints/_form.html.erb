@@ -1,4 +1,4 @@
-<div class="container">
+<div class="ui form">
   <%= form_for(print) do |f| %>
     <% if print.errors.any? %>
       <div id="error_explanation">
@@ -17,28 +17,30 @@
       <%= f.text_field :name %>
     </div>
 
-    <div class="field">
-      <%= f.label :quantity %>
-      <%= f.number_field :quantity %>
+    <div class="two fields">
+      <div class="field">
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity %>
+      </div>
+      <div class="field">
+        <%= f.hidden_field :order_state, :value => 0 %>
+      </div>
     </div>
 
-    <div class="field">
-      <%= f.label :order_state %>
-      <%= f.number_field :order_state %>
-    </div>
-
-    <div class="field">
-      <%= f.label :contact_email %>
-      <%= f.number_field :contact_email %>
-    </div>
-
-    <div class="field">
-      <%= f.label :contact_phone %>
-      <%= f.number_field :contact_phone %>
+    <div class="two fields">
+      <div class="field">
+        <%= f.label :contact_email %>
+        <%= f.text_field :contact_email %>
+      </div>
+      <div class="field">
+        <%= f.label :contact_phone %>
+        <%= f.number_field :contact_phone %>
+      </div>
     </div>
 
     <div class="actions">
-      <%= f.submit class: 'erb-btn' %>
+      <%= f.submit class: 'ui button erb-btn' %>
+      <%= link_to 'Back', prints_path, class: 'ui button' %>
     </div>
   <% end %>
 </div>

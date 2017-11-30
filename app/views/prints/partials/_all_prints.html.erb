@@ -1,0 +1,44 @@
+<!-- All Current Print Orders -->
+<div class="ui centered stackable grid">
+
+  <!-- Print Order Menu -->
+  <h3 class="print-table-headings">All Active Print Orders</h3>
+  <%= render partial: 'prints/partials/print_menu' %>
+
+  <table class="ui inverted black table">
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Quantity</th>
+        <th>Contact Phone</th>
+        <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state < 3 %>
+          <tr>
+            <td><%= link_to print do%></i><%= print.name %><% end %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_phone %></td>
+            <td><%= print.order_state %></td>
+            <td>
+              <%= link_to edit_print_path(print), class: 'ui centered' do %>
+                <i class="write icon"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to print, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ui center aligned' do %>
+                <i class="trash icon"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>

@@ -1,0 +1,50 @@
+<!-- Pending Orders -->
+<div id="pending" class="ui centered stackable grid">
+
+  <!-- Print Order Menu -->
+  <h3 class="print-table-headings">Orders Pending Approval</h3>
+  <%= render partial: 'prints/partials/print_menu' %>
+
+  <table class="ui inverted black table">
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Quantity</th>
+        <th>Contact email</th>
+        <th>Contact phone</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Move to Printing</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @prints.each do |print| %>
+        <% if print.order_state == 0 %>
+          <tr>
+            <td><%= link_to print do%></i><%= print.name %><% end %></td>
+            <td><%= print.quantity %></td>
+            <td><%= print.contact_email %></td>
+            <td><%= print.contact_phone %></td>
+            <td>
+              <%= link_to edit_print_path(print), class: 'ui centered' do %>
+                <i class="ui write icon"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to print, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ui center aligned' do %>
+                <i class="trash icon"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to bump_up_path(print), method: :put do %>
+                <i class="arrow right icon"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>

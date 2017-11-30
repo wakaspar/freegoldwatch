@@ -1,26 +1,28 @@
 @import 'semantic-ui';
 
-@media (min-width: 900px) {
-  #admin-menu {
-    width: 50%;
-  }
-}
+// @media (min-width: 600px) {
+  // #admin-menu {
+  //   font-size: 30px;
+  //   width: 50%;
+  // }
+// }
 
 .admin-style {
-  margin: 2%;
   background: #545454;
   color: #161616;
 }
 
-.admin-nav-links, .logout-link {
-  font-size: 5vw;
+.logout-link {
+  font-size: 2vw;
+  color: #161616;
+}
+
+.print-table-headings {
+  font-size: 2.5vw;
+  color: #161616;
 }
 
 .admin-nav-links {
+  font-size: 3vw;
   color: #ffffff;
-}
-
-.logout-link {
-  font-family: 'helsinkiregular';
-  color: #161616;
 }
