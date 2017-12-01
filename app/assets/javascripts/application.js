@@ -42,6 +42,10 @@ $(document).ready(function(){
     $path=$("#social").offset().top - headerHeight + 1;
     $('html,body').animate({scrollTop:$path},"slow");
    });
+   $(".foot-link").click(function(){
+    $path=$("#foot").offset().top - headerHeight + 1;
+    $('html,body').animate({scrollTop:$path},"slow");
+   });
 
   // HOME: Hides & Shows Print Order Form for Homepage
   $('.new-print-btn')

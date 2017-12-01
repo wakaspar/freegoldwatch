@@ -17,39 +17,50 @@
         <!-- Smells Fishy -->
         <p class="item psa" style="color:#161616;">print. shop. arcade.</p>
 
-        <!-- <div class="ui compact dropdown item">
-          <i class="big bars icon"></i>
-          <div class="ui burger menu">
-            <div class="header">Navigation</div>
-            <div class="ui divider"></div>
-            <a id="pins-link">
-              <a class="item">pins.</a>
-            </a>
-            <div class="ui divider"></div>
-            <a id="prints-link" class="">
-              <a class="fluid item">prints.</a>
-            </a>
-            <div class="ui divider"></div>
-            <a id="parties-link">
-              <a class="item">parties.</a>
-            </a>
-            <div class="ui divider"></div>
-            <a id="social-link">
-              <a class="item">social.</a>
-            </a>
+        <div class="ui dropdown item">
+          <div class="ui icon button" style="background-color:#161616;">
+            <i class="large bars icon" style="color:#ffffff;"></i>
           </div>
-        </div> -->
+          <div class="burger menu">
+            <div class="header">
+              freegoldwatch
+              <i class="location arrow icon"></i>
+            </div>
+            <div class="ui divider"></div>
+            <div id="pins-link" class="left aligned item">
+              <i class="bomb icon"></i>
+              pinball arcade.
+            </div>
 
-        <div class="ui selection dropdown">
-          <i class="dropdown bars icon"></i>
-          <div class="text">
-            <i class="bars icon"></i>
-          </div>
+            <div id="prints-link" class="left aligned item">
+              <i class="theme icon"></i>
+              printmaking shop.
+            </div>
+            <div id="parties-link" class="left aligned item">
+              <i class="birthday icon"></i>
+              parties and events.</div>
+            <div id="social-link" class="left aligned item">
+              <i class="hashtag icon"></i>
+              social media.
+            </div>
+            <div class="ui divider"></div>
+            <div class="header foot-link">
+              <i class="home red icon"></i>
+              1767 Waller St. SF, CA 94117
+            </div>
+            <div class="header foot-link">
+              <i class="phone blue icon"></i>
+              1(415) 876-4444
+            </div>
+            <div class="header foot-link">
+              <i class="envelope green icon"></i>
+              info@freegoldwatch.com
+            </div>
 
-          <div class="menu">
-            <div class="item">A</div>
-            <div class="item">B</div>
-            <div class="item">C</div>
+            <!-- <div class="header">
+            </div>
+            <div class="header">
+            </div> -->
           </div>
         </div>
 
@@ -76,7 +87,7 @@
   </div>
   <br>
   <div class="ui right aligned grid">
-    <p class="column box-bottom-text"><%= fa_icon "asterisk" %>all ages welcome.  games updated daily!</p>
+    <p class="column box-bottom-text"><i class="game icon"></i>all ages welcome.  games updated daily!</p>
   </div>
 </div> <!-- closes Pinball Box -->
 
@@ -86,6 +97,8 @@
 <!-- // Print Order Box // -->
 <div id="prints" class= "ui section content-box">
   <h1 class="section-header">custom screen printing.</h1>
+  <p class="row" style="padding-left:4%;"> <i class="asterisk icon"></i>We specialize in small batches of up to four colors, as well as</p>
+
   <br>
   <div class="print-order-info">
     <div class="ui center aligned three column stackable grid">
@@ -108,16 +121,12 @@
         </h2>
       </div>
       <div class="row">
-        <button class="ui massive secondary button new-print-btn">New Print Order</button>
+        <button class="ui massive secondary labeled icon button new-print-btn"> <i class="add circle icon" style="color:#ffffff;"></i> new print order</button>
       </div>
     </div>
   </div> <!-- closes print-order-info -->
   <div class="print-order-form">
     <%= render partial: 'home/new_print' %>
-  </div>
-  <br>
-  <div class="ui right aligned grid">
-    <p class="column box-bottom-text"><%= fa_icon "asterisk" %>we specialize in small batches of up to four colors.</p>
   </div>
 </div>
 
@@ -129,7 +138,7 @@
 
   <h1 class="section-header">party & event hosting.</h1>
   <!-- TODO: SMELLY! -->
-  <p style="padding-left:4%;">We proudly host public or private functions, including:</p>
+  <p style="padding-left:4%;"><i class="asterisk icon"></i>We proudly host public or private functions, including</p>
   <br>
 
   <div class="ui center aligned three column stackable grid">
@@ -155,9 +164,28 @@
       </h2>
     </div>
   </div>
+  <div class="ui divider"></div>
 
-  <div class="ui right aligned grid">
-    <p class="column box-bottom-text"><span><a class="party-link" href="tel: 415-876-4444"> <i class="phone icon"></i>call</a></span> / <a class="party-link" href="mailto: info@freegoldwatch.com"><i class="envelope icon"></i>email</a> for info & availability.</p>
+  <p class="row" style="padding-left:4%;"> <i class="info circle icon"></i> Contact the shop via:</p>
+  <div class="ui center aligned three column stackable grid">
+    <!-- Call Button -->
+    <div class="column">
+      <a href="tel:1-415-876-4444"></a>
+      <button class="ui massive secondary labeled icon button">
+        <i class="phone icon" style="color:#ffffff;"></i>
+        phone
+      </button>
+    </div>
+    <h1>or</h1>
+    <div class="column">
+      <a href="mailto:info@freegoldwatch.com">
+        <button class="ui massive secondary labeled icon button">
+          <i class="envelope icon" style="color:#ffffff;"></i>
+          email
+        </button>
+      </a>
+    </div>
+    <p class="centered five column row">...for more infomation or to ask about availabilty!</p>
   </div>
 </div>
 
@@ -220,7 +248,10 @@
     <div class="four wide column">
       <%= link_to 'http://sfpins.org', target: '_blank' do %>
         <%= image_tag('sfpd_b&w small', class: "sfpd_logo ui centered image") %>
-        <p class="box-bottom-text"><%= fa_icon "chain" %> league.</p>
+          <button class="ui big secondary labeled icon button">
+            <i class="linkify icon" style="color:#ffffff;"></i>
+            league.
+          </button>
       <% end %>
     </div>
   </div>
@@ -231,7 +262,7 @@
 <div id="bg-five" class="bg-holder"></div>
 
 <!-- Page Footer -->
-<footer>
+<footer id="foot">
   <div class="foot-cap"></div>
 
   <div class="content-box">
@@ -240,18 +271,18 @@
         <div class="five wide computer seven wide tablet column">
           <a href="https://www.google.com/maps/place/Free+Gold+Watch/@37.7682011,-122.4549127,17z/data=!4m5!3m4!1s0x80858751638705a1:0xc5438abd8814e010!8m2!3d37.7682011!4d-122.452724" target="_blank">
             <%= image_tag('new_map', class: 'ui image') %>
-            <p>1767 Waller St. SF, Ca. 94117</p>
+            <p><i class="home icon"></i> 1767 Waller St. SF, Ca. 94117</p>
           </a>
         </div>
         <div class="six wide computer one wide tablet column"></div>
         <div class="five wide computer seven wide tablet column">
           <%= image_tag('hours', class: 'ui centered image') %>
-          <div class="hours-extra-text">
-            <div><%= link_to 'mailto:info@freegoldwatch.com', target: '_blank' do %> info<span style="font-family:sans-serif;">@</span>freegoldwatch.com
-            <% end %></div>
-            <div><%= link_to 'tel: 415-876-4444' do %> 415 876-4444
-            <% end %></div>
-          </div>
+          <a href="mailto:info@freegoldwatch.com">
+            <p><i class="envelope icon"></i>info@freegoldwatch.com</p>
+          </a>
+          <a href="tel: 1-415-876-4444">
+            <p><i class="phone icon"></i>415 876-4444</p>
+          </a>
         </div>
       </div>
 
@@ -267,7 +298,7 @@
           <%= link_to 'https://twitter.com/freegoldwatchus', target: '_blank' do %>
             <%= fa_icon "twitter-square 3x" %>
           <% end %>
-          <p>copyright<span style="font-family:'serif';"> © </span>2017 | freegoldwatch.</p>
+          <p>copyright<i class="copyright icon"></i>2018 | freegoldwatch.</p>
         </div>
         <div class="three wide column"></div>
       </div>

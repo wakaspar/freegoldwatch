@@ -17,19 +17,17 @@
 @import 'semantic-ui';
 
 
-/////////////////////
-// Page Layout CSS //
-/////////////////////
-.psa, .item a, .content, .section-header,
-.tagline, .box-bottom-text, footer {
+/////////////////
+// Page Layout //
+/////////////////
+.psa, .content, .section-header,
+.tagline, .box-bottom-text {
   font-family: 'helsinkiregular';
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   color: #161616;
 }
 
-// NOTE: I was having trouble getting responsive font
-// sizes to work with things scoped into the body tag (duh).
 body {
   a, i {
     color: #161616;
@@ -41,6 +39,11 @@ body {
     background: #161616;
   }
 }
+
+p {
+  font-size: 1.2em;
+}
+
 
 ///////////////////////////
 // Responsive Font Sizes //
@@ -87,8 +90,9 @@ header {
     color: #ffffff;
   }
   .burger.menu {
-    // width: 40vw;
+    width: 30vw;
     .item {
+      width: inherit;
       font-size: 1.5em;
     }
   }
@@ -197,7 +201,6 @@ header {
   column-gap: 20px;
 }
 .pin-list li {
-  font-family: sans-serif;
   font-size: .9em;
   line-height: 15px;
   padding: 3px;
@@ -233,10 +236,7 @@ footer {
     min-height: 25px;
   }
   background-color: #777777;
-  i:hover {
+  i:hover, a:hover {
     color: #545454;
-  }
-  .hours-extra-text {
-    margin-top: 2%;
   }
 }
