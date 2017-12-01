@@ -54,4 +54,4 @@ $(document).ready(function(){
     $('.new-print-btn')
       .css('display', 'block');
   });
-};
+});
