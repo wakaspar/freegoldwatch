@@ -186,6 +186,13 @@ header {
   .full-name {
     display: none;
   }
+  .burger.menu {
+    width: 50vw;
+    .item {
+      width: inherit;
+      font-size: 1.5em;
+    }
+  }
 }
 
 ////////////////////////
