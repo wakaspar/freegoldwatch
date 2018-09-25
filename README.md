@@ -62,7 +62,7 @@ All of the above information can be found in the FGW Planning GoogleDoc, [here](
 - omg so much more...
 
 
-## Current Delpoyment
+## Current Deployment
 
 On Heroku:
 
