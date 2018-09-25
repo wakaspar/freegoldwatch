@@ -1,4 +1,4 @@
-# FREEGOLDWATCH
+# FreeGoldWatch
 This application functions as a new website for my local print shop / pinball arcade, FreeGoldWatch, located in the heart of the Haight-Ashbury neighborhood of San Francisco, California.  The site features a new public-facing homepage with a submittable print form and a series of admininstration dashboards for better managing the day-to-day operations of the shop.  
 
 The admin portion of the site features a Print Order Dashboard, which tracks orders as they make their way through the established workflow of the shop.  It also features a Pinball Dashboard that allows for the addition or removal of pinball machines from the manifest at the shop by talking to the PinballMap.com API up in Portland, Oregon. 
