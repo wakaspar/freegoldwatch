@@ -199,50 +199,6 @@
   <!-- Social Media Content - Instagram & Facebook Feeds -->
   <div class="ui center aligned three column stackable grid container">
 
-    <div class="column six wide">
-      <!-- Instagram Feed  - SFPins Account -->
-      <p><%= fa_icon "instagram 4x", class: 'ui image' %><span style="font-family:'serif';"> @</span>sfpins</p>
-      <div class="ui row tiny images">
-        <% @instagram.each do |instagram| %>
-        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
-        <% end %>
-        <% end %>
-      </div>
-
-      <!-- Instagram Feed  - FGW Account -->
-      <p><%= fa_icon "instagram 4x", class: 'ui image' %><span style="font-family:'serif';"> @</span>freegoldwatch</p>
-      <div class="ui row tiny images">
-        <% @instagram.each do |instagram| %>
-        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-        <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
-        <% end %>
-        <% end %>
-      </div>
-
-    </div>
-
-    <div class="column six wide">
-      <!-- Twitter Feed -->
-      <p><%= fa_icon "twitter 4x", class: 'ui image' %><span style="font-family:'serif';">#</span>freegoldwatchUS</p>
-      <div class="ui row tiny images">
-        <% @instagram.each do |instagram| %>
-        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-          <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
-          <% end %>
-        <% end %>
-      </div>
-
-      <!-- Facebook Feed -->
-      <p><%= fa_icon "facebook 4x", class: 'ui image' %> /freegoldwatchshop</p>
-      <div class="ui row tiny images">
-        <% @instagram.each do |instagram| %>
-        <%= link_to "#{instagram.images.standard_resolution.url}" do %>
-          <%= image_tag instagram.images.thumbnail.url, class: "ui image" %>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
 
     <!-- SFPD Badge -->
     <div class="four wide column">
